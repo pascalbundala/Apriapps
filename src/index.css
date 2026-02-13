@@ -1,0 +1,248 @@
+/* Reset basic margins and paddings */
+/* #21aaff */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* cta button */
+.cta-button{
+    margin-top: 50px;
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex: row;
+    background:linear-gradient(60deg,#00c9ff,#008cff);
+    border: none;
+}
+.cta-button a{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+    width: fit-content;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    margin: auto 10px;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover a {
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.arrow-icon{
+    color:#fff;
+}
+
+/* project title */
+.project-title{
+    min-width: 400px;
+    max-width: 50%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6rem;
+    text-align: start;
+    margin: 0;
+    color: #303030;
+}
+
+span{
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0px;
+    color: #303030;
+    text-transform: uppercase;
+    text-align: start;
+    margin: 0;
+    font-family: "Arapey", serif;
+    font-style: italic;   
+}
+
+.container-holder{
+    width: 100%;
+    height: fit-content;
+    padding: 0 5%;
+    margin: 20px 0px 50px 0px;
+}
+.center{
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.flex-column{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.small-title{
+    width: 30%;
+    text-transform: lowercase;
+    font-size: 0.9rem;
+    font-family: "Inter", serif;
+    font-weight: 300;
+    line-height: 1.3rem;
+    align-items: start;
+}
+
+
+:root {
+    --primary_color: #0D0033;
+    --primary_lite: #f1f1f1;
+    --border_color:#000;
+    --sec_color: #3bed24;
+    --bg_color: #f1f1f1;
+    --alert_color:#ff5f5f;
+}
+
+
+@media screen and (max-width:480px) {
+
+    .container-holder{
+        padding: 0 5%;
+        margin: 0px 0px 0px 0px;
+    }
+
+    .project-title{
+        width: 100%;
+        font-size: 1.2rem;
+        line-height: 1.3rem;
+        margin: 0 0 10px 0;
+    }
+
+    span{
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+    .cta-button{
+        margin-top: 0.5rem;
+        padding: 0.2rem 2rem;
+        margin-bottom: 10px;
+        background:#fff;
+        border: 1px solid #eee;
+    }
+    .cta-button a{
+        color: #00c9ff;
+        font-size: 0.9rem;
+        display: block;
+    }
+
+    .arrow-icon{
+        color: #00c9ff;
+    }
+
+    .small-title{
+        width: 100%;
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.2rem;
+        margin: 10px 0px;
+    }
+
+
+ 
+
+
+    
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    .project-title{
+        width: 60%;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .small-title{
+        width: 80%;
+        text-transform: lowercase;
+        font-size: 0.95rem;
+        font-weight: 300;
+        line-height: 1.4rem;
+        align-items: start;
+    }
+
+    
+}
+
+@media screen and (min-width:1920px) {
+
+    .project-title{
+        width: 60%;
+        font-size: 3rem;
+        font-weight: 600;
+        line-height: 3.5rem;
+        color: #303030;
+    }
+
+    .small-title{
+        width: 35%;
+        text-transform: lowercase;
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 2.5rem;
+        align-items: start;
+    }
+
+    span{
+        font-size: 1.6rem;
+        font-weight: 800;
+    }
+
+    .cta-button{
+        margin-top: 100px;
+        border-radius: 60px;
+    }
+    .cta-button a{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .cta-button:hover a {
+    display: block;
+    transition: all 0.3s ease;
+    }
+
+    .arrow-icon{
+        color:#fff;
+        width: 5rem;
+        height: 3rem;
+    }
+
+
+}

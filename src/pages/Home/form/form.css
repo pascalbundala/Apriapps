@@ -1,0 +1,233 @@
+.form{
+    width: 100%;
+    height: fit-content;
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+
+.form .form-form{
+    width: 60%;
+    height: fit-content;
+    padding: 0px 50px;
+    margin: 30px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+.form .form-form input {
+    width: 100%;
+    height: 40px;
+    padding: 30px 20px;
+    border: none;
+    border-bottom: 1px solid var(--border_color);
+    margin: 0px auto;
+    border-radius: 0px;
+    font-size: 15px;
+    font-family:"Inter", sans-serif;
+    outline: none;
+    background-color: none;
+}
+
+.form .form-form textarea{
+    width: 100%;
+    height: fit-content;
+    padding: 30px 20px;
+    border: none;
+    border-bottom: 1px solid var(--border_color);
+    margin: 0px auto;
+    border-radius: 0px;
+    font-size: 15px;
+    outline: none;
+    font-family:"Inter", sans-serif;
+}
+
+
+.submit-button{
+    cursor: pointer;
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #303030;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius:30px ;
+}
+
+.icons-arrow{
+    color:#00c9ff;
+}
+.submit-button:hover{
+    background-color: #00c9ff;
+    color: #fff;
+}
+
+.submit-button:hover .icons-arrow{
+    color: #fff;
+}
+
+small{
+    color:var(--alert_color);
+    font-size: 0.8rem;
+}
+
+
+.form-form input:focus-visible,
+.form-form textarea:focus-visible {
+  background-color: var(--bg_color);
+  border-right:1px solid  #000;
+  border-left:1px solid  #000;
+  outline: none;
+}
+
+.form-form input:first-child:focus-visible {
+  background-color: var(--bg_color);
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  border-top: 1px solid #000;
+  outline: none;
+}
+
+
+
+@media screen and (max-width:480px) {
+
+    .form{
+        padding: 20px 0 30px 0;
+    }
+
+    .form .form-form{
+        width: 100%;
+        padding: 0px 5%;
+    }
+    .form .form-form input{
+        height: 35px;
+        padding: 10px 20px;
+        margin: 10px auto;
+        border-radius: 0px;
+        font-size: 0.8rem;
+    }
+
+    .form .form-form textarea{
+        padding: 15px 20px;
+        margin: 0px auto;
+        border-radius: 0px;
+        font-size: 0.8rem;
+    }
+
+
+    .submit-button{
+        cursor: pointer;
+        background-color: #fff;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #303030;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius:30px ;
+    }
+
+    
+}
+
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    .form{
+        padding: 20px 0 30px 0;
+    }
+
+    .form .form-form{
+        width: 80%;
+        padding: 0px 5%;
+    }
+    .form .form-form input[ type="text"],input[type="email"]{
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    .form .form-form textarea{
+        padding: 15px 20px;
+        margin: 0px auto;
+        font-size: 0.8rem;
+    }
+
+
+    .submit-button{
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1rem;
+    } 
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+    .form{
+        padding: 20px 0 30px 0;
+    }
+
+    .form .form-form{
+        width: 80%;
+        padding: 0px 5%;
+    }
+    .form .form-form input[ type="text"],input[type="email"]{
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    .form .form-form textarea{
+        padding: 15px 20px;
+        margin: 0px auto;
+        font-size: 0.8rem;
+    }
+
+
+    .submit-button{
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1rem;
+    } 
+}
+
+@media screen and (min-width:1920px)  {
+
+    .form{
+        padding: 60px 0 90px 0;
+    }
+
+    .form .form-form{
+        width: 70%;
+        padding: 0px 0%;
+    }
+    .form .form-form input{
+        height: 100px;
+        font-size: 1.8rem;
+        padding: 60px;
+    }
+
+    .form .form-form textarea{
+        padding: 60px;
+        margin: 0px auto;
+        font-size: 1.8rem;
+    }
+
+
+    .submit-button{
+        margin: 80px auto;
+        padding: 20px 40px;
+        font-size: 1.8rem;
+        border-radius:50px ;
+    } 
+}

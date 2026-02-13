@@ -1,0 +1,243 @@
+.navbar{
+    width: 100%;
+    height: 10vh;
+    background: rgb(255, 255, 255,0.05); 
+    backdrop-filter: blur(10px); 
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: center;
+    align-items: center;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+.logo{
+    flex: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    padding: 0;
+    text-decoration: none;
+}
+.logo:hover{
+    text-decoration: none;
+}
+
+.logo .name-app{
+    font-family: "Inter", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+.img-logo{
+    width: 50px;
+    height: 50px;
+    object-fit: fill;
+    display: inline-block;
+}
+
+.header{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    margin: auto 0;
+    justify-content: flex-end;
+}
+
+.zero-menu{
+    display: flex;
+}
+
+.listMenu{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.item-menu{
+  text-decoration: none;
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-right: 2rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  font-family: "Inter", sans-serif;
+}
+
+.item-menu:hover{text-decoration: none;}
+
+  .item-menu.active {
+    text-decoration: line-through;
+    pointer-events: none; 
+    font-size: 1.2rem;
+
+  }
+
+.item-menu:active::after {
+  width: 100%;
+}
+
+.menu-icon{
+    color: black;
+    size: 32;
+    stroke-width: 0.8;
+    cursor: pointer;
+}
+
+.openMenu{
+    display: flex;
+    flex-flow: column;
+    background-color:#fff;
+    position: absolute;
+    top: 90%;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px 2%;
+    align-items: end;
+    overflow: hidden;
+}
+
+.openMenu .item-menu {
+  margin: 10px 0px;
+  width: fit-content;
+  float: right;
+}
+
+.closedMenu{
+  display: none;
+}
+
+/* RESPONSIVE NAVBAR */
+@media screen and (max-width:480px) {
+    .navbar{
+      width: 100vw;
+      padding: 0;
+      height: fit-content;
+      padding: 10px 0px;
+    }
+
+    .navbar .logo{
+        margin-left: 5%;
+    }
+    .img-logo{
+        width: 30px;
+        height: 30px; 
+    }
+    .name-app{
+        font-size: 0.8em;
+    }
+
+    .navbar .header .menu-icon{
+       margin-right: 5%;
+    }
+}
+
+
+
+
+@media screen and (min-width:481px)  and (max-width:768px){
+    .navbar{
+      width: 100%;
+      padding: 0;
+      padding: 0 5%;
+      height: fit-content;
+      padding: 10px 0px;
+    }
+
+    .navbar .logo{
+        margin-left: 2%;
+    }
+    .img-logo{
+        width: 30px;
+        height: 30px; 
+    }
+    .name-app{
+        font-size: 0.8em;
+    }
+    .navbar .header .menu-icon{
+       margin-right: 5%;
+    }
+
+    .openMenu .item-menu {
+         font-size: 1.2rem;
+         font-weight: 300;
+         margin-top: 20px;
+    }
+}
+
+
+@media screen and (min-width:769px)  and (max-width:1024px){
+    .navbar{
+      width: 100%;
+      padding: 0;
+      padding: 0 5%;
+      height: fit-content;
+      padding: 10px 0px;
+    }
+
+    .navbar .logo{
+        margin-left: 2%;
+    }
+    .img-logo{
+        width: 30px;
+        height: 30px; 
+    }
+    .name-app{
+        font-size: 0.8em;
+    }
+
+
+    .navbar .header .menu-icon{
+       margin-right: 5%;
+    }
+}
+
+@media screen and (min-width:1920px) {
+    .navbar{
+      width: 100%;
+      padding:20px 5%;
+      height: fit-content;
+    }
+
+    .navbar .logo{
+        margin-left: 2%;
+    }
+    .img-logo{
+        width: 30px;
+        height: 30px; 
+    }
+    .name-app{
+        font-size: 0.8em;
+    }
+
+    .navbar .header .menu-icon{
+       margin-right: 5%;
+    }
+
+    .item-menu{
+        font-size: 1.8rem;
+    }
+
+    .logo .name-app{
+        font-size: 2rem;
+        margin-left: 0.5rem;
+    }
+
+    .img-logo{
+        width: 80px;
+        height: 80px;
+}
+
+}
+
+
+
+

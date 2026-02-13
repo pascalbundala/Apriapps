@@ -1,0 +1,60 @@
+.officer{
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.officer-details{
+    width: fit-content;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+}
+
+.officer-details img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.officer-details .officer-data{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+.officer-details .officer-data h3{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 900;
+    width: 200px;
+    color: black;
+    margin: 0;
+}
+.officer-details .officer-data h4{
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.speech{
+    height: fit-content;
+    width: 387px;
+    margin-top: 20px;
+}
+
+.speech p{  
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+   
+}

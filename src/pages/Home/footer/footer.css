@@ -1,0 +1,375 @@
+.footer{
+    width: 100%;
+    padding: 40px 5%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column  nowrap;
+    justify-content: center;
+    color: white;
+    background:
+    linear-gradient(#28c1f4a3, rgba(0, 0, 0, 1)),
+    url("/images/background.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.footer h3{
+    text-align: start;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 700;
+    width: 60%;
+    margin-bottom: 100px;
+}
+
+.footer-title{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2rem;
+    margin:5px 0px;
+    text-align: start;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.footer-title:hover{
+    color: #28c1f4;
+}
+.footer .social-account{
+    display: flex;
+    flex-flow: row nowrap;
+    width: fit-content;
+    height: fit-content;
+    justify-content: start;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.footer .social-account li{
+    list-style: none;
+    text-align: start;
+    width: fit-content;
+    height: fit-content;
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+.footer .social-account li a{
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1rem;
+    text-decoration: none;
+    color: white;
+}
+
+.footer .social-account li a:hover{
+    color: #28c1f4;
+}
+
+.footer .footer-end{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.footer .footer-end h4{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 0;
+
+}
+
+.footer .footer-end .extra{
+    width: fit-content;
+    height: fit-content;
+}
+
+.footer .footer-end h4{
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 400;
+}
+
+.footer .footer-end .extra a{
+    text-decoration: none;
+    font-size: 1rem;
+    list-style: none;
+    font-weight: 300;
+    line-height: 1rem;
+    margin: 0px 20px;
+    color: white;
+}
+
+
+@media screen and (max-width:480px) {
+
+    .footer{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .footer h3{
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 900;
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    .footer-title{
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 1rem;
+        margin:5px 0px;
+    }
+
+    .footer .social-account{
+        margin-top: 15%;
+    }
+
+    .footer .social-account li{
+        margin-right: 30px;
+    }
+
+    .footer .social-account li a .social-icon{
+        width: 2rem;
+        font-size: 0.5rem;
+        stroke-width: 0.8;
+    }
+
+    .footer .footer-end{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height: fit-content;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .footer .footer-end .extra{
+        margin-top: 10px;
+        align-self: flex-end;
+        align-items: end;
+    }
+
+    .footer .footer-end h4{
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+        font-weight: 400;
+    }
+
+    .footer .footer-end .extra a{
+        text-decoration: none;
+        font-size: 0.8rem;
+        list-style: none;
+        font-weight: 300;
+        line-height: 0.8rem;
+        margin: 0px 5px;
+        color: white;
+    }
+    
+}
+
+@media screen and (min-width:481px ) and (max-width:768px) {
+
+    .footer{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .footer h3{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        font-weight: 900;
+        width: 60%;
+        margin-bottom: 50px;
+    }
+
+    .footer-title{
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1rem;
+        margin:0.5rem 0px;
+    }
+
+    .footer .social-account{
+        margin-top: 5rem;
+    }
+
+    .footer .social-account li{
+        margin-right: 30px;
+    }
+
+    .footer .social-account li a .social-icon{
+        width: 2rem;
+        stroke-width: 0.8;
+    }
+
+    .footer .footer-end{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height: fit-content;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .footer .footer-end .extra{
+        margin-top: 10px;
+        align-self: flex-end;
+        align-items: end;
+    }
+
+    .footer .footer-end h4{
+        font-size: 0.9rem;
+        line-height: 0.8rem;
+        font-weight: 400;
+    }
+
+    .footer .footer-end .extra a{
+        text-decoration: none;
+        font-size: 0.9rem;
+        list-style: none;
+        font-weight: 300;
+        line-height: 0.8rem;
+        margin: 0px 5px;
+        color: white;
+    }
+    
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+    .footer{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .footer h3{
+        font-size: 3rem;
+        line-height: 2.8rem;
+        margin-bottom: 100px;
+    }
+
+    .footer-title{
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1rem;
+        margin:0.5rem 0px;
+    }
+
+    .footer .social-account{
+        margin-top: 5rem;
+    }
+
+    .footer .social-account li{
+        margin-right: 30px;
+    }
+
+    .footer .social-account li a .social-icon{
+        width: 2rem;
+    }
+
+    .footer .footer-end{
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .footer .footer-end .extra{
+        margin-top: 20px;
+        align-self: flex-end;
+        align-items: end;
+    }
+
+    .footer .footer-end h4{
+        font-size: 0.92rem;
+        line-height: 0.8rem;
+        font-weight: 400;
+    }
+
+    .footer .footer-end .extra a{
+        font-size: 0.92rem;
+        line-height: 0.92rem;
+        margin: 0px 5px;
+        color: white;
+    }
+    
+}
+
+@media screen and (min-width:1920px) {
+    .footer{
+        width: 100%;
+        height: fit-content;
+        padding-top: 5rem;
+        background-size: cover;
+    }
+
+    .footer h3{
+        font-size: 7rem;
+        line-height: 7rem;
+        margin-bottom: 10rem;
+    }
+
+    .footer-title{
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        margin:0.8rem 0px;
+    }
+
+    .footer .social-account{
+        margin-top: 10rem;
+    }
+
+    .footer .social-account li{
+        margin-right: 3rem;
+    }
+
+    .footer .social-account li a{
+        font-size: 3rem;
+        font-weight: 300;
+        text-decoration: none;
+    }
+
+    .footer .social-account li a .social-icon{
+        width:4rem;
+        height:4rem;
+        stroke-width: 1;
+    }
+
+
+
+    .footer .footer-end{
+        padding: 0;
+        margin-top: 3rem;
+    }
+
+    .footer .footer-end .extra{
+        margin-top: 3rem;
+        align-self: flex-end;
+        align-items: end;
+    }
+
+    .footer .footer-end h4{
+        font-size:2rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+
+    .footer .footer-end .extra a{
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 0px 1rem;
+    }    
+}

@@ -1,0 +1,157 @@
+.partner{
+    width: 100%;
+    height: 70vh;
+    background-color: #ffffff;
+    padding: 50px 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+.logos-fader::before{
+  width: 100px;
+  height: 100%;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  /* background: linear-gradient(to right,#ffffff,#ffffff00); */
+}
+
+.logos-fader::after{
+  width: 100px;
+  height: 100%;
+  position: absolute;
+  content: "";
+  right: 0;
+  z-index: 10;
+  /* background: linear-gradient(to right,#ffffff00,#ffffff); */
+}
+
+
+
+.logos-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logos-fader{
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.logos-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.logos-track {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px 0px;
+  position: relative;
+}
+
+.logos-track .box{
+  border-radius: 0px;
+  padding:30px 60px;
+  border: 1px solid #efefef;
+}
+
+.logos-track .box img{
+  display: block;
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+
+@media screen and (max-width:480px) {
+
+    .partner{
+      height: 50vh;
+      padding: 20px 0;
+    }
+
+    .logos-track {
+      padding: 10px 0px;
+    }
+
+    .logos-track .box{
+      padding:20px 60px;
+    }
+
+    .logos-track .box img{
+      height: 40px;
+      aspect-ratio: 1;
+    }
+      
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    .partner{
+      height: 50vh;
+      padding: 20px 0;
+    }
+
+    .logos-track {
+      padding: 0;
+    }
+
+    .logos-track .box{
+      padding:30px;
+    }
+
+    .logos-track .box img{
+      height: 40px;
+      width: 40px;
+    }
+  
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+    .partner{
+      height: 50vh;
+      padding: 20px 0;
+    }
+
+    .logos-track {
+      padding: 0;
+    }
+
+    .logos-track .box{
+      padding:30px;
+    }
+
+    .logos-track .box img{
+      height: 40px;
+      width: 40px;
+    }
+  
+}
+
+@media screen and (min-width:1920px) {
+
+    .partner{
+      height: 50vh;
+      padding: 20px 0;
+    }
+
+    .logos-track {
+      padding: 40px 0px;
+    }
+
+    .logos-track .box{
+      padding:80px;
+    }
+
+    .logos-track .box img{
+      height: 80px;
+      width: 80px;
+    }
+      
+}

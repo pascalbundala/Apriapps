@@ -1,0 +1,305 @@
+
+
+.flex{
+    display: flex;
+}
+
+.row{
+    flex-flow: row;
+}
+
+.column{
+    flex-flow: column;
+}
+
+.big-title{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    padding: 0 8%;
+}
+
+
+span{
+    height: fit-content;
+    width: fit-content;
+    font-size: 1rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    color: #303030;
+    margin-left: 10%;
+    background-color: rgba(191, 191, 191, 0);
+    padding: 5px 10px;
+}
+
+h1{
+    font-size: 2.04rem;
+    line-height: 3rem;
+    width: 70%;
+    align-self: flex-end;
+    color: #303030;
+    margin-top: 50px;
+}
+
+.stats{
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.img-container{
+    width: 410px;
+    margin: 0;
+    height: 100%;
+}
+
+.img-container img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.box-data{
+    width: 40%;
+    margin-left: 10%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+}
+
+.x-column{
+    height: fit-content;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    margin:20px 0;
+}
+
+.statscard{
+    height: fit-content;
+    width: fit-content;
+    background-color: #fff;
+    padding: 60px;
+    color: #303030;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left:20px ;
+    border: 0.5px solid #e4e4e4;
+}
+
+.statscard h3{
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-style: normal;
+}
+
+.statscard p{
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 200;
+    margin: 4px auto;
+}
+
+.mv{
+    width: 100%;
+    height: 70vh;
+    background-color: #303030;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.m{
+    display: flex;
+    flex-flow: row nowrap;
+    width: fit-content;
+    height: fit-content;
+    margin: 30px;
+    padding: 0 5%;
+
+}
+
+.m span{
+    margin-right: 40px;
+    color: #fff;
+   
+}
+
+.standard-text{
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    font-weight: 300;
+    width: 70%;
+}
+
+.why{
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.img-chess{
+    position: relative;
+    margin: 0;
+}
+
+.why span{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 50px;
+    left: 30%;
+    transform: translate(0,50%);
+    color: #fff;
+}
+
+.strategyContainer{
+    height: 60vh;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-items: flex-end;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.reas{
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 45%;
+    margin: 30px 0;
+}
+
+.reas h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    width: 60%;
+    color: #303030;
+}
+
+
+.what-wedo{
+    height: fit-content;
+    width: 100%;
+    padding: 40px 10%;
+    color: #fff;
+    background-color: #303030;
+}
+
+.what-wedo span{
+    color: #fff;
+}
+
+.best{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap; 
+    padding: 40px 0px;
+    justify-content: space-between;
+}
+
+.service-item{
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 50px;
+}
+
+.service-item h3{
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    font-size: 900;
+    color: #fff;
+    margin: 20px 50px 0 0;
+    
+}
+
+.service-item ul{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 20px;
+    padding: 60px 60px;
+    border: 1px solid #555;
+}
+
+.service-item ul li{
+    list-style: circle;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+
+
+.techstack{
+    height: 100vh;
+    width: 100%;
+    background-color: #303030;
+    padding: 50px 10%;
+}
+
+.techstack span{
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+.techs{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+.tech {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    width: fit-content;
+    padding: 20px 30px;
+    background-color: #fff;
+    color: #303030;
+    margin: 10px;
+}
+
+.tech img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.tech h3{
+    font-size: 1rem ;
+    line-height: 1rem;
+    font-weight: 900;
+    text-transform: capitalize;
+}

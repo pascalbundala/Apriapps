@@ -1,0 +1,133 @@
+.large {
+    width: 100%;
+    height: 90vh;
+    padding: 0px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    background:linear-gradient(#00c9ff50, #00c9ff50),url("/images/websiteImage.png");
+    background-position: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+
+.text-large{
+    height: fit-content;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0;
+    margin: auto 0;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.text-large p{
+    width: 100%;
+    margin: 5%;
+    font-size: 3rem;
+    line-height: 4rem;
+    color: #ffffff;
+    font-weight: 900;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.01rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+} 
+
+
+.mask-image {
+    width: 100%;
+    height: 100vh;
+    /* mask-image: url('/public/star.svg'); */
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 20%;            
+    /* -webkit-mask-image: url('/public/star.svg'); */
+    /* -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); */
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.mask-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+
+@media screen and (max-width:480px) {
+
+    .large {
+        height: 70vh;
+    }
+
+    .text-large{
+        padding: 10px 0;
+        margin: auto 0;
+    }
+
+    .text-large p{
+        margin: 3%;
+        font-size: 1.8rem;
+        line-height: 2rem;
+    } 
+}
+
+@media screen and (min-width:481px) and (max-width:768px) {
+
+    .large {
+        height: 70vh;
+    }
+
+    .text-large{
+        padding: 10px 0;
+        margin: auto 0;
+    }
+
+    .text-large p{
+        margin: 3%;
+        font-size: 2.35rem;
+        line-height: 2.5rem;
+    } 
+}
+
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+    .large {
+        height: 70vh;
+    }
+
+    .text-large{
+        padding: 10px 0;
+        margin: auto 0;
+
+    }
+
+    .text-large p{
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+    } 
+}
+
+
+
+@media screen and (min-width:1920px)  {
+
+    .large {
+        height: 70vh;
+    }
+
+    .text-large p{
+        font-size: 5rem;
+        line-height: 7.5rem;
+    } 
+}
+
