@@ -1,0 +1,616 @@
+.footer{
+    width: 100%;
+    padding: 0% 0 0% 0;
+    height: fit-content;
+    display: flex;
+    flex-flow: column  nowrap;
+    justify-content: center;
+    color: var(--white-color);
+    background-color: var(--black-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.x-footer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    margin: 0rem auto;
+}
+
+.xx{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0;
+    align-items: center;
+}
+
+.xx img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.xx p{
+    margin: 2rem 0;
+    width: 50%;
+}
+
+
+.x-fed{
+    width: 100%;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-top: 7rem;
+    height: fit-content;
+}
+
+.x-feds-o{
+    width: 52%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+}
+
+.x-feds{
+    width: 48%;
+    display: flex;
+    flex-flow: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.subscribe{
+    width: 60%;
+    border: 1px solid var(--border-color);
+    height: 3rem;
+    background-color: transparent;
+    color: var(--white-color);
+    font-size: 2rem;
+    padding: 0 1rem;
+    font-family: "Kaushan Script",cursive;
+
+}
+
+.x-feds p{
+    width: 60%;
+    margin: 1rem 0;
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+.footer .x-footer .xx .title-bold-extra{
+    text-align: start;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.office{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    align-self: start;
+    margin-bottom: 2rem;
+}
+
+.f-links{
+    width: 50%;
+}
+
+.contact-office{
+    width: 60%;
+}
+
+.fade-title{
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--white-fade-color);
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+}
+
+.f-links .small-title{
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    width: fit-content;
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-size: 0.75rem;
+}
+
+.office .small-title-large{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.office .small-title:hover{
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.footer .legal{
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    height: fit-content;
+}
+
+.footer .legal a{
+    margin-right: 1rem;
+    width: fit-content;
+    padding: 0;
+    color: var(--white-color);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+
+
+.footer .footer-end{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    padding-top: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer .footer-end .f-end{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    text-transform: capitalize;
+    color: var(--white-color);
+    font-weight: 400;
+}
+
+.footer .footer-end h6{
+    width: 100%;
+    text-align: start;
+    padding: 0;
+    font-weight: 400;
+}
+
+.footer .footer-end .f-social{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+    height: fit-content;
+    padding: 0;
+}
+
+.footer .footer-end .f-social a{
+    width: fit-content;
+    height: fit-content;
+    text-align: start;
+    font-weight: 400;
+    color: var(--white-color);
+    text-transform: capitalize;
+    margin-left: 2rem;
+   
+}
+
+.footer .amexs{
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    margin-top: 0rem;
+}
+.footer .amexs h2{
+    font-size: 23rem;
+    line-height: 26rem;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: -5rem;
+    text-transform: lowercase;
+    display: block;
+    transform:perspective(600px)  rotateX(40deg) rotateY(0deg);
+    background: linear-gradient(120deg, var(--accent-color), #3f5efb, #2a3278);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.shadow{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    border-radius: 0%;
+    background: radial-gradient(
+        circle at center,
+        rgb(0, 200, 255) 0%,   
+        rgba(0, 170, 255, ) 20%,
+        rgba(63, 94, 251, 1) 50%,
+        rgba(15, 49, 218, 0.929) 100%,
+    );
+  filter: blur(30px);
+  display: block;
+}
+
+
+@media screen and (max-width:480px) {
+
+    .footer{
+        width: 100%;
+    }
+
+    .x-footer{
+        width: 100%;
+        flex-flow: column nowrap;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer .x-footer .xx h3{
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+
+    }
+
+    .xx{
+        width: 100%;
+    }
+
+    .xx p{
+        margin: 1rem auto;
+        width: 80%;
+        text-align: center;
+    }
+
+    .x-fed{
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-top: 6rem;
+    }
+
+    .x-feds-o{
+        flex-flow: column;
+        justify-content: center;
+        width: 100%;
+        margin: 0 0 3rem 0;
+    }
+
+    .x-feds{
+        width: 100%;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .x-feds .small-title ,.x-feds input{
+        width: 80%;
+    }
+
+    .office{
+        width: 100%;
+        margin-top: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .f-links{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        margin-top: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .f-links .small-title-large{
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .f-links .small-title{
+        margin-right: 0;
+    }
+
+    .fade-title{
+        font-size: 0.7rem;
+        margin-bottom: 0rem;
+    }
+
+    .contact-office{
+        width: 100%;
+        font-size: 1.2rem;
+        margin: 0rem auto;
+        font-weight: 400;
+        padding: 0;
+    }
+
+    .contact-office .office{
+        margin-bottom: 0rem;
+    }
+
+    .footer .footer-end{
+        padding-top: 0rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-flow: column nowrap;
+        flex-direction: column-reverse;
+    }
+
+    .footer .footer-end .f-end{
+        margin: 0rem auto;
+    }
+
+        .footer .footer-end a{
+        font-size: 0.8rem;
+        text-align: center;
+        margin: 0rem auto;
+        width: 100%;
+
+    }
+
+
+    .footer .footer-end h6{
+        font-size: 0.8rem;
+        font-weight: 400;
+        text-align: center;
+
+    }
+
+    .footer .legal {
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .footer .legal a{
+        font-size: 0.8rem;
+        text-align: center;
+        width: fit-content;
+    }
+
+
+    .footer h1{
+        font-size: 6rem;
+        line-height: 7rem;
+        margin: 0;
+    }
+    
+    .footer .amexs {
+        margin-top: 1rem;
+    }
+
+    .footer .amexs h2{
+        font-size: 12rem;
+        line-height: 10rem;
+        font-weight: 900;
+        margin-bottom: 0rem;
+        transform:perspective(300px)  rotateX(25deg) rotateY(25deg);
+    }
+
+    
+
+
+}
+
+@media screen and (min-width:481px ) and (max-width:768px) {
+
+    .footer{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .footer h3{
+        font-size: 2.5rem;
+        line-height: 3rem;
+        font-weight: 900;
+        width: 60%;
+        margin-bottom: 50px;
+    }
+
+    .footer-title{
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1rem;
+        margin:0.5rem 0px;
+    }
+
+    .footer .social-account{
+        margin-top: 5rem;
+    }
+
+    .footer .social-account li{
+        margin-right: 30px;
+    }
+
+    .footer .social-account li a .social-icon{
+        width: 2rem;
+        stroke-width: 0.8;
+    }
+
+    .footer .footer-end{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        height: fit-content;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .footer .footer-end .extra{
+        margin-top: 10px;
+        align-self: flex-end;
+        align-items: end;
+    }
+
+    .footer .footer-end h4{
+        font-size: 0.9rem;
+        line-height: 0.8rem;
+        font-weight: 400;
+    }
+
+    .footer .footer-end .extra a{
+        text-decoration: none;
+        font-size: 0.9rem;
+        list-style: none;
+        font-weight: 300;
+        line-height: 0.8rem;
+        margin: 0px 5px;
+        color: white;
+    }
+    
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+
+    .footer{
+        width: 100%;
+        background-size: cover;
+    }
+
+    .footer h3{
+        font-size: 3rem;
+        line-height: 2.8rem;
+        margin-bottom: 100px;
+    }
+
+    .footer-title{
+        font-size: 1.6rem;
+        font-weight: 300;
+        line-height: 1rem;
+        margin:0.5rem 0px;
+    }
+
+    .footer .social-account{
+        margin-top: 5rem;
+    }
+
+    .footer .social-account li{
+        margin-right: 30px;
+    }
+
+    .footer .social-account li a .social-icon{
+        width: 2rem;
+    }
+
+    .footer .footer-end{
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .footer .footer-end .extra{
+        margin-top: 20px;
+        align-self: flex-end;
+        align-items: end;
+    }
+
+    .footer .footer-end h4{
+        font-size: 0.92rem;
+        line-height: 0.8rem;
+        font-weight: 400;
+    }
+
+    .footer .footer-end .extra a{
+        font-size: 0.92rem;
+        line-height: 0.92rem;
+        margin: 0px 5px;
+        color: white;
+    }
+    
+}
+
+@media screen and (min-width:1920px) {
+    .footer{
+        width: 100%;
+        height: fit-content;
+        padding-top: 5rem;
+        background-size: cover;
+    }
+
+    .footer h3{
+        font-size: 7rem;
+        line-height: 7rem;
+        margin-bottom: 10rem;
+    }
+
+    .footer-title{
+        font-size: 3.2rem;
+        line-height: 3.2rem;
+        margin:0.8rem 0px;
+    }
+
+    .footer .social-account{
+        margin-top: 10rem;
+    }
+
+    .footer .social-account li{
+        margin-right: 3rem;
+    }
+
+    .footer .social-account li a{
+        font-size: 3rem;
+        font-weight: 300;
+        text-decoration: none;
+    }
+
+    .footer .social-account li a .social-icon{
+        width:4rem;
+        height:4rem;
+        stroke-width: 1;
+    }
+
+
+
+    .footer .footer-end{
+        padding: 0;
+        margin-top: 3rem;
+    }
+
+    .footer .footer-end .extra{
+        margin-top: 3rem;
+        align-self: flex-end;
+        align-items: end;
+    }
+
+    .footer .footer-end h4{
+        font-size:2rem;
+        line-height: 2rem;
+        font-weight: 400;
+    }
+
+    .footer .footer-end .extra a{
+        font-size: 2rem;
+        line-height: 2rem;
+        margin: 0px 1rem;
+    }    
+}

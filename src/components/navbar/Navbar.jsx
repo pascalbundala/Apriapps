@@ -1,127 +1,90 @@
-// import React, {useEffect,useState} from 'react';
-// import { NavLink } from "react-router-dom";
-// import './navbar.css';
-// import { Menu,X  } from 'lucide-react';
-// import useMediaQuery from "../useMediaQuery";
-
-// const Navbar = () => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const isMobile = useMediaQuery("(max-width: 768px)");
-
-//   return (
-
-//     <div className='navbar'>
-
-//         <NavLink to="/" className="logo">
-//           <img
-//             src="/src/assets/logo-bluefade.png"
-//             alt="logo for Apriapps"
-//             className="img-logo"
-//           />
-//           <div className="name-app">Apriapps</div>
-//         </NavLink>
-        
-//       {isMobile?
-//             <ul className='header'>
-//               {isOpen? <X className='menu-icon' onClick={() => setIsOpen(!isOpen)} /> :<Menu className='menu-icon' onClick={() => setIsOpen(!isOpen)} />}
-
-//               <div className={`${isOpen ? "openMenu" : "closedMenu"}`}>
-//                 <NavLink to="/about" className="item-menu">About</NavLink>
-//                 <NavLink to="/project" className="item-menu">Project</NavLink>
-//                 <NavLink to="/contact" className="item-menu">Contact</NavLink>
-//               </div>           
-//             </ul> 
-//               : 
-//             <ul className='header'>
-//                 <div className='listMenu'>
-//                 <NavLink to="/about" className="item-menu">About</NavLink>
-//                 <NavLink to="/project" className="item-menu">Project</NavLink>
-//                 <NavLink to="/contact" className="item-menu">Contact</NavLink>
-//                 </div>           
-//             </ul>
-//       }
-              
-//     </div> 
-
-//   )
-// }
-
-// export default Navbar
-
-
-
 import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import './navbar.css';
-import { Menu, X } from 'lucide-react';
-import useMediaQuery from "../useMediaQuery";
+import { Plus,Minus } from 'lucide-react';
+
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 768px)");
+   const [isOpen, setIsOpen] = useState(false);
 
-  // 🔒 STOP BODY SCROLL WHEN MENU IS OPEN (MOBILE)
-useEffect(() => {
-  if (!isMobile) return;
+    useEffect(() => {
+      if (isOpen) {
+        document.documentElement.classList.add("no-scroll");
+      } else {
+        document.documentElement.classList.remove("no-scroll");
+      }
 
-  if (isOpen) {
-    const scrollY = window.scrollY;
-    
-    document.body.style.position = "fixed";
-    document.body.style.top = `-${scrollY}px`;
-    document.body.style.width = "100%";
-  } else {
-    const scrollY = document.body.style.top;
-
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.width = "";
-
-    window.scrollTo(0, parseInt(scrollY || "0") * -1);
-  }
-
-  return () => {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.width = "";
-  };
-}, [isOpen, isMobile]);
+      return () => {
+        document.documentElement.classList.remove("no-scroll");
+      };
+    }, [isOpen]);
 
 
   return (
-    <div className='navbar'>
+    <div className='navbar padding-space'>
       <NavLink to="/" className="logo">
         <img
-          src="/src/assets/logo-bluefade.png"
+          src="/src/assets/icon-last.png"
           alt="logo for Apriapps"
           className="img-logo"
         />
-        <div className="name-app">Apriapps</div>
+        <div className="name-app">
+          <h2>Apriapps</h2>
+          <h3>Digital Solutions</h3>
+        </div>
       </NavLink>
 
-      {isMobile ? (
-        <ul className='header'>
+      <div className="header">
+        <div className="menu-wrapper"> 
           {isOpen ? (
-            <X className='menu-icon' onClick={() => setIsOpen(false)} />
+            <div className='close-icon' onClick={() => setIsOpen(false)}>
+              Close <Minus className='close-icon-icon' />
+            </div>
           ) : (
-            <Menu className='menu-icon' onClick={() => setIsOpen(true)} />
+            <div className="cta-menu">            
+              <div className='close-icon' onClick={() => setIsOpen(true)}>
+                Menu <Plus className='close-icon-icon' />
+              </div>
+            </div>
           )}
+        </div>
 
-          <div className={`${isOpen ? "openMenu" : "closedMenu"}`}>
-            <NavLink to="/about" className="item-menu" onClick={() => setIsOpen(false)}>About</NavLink>
-            <NavLink to="/project" className="item-menu" onClick={() => setIsOpen(false)}>Project</NavLink>
-            <NavLink to="/contact" className="item-menu" onClick={() => setIsOpen(false)}>Contact</NavLink>
-          </div>
-        </ul>
-      ) : (
-        <ul className='header'>
-          <div className='listMenu'>
-            <NavLink to="/about" className="item-menu">About</NavLink>
-            <NavLink to="/project" className="item-menu">Project</NavLink>
-            <NavLink to="/contact" className="item-menu">Contact</NavLink>
-          </div>
-        </ul>
-      )}
+        <div className={isOpen ? "openMenu" : "closedMenu"}>
+            <div className="nav-open">
+                  <h1>
+                    Let work<br/> together.
+                  </h1>
+                
+                  <div className="links">
+                      <NavLink to="/about" className="title-bold item-menu " onClick={() => setIsOpen(false)}>
+                        About
+                      </NavLink>
+                      <NavLink to="/project" className="title-bold item-menu " onClick={() => setIsOpen(false)}>
+                        Project
+                      </NavLink>
+                      <NavLink to="/contact" className="title-bold item-menu" onClick={() => setIsOpen(false)}>
+                        Contact
+                      </NavLink>
+                  </div>
+            </div>
+
+            <div className="simple-contact">
+              <h3 className='small-title'>hello@apriapps.com</h3>
+              <h3 className='small-title'>+255(0)785492267</h3>
+              <h3 className='small-title'>2519 new st,Moshi Kilimanjaro TZ</h3>
+            </div>
+
+            <div className="social-links">
+              <a className='small-title' href="">linkedln</a>
+              <a className='small-title' href="">facebook</a>
+              <a className='small-title' href="">twitter</a>
+              <a  className='small-title' href="">dribble</a>
+            </div>
+
+            <div className="background-shadow"></div>
+        </div>
+      </div>
+
     </div>
   );
 };

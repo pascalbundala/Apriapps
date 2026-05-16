@@ -1,0 +1,23 @@
+
+    .span-text{
+        font-weight: 600;
+        font-size: 0.65rem;
+        line-height: 0.65rem;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--white-color);
+        margin:auto 0 auto 1rem ;
+    }
+
+    .span-icon{
+        color: var(--accent-color);
+        stroke-width: 0.8;
+        display: flex;
+
+    }
+
+    .ic{
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 1rem;
+    }

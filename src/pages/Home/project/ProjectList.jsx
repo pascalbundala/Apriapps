@@ -1,111 +1,112 @@
 import React, { useRef } from "react";
 import './projectlist.css';
-import { ArrowUpRight } from 'lucide-react';
+import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
+import { useGSAP } from "@gsap/react"; 
+import { SplitText } from "gsap/SplitText";
 import useMediaQuery from "../../../components/useMediaQuery";
-
-gsap.registerPlugin(ScrollTrigger);
+import FadeText from "../../../components/FadeText";
+import Button from '../../../components/button/Button';
+import Span from '../../../components/span/span';
+import { useLenis } from "lenis/react"
+gsap.registerPlugin(ScrollTrigger,SplitText);
 
 const projectData=[
-  {img:"/src/assets/project1.jpg",name:"Talanta trust",tags:"ux&ui,Branding"},
-  {img:"/src/assets/project2.jpg",name:"Talanta trust",tags:"ux&ui,Branding"},
-  {img:"/src/assets/project3.jpg",name:"Talanta trust",tags:"ux&ui,Branding"},
+  {img:"/src/assets/project1.jpg",name:"Talanta trust",tags:"Branding"},
+  {img:"/src/assets/project2.jpg",name:"Talanta trust",tags:"Website"},
+  {img:"/src/assets/project3.jpg",name:"Talanta trust",tags:"Branding"},
+  {img:"/src/assets/project1.jpg",name:"Talanta trust",tags:"Branding"},
+  {img:"/src/assets/project2.jpg",name:"Talanta trust",tags:"Website"},
+  {img:"/src/assets/project3.jpg",name:"Talanta trust",tags:"Branding"},
 ]
 
 
 const ProjectList = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
-  const projectList=useRef(null);
-  const projectRow=useRef(null);
-  const project=useRef(null);
+  const container = useRef(null)
+  const lenis = useLenis() 
 
-  useGSAP(()=>{
-        gsap.from(".item",{
-        y:-10,
-        opacity:0,
-        ease: "power3.out",
-        duration:0.8,
-        stagger: 0.25,
-        scrollTrigger:{
-          trigger:projectList.current,
-          start:"top 80%",
-          end:"bottom 40%",
+  useGSAP(
+    () => {
+      // Sync Lenis with ScrollTrigger
+      if (lenis) {
+        lenis.on("scroll", ScrollTrigger.update)
+      }
+      
+      const wrappers = gsap.utils.toArray(".img-holder")
+      wrappers.forEach((wrapper) => {
+        const img = wrapper.querySelector("img")
+        let skewSetter = gsap.quickSetter(img, "skewY", "deg")
+        let proxy = { skew: 0 }
+        let clamp = gsap.utils.clamp(-17, 17)
+
+        ScrollTrigger.create({
+          trigger: wrapper,
+          start: "top bottom",
+          end: "bottom top",
+          onUpdate: (self) => {
+            let skew = clamp(self.getVelocity() / -300)
+            if (Math.abs(skew) > Math.abs(proxy.skew)) {
+              proxy.skew = skew
+              gsap.to(proxy, {
+                skew: 0,
+                duration: 0.8,
+                ease: "power3",
+                overwrite: true,
+                onUpdate: () => skewSetter(proxy.skew)
+              })
+            }
+          }
+        })
+      })
+
+      return () => {
+        ScrollTrigger.getAll().forEach((t) => t.kill())
+        if (lenis) {
+          lenis.off("scroll", ScrollTrigger.update)
         }
-        });
+      }
+    },
+    { scope: container }
+  )
 
-  },[]);
-
-
-  //   const startShake = (e) => {
-  //   const img = e.currentTarget;
-
-  //   gsap.killTweensOf(img);
-
-  //   img._shakeTween = gsap.to(img, {
-  //     x: 4,
-  //     rotation: 1.5,
-  //     duration: 0.1,
-  //     repeat: -1,
-  //     yoyo: true,
-  //     ease: "power1.inOut",
-  //   });
-  // };
-
-  // const stopShake = (e) => {
-  //   const img = e.currentTarget;
-
-  //   if (img._shakeTween) {
-  //     img._shakeTween.kill();
-  //     img._shakeTween = null;
-  //   }
-
-  //   gsap.to(img, {
-  //     x: 0,
-  //     rotation: 0,
-  //     duration: 0.2,
-  //     ease: "power2.out",
-  //   });
-  // };
 
 
 
   return (
-    <div className='projectList'>
+          <div className='projectList padding-space' ref={container}>
 
-      <div className={`container-holder ${isMobile ? "flex-column " : "flex  space-between" } `}>
-          <p className="project-title">
-            <span>project</span><br/>
-            We build fast, secure and <br/> user-focused digital products.
-          </p>
+            <FadeText>
+              <Span title="selected project"/>
+            </FadeText>
 
-          <div className="cta-button">
-            <ArrowUpRight  size={32} strokeWidth={0.5}  className="arrow-icon" />
-            <a href="#">View All</a>
-          </div>
-       </div>
+            <FadeText>
+              <h2 className="title-bold-extra">A selected project showcasing strategic <br/> planning and measurable <br/> <span className="span-highlight">outcomes.</span></h2>
+            </FadeText>
 
-        <div className="grid" ref={projectList}>
-          <div className="rows" ref={projectRow}>
-            {
-             projectData .map((data,index)=>(
-                <div className="item" key={index}>
-                  <div className="img-holder">
-                    <img src={data.img} alt="" 
-                    // onMouseEnter={startShake}
-                    // onMouseLeave={stopShake}
-                    />
+                <div className="grid" >
+                  <div className="rows">
+                    {
+                    projectData .map((data,index)=>(
+                        <div className="item" key={index}>
+                          <div className="img-holder">
+                            <img src={data.img} alt=""/>
+                          </div>
+                          <h3>{data.name}</h3>
+                          <p>{data.tags}</p>
+                        </div>
+                    ))
+                    }
                   </div>
-                  <h3>{data.name}</h3>
-                  <p>{data.tags}</p>
                 </div>
-             ))
-            }
-          </div>
-        </div>
-      
-    </div>
+
+                <Link to="/project" className='navigation-link'>
+                <Button text="all work" />
+                </Link>
+
+          </div>  
+
   )
 }
 

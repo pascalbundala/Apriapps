@@ -1,105 +1,117 @@
-import React, {useState} from 'react';
+import React, {useState,useRef} from 'react';
 import './service.css';
 import { ArrowUpRight,Rocket,CodeXml ,Brush,Atom   } from 'lucide-react';
+import useMediaQuery from '../../../components/useMediaQuery';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import useMediaQuery from '../../../components/useMediaQuery';
-
-gsap.registerPlugin(ScrollTrigger);
+import { SplitText } from "gsap/SplitText";
+import Span from '../../../components/span/span';
+import FadeText from '../../../components/FadeText';
+import { useLenis } from "lenis/react"
+gsap.registerPlugin(ScrollTrigger,SplitText,useGSAP);
 
 const serviceList=[
     {
-    icon:<Brush color='#28c1f4' size={42} strokeWidth={0.8} />,
-    name: ["Brand","&Creative."],
-    listitem:["brand Strategy","Visual Identity","UI&UX Design","Creative Direction"],
-    text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vitae qui, temporibus, adipisci recusandae magni consequatur ab sunt tenetur aut deserunt",
+    image:"/services/branding.jpg",  
+    name: ["Brand","& Creative."],
+    listitem:["brand Strategy","Visual Identity","Creative Direction"],
+    text:"We create strategic and visually compelling brand experiences that help businesses stand out. By combining design, strategy, and modern trends, we build brands that are clear, consistent, and impactful ensuring a strong identity and a professional presence across all platforms.",
     },
 
     {
-    icon:<Atom color='#28c1f4' size={42} strokeWidth={0.8} />,
-    name: ["Digital","Products."],
-    listitem:["Website","SaaS & Platforms","E-commerce websites","Digital & dashboards"],
-    text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vitae qui, temporibus, adipisci recusandae magni consequatur ab sunt tenetur aut deserunt",
+    image:"/services/development.jpg",  
+    name: ["Design."],
+    listitem:["User Interfaces design","User Experiences Design","Wireframes and prototypes"],
+    text:"We design clean, modern, and visually engaging interfaces that enhance usability and user satisfaction.Our approach focuses on intuitive navigation, seamless user experience (UX), and conversion-driven design,leading to higher engagement and business growth.",
     },
 
     {
-    icon: <CodeXml color='#28c1f4' size={42} strokeWidth={0.8} />,  
-    name: ["Software","Development."],
-    listitem:["Web Application","Mobile Applications","APIs & Integration","Customs Systems"],
-    text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vitae qui, temporibus, adipisci recusandae magni consequatur ab sunt tenetur aut deserunt",
+    image:"/services/marketing.png",     
+    name: ["Websites."],
+    listitem:["Business and corporate websites","Landing pages and portfolios","responsiveness"],
+    text:"We build reliable, secure, and scalable digital products tailored to your business needs.Our solutions are designed for high performance, seamless user experience, and long-term growth. we ensure flexibility, efficiency, and easy integration with your existing systems.",
     },
 
     {
-    icon: <Rocket color='#28c1f4' size={42} strokeWidth={0.8} />,    
-    name: ["SEO","Digital Marketing."],
-    listitem:["Search Engine Optimization","Digital Marketing","Analytics & Performance"],
-    text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vitae qui, temporibus, adipisci recusandae magni consequatur ab sunt tenetur aut deserunt",
+    image:"/services/marketing.png",     
+    name: ["Custom software."],
+    listitem:["Custom software systems","Mobile app (Android & iOS)","Web applications & platforms"],
+    text:"We build reliable, secure, and scalable digital products tailored to your business needs,Using modern technologies and best practices, we deliver high-performance solutions that grow with your business.Our focus is on efficiency, flexibility, and long-term value to support your success in a competitive digital landscape.",
+    },
+    {
+    image:"/services/marketing.png",     
+    name: ["Digital","Marketing."],
+    listitem:["Search Engine Optimization (SEO)","Social Media Marketing & Management","Google & Social Media Advertising","Content Marketing Strategy"],
+    text:"We help businesses grow and reach the right audience by turning online attention into real customers. Using data-driven strategies, creative campaigns, and modern digital marketing tools, we increase visibility, generate leads, and drive measurable growth.ensuring maximum impact in a competitive digital landscape.",
     },
 ]
 
 const Service = () => {
-  const [hoveredId, setHoveredId] = useState(null);
-  const isMobile=useMediaQuery("(max-width: 768px)");
+  const isMobile=useMediaQuery("(max-width:768px)");
+  const serviceListRef=useRef(null);
+  const serviceContainer=useRef(null);
+  const lenis = useLenis() 
 
     useGSAP(()=>{
-          gsap.from(".serviceItem",{
-          y:-10,
-          opacity:0,
-          ease: "power3.out",
-          duration:0.8,
-          stagger: 0.25,
-          scrollTrigger:{
-            trigger:".service-list",
-            start:"top 80%",
-            end:"bottom 40%",
-          }
-          });
-    },[]);
+     if (lenis){lenis.on("scroll", ScrollTrigger.update)}
 
-
+    
+    const serviceCard=gsap.utils.toArray(".service-item");
+    serviceCard.forEach((card,i)=>{
+      gsap.to(card,{
+        ease:"power1.inOut",
+        scrollTrigger:{
+          trigger:card,
+          start: `top ${20 + i * 0}%`,
+          end:"bottom  center",
+          endTrigger:".service-list",
+          scrub:true,
+          pin:true,
+          pinSpacing:false,
+          invalidateOnRefresh:true,
+          markers:false
+        }
+      }
+      )
+    })
+    
+    },{scope:serviceContainer})
   return (
-    <div className="service-section">
-
-      <div className={`container-holder ${isMobile ? "flex-column " : "flex  space-between" } `}>
-            <p className="project-title">
-            <span>Services</span><br/>
-            We help brands scale faster perform better  and stand out online.
-            </p>
-            <p className="small-title">Our expertise is deliberately focused. We stick to what we know because we know it better than most. These are the disciplines where we lead, innovate, and set the standard.
-            </p>
-        </div>
-
-        <div className="service-list">
-           {
-             serviceList.map((service,index)=>(
-                <div className="serviceItem"
-                    key={index}   
-                    onMouseEnter={() => setHoveredId(index)}
-                    onMouseLeave={() => setHoveredId(null)}
-                >
-                    <div className="noicon">
-                        <h3>0{index+1}</h3>
-                        <ArrowUpRight  size={32} strokeWidth={0.5}
-                        color={hoveredId === index ? "#28c1f4" : "#ffffff"}
-                        />
-                    </div>
-
-                    <div className="icons">
-                        {/* {service.icon} */}
-                    </div>
-
-                    <h2>{service.name[0]} <br />{service.name[1]}</h2>
-                    <p>{service.text}</p>
-                    <ul>
-                        {service.listitem.map((its, i) => (
-                            <li key={i}>{its}</li>
-                        ))}
-                    </ul>
+    <div className="service-section" ref={serviceContainer}>
+          <div className={`flex padding-space space-between ${isMobile?"column":"row"}`}>
+                <div className="column">
+                   <FadeText> < Span title="Our core services"/></FadeText>
+                   <FadeText><h2 className='title-bold-extra'>
+                    We provides smart digital <br/> solutions that help businesses <br/><span className="span-highlight">grow.</span>
+                    </h2></FadeText>
                 </div>
-             ))
-           }
-        </div>
+          </div>
+
+            <div className="service-list" ref={serviceListRef}>
+              {
+                serviceList.map((service,index)=>( 
+                <div className="service-item" key={index}>
+                      <div className="x-item padding-space">
+                          <h1 key={index} className='title-bold-extra'>{service.name[0]} &nbsp;
+                            {service.name[1]}
+                          </h1>
+                          <p className='small-title'>{service.text}</p>
+                        <ul>
+                          {service.listitem.map((its, i) => (
+                              <li key={i}>{its}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <img src={service.image} alt="" />
+                </div> 
+
+                ))
+              }
+            </div>
+
+            <div className="spacer"></div>
     </div>
   )
 }

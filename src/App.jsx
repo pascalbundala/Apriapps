@@ -1,51 +1,43 @@
-// import React from 'react'
-// import Hero from './components/hero/hero'
-// import Welcome from './components/welcome/welcome'
-// import Officer from './components/officer/Officer'
-// import Largeimg from './components/largeImage/Largeimg'
-// import Testmonial from './components/testmonial/Testmonial'
-// import Partner from './components/partner/Partner'
-// import Form from './components/form/Form'
-// import Footer from './components/footer/Footer'
-// import ProjectList from './components/project/ProjectList'
-// import Service from './components/service/service'
-// import Navbar from './components/navbar/Navbar'
-
-// const App = () => {
-//   return (
-//     <div className='app'>
-//        <Navbar/>     
-//        <Hero/>  
-//        <Welcome/>
-//        <ProjectList/>
-//        <Service/>
-//        <Largeimg/>
-//        <Testmonial/>
-//        <Partner/>
-//        <Form/>
-//        <Footer/>
-//     </div>
-//   )
-// }
-
-// export default App
-
-
+import React,{useRef,useEffect} from 'react';
+import gsap from 'gsap'
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Project from "./pages/Project/Project";
 import Contact from "./pages/Contact/Contact";
+import Service from "./pages/service/Service";
+import ScrollToTop from './components/scrollToTop';
+import { ReactLenis } from 'lenis/react'
 
 function App() {
+
+  const lenisRef = useRef()
+  
+  useEffect(() => {
+    function update(time) {
+      lenisRef.current?.lenis?.raf(time * 1000)
+    }
+  
+    gsap.ticker.add(update)
+  
+    return () => gsap.ticker.remove(update)
+  }, [])
+
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/project" element={<Project />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
+        <>
+            <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
+            <ScrollToTop />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/service" element={<Service />} />
+              <Route path="/project" element={<Project />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+        </>
+
   );
 }
 
 export default App;
+

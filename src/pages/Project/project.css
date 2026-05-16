@@ -1,0 +1,153 @@
+.project-page{
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    padding-top: 10rem;
+    
+}
+
+.work-title{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 5rem;
+}
+
+.work-title h1{
+    width: 100%;
+    text-align: start;
+    margin-bottom: 2rem;
+}
+
+.project-page .title{
+    width: 50%;
+    margin-top: 0;
+    margin-bottom: 0%;
+}
+
+.title .small-title{
+    width: 50%;
+}
+
+.project_list{
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.project-item {
+    width: 30%;
+    height: 70vh;
+    min-height: 50vh;
+    cursor: pointer;
+}
+
+.project-item img{
+    width: 100%;
+    height: 80%;
+    display: block;
+    object-fit: cover;
+}
+
+.simple-description{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+}
+
+.simple-description h3{
+    font-size: 0.9rem;
+    line-height: 1rem;
+    font-weight: 800;
+    width: 40%;
+    text-transform: uppercase;
+    color: var(--black-color);
+}
+
+.simple-description p{
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    font-weight: 400;
+    width: 60%;
+    display: block;
+    text-transform: uppercase;
+    text-align: end;
+}
+
+
+@media screen  and (max-width:480px) {
+
+    .project-page{
+        padding-top: 5rem;
+    }
+
+    .work-title{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .work-title h1{
+        width: 100%;
+        text-align: start;
+        margin: 0;
+    }
+
+    .project-page .title{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .title .small-title{
+        width: 70%;
+    }
+
+    .project_list{
+        width: 100%;
+
+    }
+
+    .project-item {
+        width: 100%;
+        height: 50vh;
+        margin: 1rem auto;
+    }
+
+    .project-item img{
+        width: 100%;
+        height: 80%;
+    }
+
+    .simple-description{
+        width: 100%;
+        margin: 0px;
+        padding: 1rem 0;
+        align-items: center;
+    }
+
+    .simple-description h3{
+        font-size: 0.9rem;
+        line-height: 1rem;
+        width: 40%;
+    }
+
+    .simple-description p{
+        font-size: 0.72rem;
+        font-weight: 400;
+    }
+
+
+    
+}

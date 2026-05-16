@@ -1,125 +1,67 @@
-import React, { useEffect, useRef} from 'react'
-import './hero.css'
+import React, { useState, useEffect,useRef } from 'react';
+import './hero.css';
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react"; 
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import useMediaQuery from "../../../components/useMediaQuery";
-import { BrightnessContrastShader } from 'three/examples/jsm/Addons.js';
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+gsap.registerPlugin(useGSAP,ScrollTrigger,ScrollSmoother);
+import useMediaQuery from '../../../components/useMediaQuery';
+import FadeText from '../../../components/FadeText'
 
-gsap.registerPlugin(useGSAP,ScrollTrigger);
-
-const simpleService=["Branding","websites","mobile apps","web apps","digital solutions"]
 
 const Hero = () => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-  const isLarge = useMediaQuery("(max-width: 1920px)");
+  const containerHero=useRef(null);
+  const isMobile=useMediaQuery("(max-width:768px)");
 
-  const heroSection = useRef(null);
-  const splitContainer = useRef(null);
-  const splitImage = useRef([]);
+  // useGSAP(()=>{
+  //     gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: ".video-c",
+  //         start:isMobile? "top 30%" :"top 30%",
+  //         end:isMobile? "bottom 20%" :"bottom top",
+  //         scrub: true,
+  //         pin: true,
+  //         invalidateOnRefresh: true,
+  //         markers: false
+  //       },
+  //     })
 
-
-  useGSAP(
-    isMobile?
-
-        () => {
-          const images = splitImage.current;
-          const centerIndex = Math.floor(images.length / 2);
-          const centerImage = images[centerIndex];
-          // Get center position
-          const centerRect = centerImage.getBoundingClientRect();
-
-          gsap.to(images, {
-            x: (i, el) => {
-              if (i === centerIndex) return 0;
-
-              const rect = el.getBoundingClientRect();
-              return centerRect.left - rect.left;
-            },
-            y: (i, el) => {
-              if (i === centerIndex) return 0;
-
-              const rect = el.getBoundingClientRect();
-              return centerRect.top - rect.top;
-            },
-            scale: (i) => (i === centerIndex ? 1.15 : 0),
-            opacity: (i) => (i === centerIndex ? 1 : 0),
-              scrollTrigger: {
-              trigger: splitContainer.current,
-              start: "top 40%",
-              end:"top 20%",
-              scrub:1,
-              markers:false,
-            }
-          });
-        }
-    :
-    () => {
-      const items = splitImage.current;
-      const centerIndex = Math.floor(items.length / 2);
-      items.forEach((item, i) => {
-        item.style.zIndex = items.length - i;
-      });
-
-      gsap.to(items, {
-        x: (i) =>
-          i < centerIndex
-            ?-200 * (centerIndex - i)
-            : 200 * (i - centerIndex),
-        scale: (i) => {
-              const distance = Math.abs(i - centerIndex);
-              return Math.max(0.7, 1.30 - distance * 0.2);
-            },
-        rotation: (i) => (i < centerIndex ? -360 : 360),
-        opacity: 1,
-        stagger: 0.1,
-        duration:1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: splitContainer.current,
-          start: "top 50%",
-          end: "bottom 40%",
-          scrub: true,
-          markers:false,
-        },
-      });
-  },[]);
-
+  //   .to(".background-video", { autoAlpha:1,width: "100vw", height: isMobile ? "50vh" : "90vh", ease: "none" })
+  //   .to(".video-c",{width:"50%",autoAlpha:1});
+    
+  //   },
+  // {scope: containerHero});
 
   return (
 
-    <div className='hero-section'  ref={heroSection}>
-          <div className="background-container">
-             <div className="background-blur"></div>
-             <div className="background-blur"></div>
-          </div>
-          <div className="background-container-2">
-             <div className="background-blur2"></div>
-          </div>
+    <div className="hero flex column padding-space " ref={containerHero}>
 
-        <div className='hero'>
-            <div className="xh2"><h2>We create <span>digital experience</span><br /> for your brands.</h2></div>
-            <div className="hero-title">
-                   {
-                    simpleService.map((simple,index)=>(
-                      <p className='herotitle' key={index}>{simple}</p>
-                    ))
-                   }
-            </div> 
-        </div>
+      <FadeText>
+        <h1 className="larger-h1">
+          We  Built <br/>Digital Solutions.
+      </h1></FadeText>
 
-        <div className="scatter-container" ref={splitContainer}>
-          {[1, 2, 3,4,5].map((_, index) => (
-            <img
-              className="scatter-item"
-              key={index}
-              ref={(el) => (splitImage.current[index] = el)}
-              src="/src/assets/split-image.jpg"
-              alt=""
-            />
-          ))}
-        </div>
+
+      <FadeText>
+        <p className="small-title">
+         Build your premium experience online, where innovation meets excellence and results speak louder.
+      </p></FadeText>
+
+{/* 
+      <div className="center-horizontal details">
+            <p className='title-bold-extra'>
+                Apriapps is a results-driven digital agency delivering precise, tailored solutions that help businesses achieve measurable growth. We create bespoke websites that not only look exceptional but also generate enquiries and drive real business impact.
+            </p>
+
+            <div className="video-c">
+               <video autoPlay muted loop playsInline className="background-video">
+                  <source src="/billboard.mp4" type="video/mp4"/>
+               </video>
+            </div>
+      </div> */}
+      {/* <div className="spacer-hero"></div> */}
     </div>
+
   )
 }
 

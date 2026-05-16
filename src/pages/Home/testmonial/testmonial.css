@@ -1,33 +1,23 @@
 .testmonial{
-    padding: 50px 0px;
+    padding: 10rem 0 10rem 0;
     display: flex;
     flex-flow:  column nowrap;
     justify-content: space-between;
-    color: #303030;
 }
 
-.testmonial .intro-div{
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    display: none;
+.t-header{
+    justify-content: space-between;
 }
 
-.testmonial .intro-div h4{
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 500;
-    text-align: center;
+.testmonial .title-bold-extra{
+    text-align: start;
+    width: 120%;
+    color: var(--black-color);
 }
 
-.testmonial .intro-div img{
-    width: 250px;
-    height: 70px;   
-    margin-top: 0px;
+.testmonial .span-text,.testmonial .span-icon{
+    color: var(--black-color);
 }
-
 
 .slider-track {
     display: flex;
@@ -36,9 +26,9 @@
 }
 
 .slide-holder{
-    width: 90%;
+    width: 100%;
     height: fit-content;
-    margin-bottom: 50px;
+    margin-bottom: 3rem;
     position: relative;
     justify-content: flex-end;
     margin: 0 auto;
@@ -46,18 +36,18 @@
 .slide-button{
     height: fit-content;
     width: fit-content;
-    padding: 10px;
-    border: 1px solid #00000050;
+    padding: 0.8rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20px;
+    margin-left: 1rem;
     cursor: pointer;
+    border: 1px solid var(--black-color);
 }
 
 .slide-arrow{
-    color: #000000c0;
+    color: var(--black-border-color);
     size: 2rem;
     stroke-width: 1;
 }
@@ -72,9 +62,7 @@
 
 .main-card{
     width: 100%;
-    padding: 0px 5%;
     display: flex;
-    justify-content: space-evenly;
     height: fit-content;
     margin: 60px auto;
     overflow: hidden;
@@ -83,18 +71,27 @@
 }
 
 .card-test{
-    border-radius: 0px;
-    min-height:400px;
-    width: 40%;
-    padding: 20px 30px;
-    border: 0.6px solid #ababab24;
+    border-radius: var(--border-radius);
+    height: fit-content;
+    width: 30%;
+    padding: 4rem 0;
     opacity: 1;
-    margin-right:50px;
+    margin-right:0rem;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
-    white-space: normal; 
+    white-space: normal;
+    color: var(--black-color);
+    background-color: var(--dark-white);
+    position: relative;
+    overflow: hidden;
 }
+
+.testmonial .background-shadow{
+    top: -150px;
+    left: -100px;
+}
+
 .card-test .title-c{
     display: flex;
     flex-flow: row nowrap;
@@ -102,13 +99,13 @@
     height: fit-content;
     width: fit-content;
     align-items: center;
-    margin: 0px auto 20px auto ;
+    margin: 0px auto 3rem auto ;
 }
 
 .card-test .title-c img{
     border-radius: 50%;
-    width: 60px;
-    height:60px;
+    width: 4rem;
+    height:4rem;
 }
 
 .card-test .title-c .names{
@@ -121,10 +118,9 @@
 }
 
 .card-test .title-c .names h4{
-    font-size: 1rem;
-    font-weight: 900;
-    color: #444;
-    line-height: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1rem;
     margin: 0;
     padding: 0;
     text-align: start;
@@ -132,25 +128,29 @@
 }
 
 .card-test .title-c .names h3{
-    font-size: 0.8rem;
-    font-weight: 400;
-    font-style: italic;
-    line-height: 13px;
-    margin-top: 3px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.2rem;
+    margin-top: 0.3rem;
     padding: 0;
     text-align: start;
+    text-transform: uppercase;
 }
 
-.card-test p{
-    width: 100%;
-    text-transform: lowercase;
-    font-size: 0.95rem;
-    font-family: "Inter", serif;
-    font-weight: 300;
-    line-height: 1.4rem;
-    text-align: center;
-    margin: 20px auto;
-    color: #021c2b;
+.card-test .small-title{
+    width: 80%;
+    text-align: start;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.card-test .test-icon{
+    position: absolute;
+    font-size: 3rem;
+    bottom: 6rem;
+    right: 20%;
+    stroke-width: 1;
 }
 
 .card-test .stars{
@@ -159,7 +159,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 40px auto 10px auto ;
+    margin: 3rem auto 0 auto;
 
 }
 
@@ -167,30 +167,35 @@
     height: fit-content;
     width: fit-content;
     display: block;
+    padding: 0;
 }
 .card-test .stars span img{
-    width: 10px;
-    height: 10px;
-    margin-right: 3px;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0rem;
 }
 
 
 @media screen and (max-width:480px) {
 
-    .testmonial .intro-div{
-        margin-top: 30px;
+    .testmonial .title-bold-extra{
+        text-align: center;
+        margin: 0 auto;
     }
 
-    .testmonial .intro-div h4{
-        font-size: 1.2rem;
-        line-height: 1.2rem;
+    .testmonial .slide-holder{
+        margin: 2rem auto;
+        justify-content: center;
     }
 
-    .testmonial .intro-div img{
-        width: 250px;
-        height: 70px;   
+
+    .slide-button{
+        padding: 0.5rem;
     }
 
+    .slide-arrow{
+        size: 1rem;
+    }
 
     .main-card{
         padding: 0px;
@@ -207,15 +212,24 @@
         margin-left: 5%;
         flex-shrink: 0;
         white-space: normal; 
+        border-right: 1px solid var(--black-border-color);
     }
     .card-test .title-c{
         margin-bottom: 20px;
         width: 100%;
     }
 
-    .card-test .title-c img{
+    .card-test .title-c .img-pass{
         width: 50px;
         height:50px;
+        border-radius: 50%;
+    }
+
+    .card-test .title-c .img-pass img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .card-test .title-c .names{

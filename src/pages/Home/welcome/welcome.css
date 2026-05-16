@@ -3,89 +3,109 @@
     height:fit-content;
     display: flex;
     flex-flow: column nowrap;
-    color: white;
     justify-content: center;
-    align-items:space-between;
-    padding: 50px 5% 50px 5%;
-    background:linear-gradient(#fff,#c4f9ff31,#fff);
-  
+    padding: 6rem 0 8rem 0;
+    background-color: var(--white-color);
 }
 
-.large-intro{
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 36px;
+.welcomeintro .title-bold-extra{
     width: 50%;
-    color: #222222;
     text-align: start;
-    margin-bottom: 0px;
-    will-change: color, transform;
-    display: none;
-    font-family: "Roboto", sans-serif;
-}
-.text-intro{
-    font-size: 1.7rem;
-    font-weight: 300;
-    line-height: 2.45rem;
-    width: 90%;
-    margin: 0 auto;
-    color: #303030;
-    text-align: center;
-    margin-bottom: 40px;
-    will-change: color, transform;
-    display: block;
-    font-family: "Inter", serif;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 600;
+    color: var(--black-fade-color);
 }
 
-.char {
-  display: inline-block;
+.welcomeintro .title-bold-extra .span-highlight{
+    color: var(--black-color);
 }
+
+.welcomeintro .span-text,.welcomeintro .span-icon{
+    color: var(--black-color);
+}
+
+.welcomeintro .small-title{
+    width: 40%;
+    margin: 0rem auto 6rem auto;
+    text-align: center;
+}
+
+.welcomeintro .btn{
+    margin-top: 8rem;
+}
+
+
 
 @media screen and (max-width:480px) {
 
     .welcomeintro{
-        padding: 50px 5% 50px 5%;
+        width: 100%;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
     }
 
+    .welcomeintro .title-bold-extra-welcome{
+        width: 100%;
+        text-align: start;
+        margin: 0 auto 2rem auto;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        margin-top: 0;
+    }
 
-    .text-intro{
-        font-size: 1.1rem;
-        font-weight: 300;
-        line-height: 1.9rem;
-        width: 90%;
-        margin: 0px auto;
-        color: #303030;
+    .welcomeintro .small-title{
+        width: 80%;
+        margin: 0rem auto 0rem auto;
         text-align: center;
-        will-change: color, transform;
-        display: block;
-        margin-bottom: 30px;
     }
+
+    .welcomeintro .button-cta{
+        margin-top: 3rem;
+}
 }
 
 @media screen and (min-width:481px) and (max-width:768px) {
 
-        .welcomeintro{
-        padding: 50px 5% 50px 5%;
-        height: fit-content;
+    .welcomeintro{
+        width: 100%;
+        padding-bottom: 0;
     }
 
-        .text-intro{
-        font-size: 1.3rem;
-        line-height: 2rem;
-        font-weight: 300;
-        width: 90%;
-        
+    .welcomeintro .title-bold-extra{
+        width: 80%;
+        text-align: center;
+        margin: 0 auto 2rem auto;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .welcomeintro .small-title{
+        width: 80%;
+        margin: 0rem auto 4rem auto;
+        text-align: center;
     }
     
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {
-    .text-intro{
-        font-size: 1.4rem;
-        line-height: 2rem;
-        font-weight: 300;
-        width: 90%;
-        
+    .welcomeintro{
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .welcomeintro .title-bold-extra{
+        width: 60%;
+        text-align: center;
+        margin: 0 auto 2rem auto;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .welcomeintro .small-title{
+        width: 60%;
+        margin: 0rem auto 4rem auto;
+        text-align: center;
     }
     
 }
@@ -98,5 +118,4 @@
         font-weight: 300;
         width: 80%;
     }
-    
 }

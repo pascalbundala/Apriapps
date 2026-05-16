@@ -1,103 +1,77 @@
 import React, { useEffect, useRef } from 'react'
+import { Link } from "react-router-dom";
 import './welcome.css'
-import { ReactLenis, useLenis } from 'lenis/react'
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { SplitText } from "gsap/SplitText"
-import { ArrowUpRight } from 'lucide-react';
-import useMediaQuery from '../../../components/useMediaQuery';
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { SplitText } from "gsap/SplitText";
+import Span from '../../../components/span/span';
+import Button from '../../../components/button/Button';
+import FadeText from '../../../components/FadeText';
 
-gsap.registerPlugin(ScrollTrigger, SplitText)
+
+gsap.registerPlugin(useGSAP,ScrollTrigger,ScrollSmoother,SplitText);
 
 const Welcome = () => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-  const large = useRef(null)
-  const small = useRef(null)
-  const buttonReveal = useRef(null)
-  const lenis = useLenis()
+  const containerWelcome = useRef();
+  const welcomeText  = useRef();
 
-  useEffect(() => {
-    document.fonts.ready.then(() => {
+    useGSAP(
+    () => {
+      if (!containerWelcome.current || !welcomeText.current) return;
 
-      if (lenis) {
-        lenis.on('scroll', ScrollTrigger.update)
-        gsap.ticker.add((time) => {
-          lenis.raf(time * 1000)
-        })
-        gsap.ticker.lagSmoothing(0)
-      }
+      const init = async () => {
+        await document.fonts.ready;
+        const split = new SplitText(welcomeText.current, {
+          type: "words",
+          wordsClass: "word"
+        });
 
-      const splitWord = new SplitText(large.current, { type: "words" })
-      const splitChar = new SplitText(small.current, { type: "chars" })
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: welcomeText.current,
+            start: "top 80%",
+            end: "bottom center",
+            pin: false,
+            scrub: true,
+            markers: false
+          }
+        });
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".welcomeintro",
-          start: "100px 100%",
-          end: "70% 60%",
-          scrub: 0.5,
-        },
-      })
+        tl.from(
+          split.words,
+          {
+            opacity: 0.1,
+            stagger: 0.1
+          },
+          0.1
+        );
+        ScrollTrigger.refresh();
+      };
 
-      tl.from(
-        splitChar.chars,
-        {
-          opacity:0,
-          stagger: 0.03,
-          duration: 0.6,
-          ease: "power3.out",
-        },
-        "+=0.4"
-      )
-
-      tl.fromTo(buttonReveal.current,
-        {
-          opacity:0,
-        },{
-          opacity:1,
-        }
-      )
-
-
-      return () => tl.kill()
-
-    })
-  }, [lenis])
+      init();
+    },
+    { scope: containerWelcome }
+  );
+    
+{/* <span className='span-highlight'>growth</span> 
+<span className='span-highlight'>digital solutions.</span> */}
 
   return (
-    <ReactLenis root options={{ smooth: true, lerp: 0.1 }}>
-      <div className='welcomeintro'>
-
-            <div
-      className={`container-holder flex ${
-        isMobile ? "mobile-layout" : "space-between"
-      }`}
-    ></div>
-
-
-        <div className={`container-holder ${isMobile ? "flex-column " : "flex space-between" } `}>
-          <p className="project-title">
-            <span>About Us</span><br/><br/>
+    <>
+      <div className='welcomeintro padding-space' ref={containerWelcome} > 
+        <FadeText>< Span title="Our Studio"/></FadeText>
+          <p className='title-bold-extra' ref={welcomeText}>
+            We transform technology into growth by delivering smart digital solutions. from custom software,web and mobile apps to cloud systems that help businesses succeed in the modern digital world.
           </p>
-        </div>
-
-        <p ref={large} className='large-intro'>
-          We create smart, scalable, and seamless tools to help you succeed in the modern digital world.
-        </p>
-
-        <p ref={small} className='text-intro'>
-          We turn technology into opportunity. We are a forward-thinking IT and digital solutions company passionate about helping businesses grow, scale, and succeed in the modern digital world. From custom software development, web and mobile app design, to cloud systems and digital transformation, we deliver smart, seamless, and scalable solutions that drive real impact.
-        </p>
-
-        <div className="center flex">
-          <div className='cta-button' ref={buttonReveal}>
-            <ArrowUpRight  size={32} strokeWidth={0.5} className="arrow-icon" />
-            <a href="#">About Us</a>
-          </div>
-        </div>
+            
+          <Link to="/about" className='navigation-link'>
+           <Button text="Agency" />
+          </Link>
 
       </div>
-    </ReactLenis>
+    </>
   )
 }
 

@@ -1,17 +1,23 @@
 .navbar{
     width: 100%;
-    height: 10vh;
-    background: rgb(255, 255, 255,0.05); 
-    backdrop-filter: blur(10px); 
+    height: fit-content;
+    /* backdrop-filter: blur(20px);  */
     display: flex;
     flex-flow: row nowrap;
     text-align: center;
     align-items: center;
-    padding: 0 5%;
-    position: sticky;
-    top: 0;
     z-index: 2000;
+    box-sizing: border-box;
+    position: fixed;
+    left: 50%;
+    top: 0rem;
+    transform: translateX(-50%);
+    border-radius:var(--border-radius);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
+
+
 .logo{
     flex: 1;
     display: flex;
@@ -26,93 +32,206 @@
 }
 
 .logo .name-app{
-    font-family: "Inter", serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 1rem;
-    text-transform: uppercase;
+    display: flex;
+    flex-flow: column nowrap;
     margin-left: 0.5rem;
-    text-decoration: none;
-    color: #000;
+}
+.logo .name-app h2{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-color);
+    text-align: start;
+    padding: 0;
+    margin: 0;
 }
 
+.logo .name-app h3{
+    font-size: 0.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--white-color);
+    text-align: start;
+    display: none;
+}
+
+
+
 .img-logo{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: fill;
     display: inline-block;
 }
 
-.header{
+.header {
     flex: 1;
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
     height: fit-content;
-    margin: auto 0;
-    justify-content: flex-end;
-}
-
-.zero-menu{
+    position: relative;
     display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.listMenu{
+.menu-wrapper {
+    position: relative;
+    width: auto;
+}
+
+.openMenu {
+    top: 4rem;
+    right: 0;
+    left: auto; 
+    width: calc(93.2vw);
+    height: 85vh;
+    position: absolute;
+    background-color: var(--black-fade-color);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 2rem;
+    z-index: 2100; 
+}
+.cta-menu{
+    width: fit-content;
+    cursor: pointer;
     display: flex;
     flex-flow: row nowrap;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.header .close-icon{
+    min-width:4rem;
+    padding: 0.8rem;
+    height: fit-content;
+    cursor: pointer;
+    font-size: .7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color:var(--white-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-icon-icon{
+    stroke-width: 0.8;
+    margin-left: 0.5rem;
+}
+
+
+.nav-open{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+    color: var(--white-color);
+}
+
+.nav-open h1{
+    font-size: 3rem;
+    width: 50%;
+    text-align: start;
+}
+
+.nav-open .links{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: end;
+}
+
+.links .title-bold{
+    color: var(--white-color);
+    font-size: 3rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
 
 .item-menu{
   text-decoration: none;
-  color: #000;
-  font-size: 0.8rem;
-  font-weight: 400;
-  margin-right: 2rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
-  font-family: "Inter", sans-serif;
+  margin: 0.3rem 0;
+  text-transform: capitalize;
+  padding-right: 3rem;
 }
 
-.item-menu:hover{text-decoration: none;}
+.item-menu:hover{
+    text-decoration: none;
+}
 
   .item-menu.active {
-    text-decoration: line-through;
     pointer-events: none; 
-    font-size: 1.2rem;
-
+    text-decoration: line-through;
   }
 
 .item-menu:active::after {
   width: 100%;
 }
 
-.menu-icon{
-    color: black;
-    size: 32;
-    stroke-width: 0.8;
-    cursor: pointer;
-}
-
-.openMenu{
-    display: flex;
-    flex-flow: column;
-    background-color:#fff;
-    position: absolute;
-    top: 90%;
-    width: 100vw;
-    height: 100vh;
-    padding: 30px 2%;
-    align-items: end;
-    overflow: hidden;
-}
-
 .openMenu .item-menu {
-  margin: 10px 0px;
   width: fit-content;
-  float: right;
+  padding: 0;
 }
 
 .closedMenu{
   display: none;
+}
+
+.simple-contact{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+}
+
+.simple-contact .small-title {
+    width: fit-content;
+    font-weight: 400;
+    text-transform: lowercase;
+    margin-top: 0.3rem;
+    color: var(--white-fade-color);
+}
+
+.social-links{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: end;
+    border-top: 1px solid var(--white-fade-color);
+    padding-top: 1rem;
+}
+
+.social-links a{
+    text-decoration: none;
+    width: fit-content;
+    margin: 0 1rem;
+    color: var(--white-fade-color);
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.social-links a:hover{
+    color: var(--accent-color);
+}
+
+
+.openMenu .background-shadow{
+    width: 100%;
+    height: 100px;
+    border-radius: 0;
+    bottom:0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    filter: blur(350px);
 }
 
 /* RESPONSIVE NAVBAR */
@@ -121,12 +240,8 @@
       width: 100vw;
       padding: 0;
       height: fit-content;
-      padding: 10px 0px;
     }
 
-    .navbar .logo{
-        margin-left: 5%;
-    }
     .img-logo{
         width: 30px;
         height: 30px; 
@@ -135,13 +250,43 @@
         font-size: 0.8em;
     }
 
-    .navbar .header .menu-icon{
-       margin-right: 5%;
+    .openMenu{
+        padding:0 1rem 2rem 1rem;
     }
+
+
+    .nav-open{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+    }
+
+    .nav-open h1{
+        font-size: 2.5rem;
+        line-height: 2rem;
+        width: 50%;
+        text-align: start;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .nav-open .links{
+        width: 50%;
+        justify-content: start;
+    }
+
+    .item-menu{
+        margin: 0.3rem 0;
+        text-transform: capitalize;
+        padding-right: 0rem;
+    }
+
+
 }
-
-
-
 
 @media screen and (min-width:481px)  and (max-width:768px){
     .navbar{
@@ -172,7 +317,6 @@
          margin-top: 20px;
     }
 }
-
 
 @media screen and (min-width:769px)  and (max-width:1024px){
     .navbar{

@@ -1,0 +1,249 @@
+.sevc{
+    padding: 0;
+}
+
+.sevc .container-holder{
+    background-color: #fff;
+    margin: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.sevc .big-title{
+    margin-bottom: 10rem;
+    width: fit-content;
+    padding: 0;
+    margin-top: 0;
+    width: 50%;
+    margin: 0 auto 10rem auto;
+    height: fit-content;
+}
+
+.sevc-list{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    height: fit-content;
+    margin: 0 0  5rem 0rem;
+}
+.sevc-list h3{
+    margin: 10px 0;
+}
+
+
+.ul-list{
+    display: column;
+}
+
+.ul-list li{
+    list-style: none;
+    margin: 20px 0px;
+    font-size: 2.7rem;
+    line-height: 5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+.ul-list li  span{
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-right: 0;
+    padding: 0;
+}
+
+
+.ready-work{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    margin-bottom: 8rem;
+}
+
+.ready-work .title-bold{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.ready-work .title-bold span{
+    line-height: 3rem;
+    color: var(--accent-color);
+}
+
+.ready-work .cta-work{
+    width: 50%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ready-work .cta-work button{
+    padding: 20px;
+    height: fit-content;
+    background-color: var(--accent-color);
+    border: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+/* HOW WE WORK*/
+.how{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    background-color: #eee;
+    padding:8rem 8%;
+    display: flex;
+}
+
+.how span{
+    width: fit-content;
+    margin: 0 auto;
+}
+.how .title-bold{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.how .prs{
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+}
+
+
+.how .prs .hows{
+    width: 40%;
+    height: fit-content;
+    display: flex;
+    padding: 0px; 
+    align-items: start;
+}
+
+
+.how .hows:nth-child(2n+1){
+     margin-top: 0rem;
+     align-items: center;
+}
+
+.how .hows:nth-child(even){
+     margin-top: 20rem;  
+     align-items: center; 
+     flex-direction: row-reverse; 
+}
+
+.how .prs .hows .how-image{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.how .prs .hows img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.how .prs .hows .width-50{
+    width: 50%;
+    height: 100%;
+    padding-right: 1.5rem;
+    padding-left: 0.8rem;
+}
+
+.how .hows h2{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: var(--accent-color);
+    text-align: start;
+    width: 100%;
+    display: block;
+}
+
+
+.how .hows .how-title{
+    font-weight: 600;
+    width: 100%;
+    line-height: 1.4rem;
+    text-align: start;
+    margin: 0 0 1rem 0;
+    color: var(--fade-color);
+
+}
+
+.how .hows .standard-text{
+    width: 100%;
+    color: var(--black-color);
+
+}
+
+
+
+/* TECH STACK */
+.techstack{
+    height: fit-content;
+    width: 100%;
+    background-color: var(--black-color);
+    padding: 8rem 8%;
+    justify-content: center;
+    align-items: center;
+}
+
+.techstack span{
+    width: fit-content;
+    color: var(--white-color);
+}
+.techstack .title-bold{
+    width: 60%;
+    color: var(--white-color);
+    text-align: center;
+    margin:2rem auto 5rem auto;
+}
+
+.techs{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    margin-top: 30px;
+}
+.tech {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 11rem;
+    width: 11rem;
+    padding: 20px 30px;
+    background-color: var(--blackfade-color);
+    color: var(--white-color);
+    margin: 10px;
+}
+
+.tech img{
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+
+.tech h3{
+    font-size: 1rem ;
+    line-height: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    text-transform: capitalize;
+}
