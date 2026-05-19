@@ -21,27 +21,43 @@ const Navbar = () => {
 
 
   return (
-    <div className='navbar padding-space'>
+    <div className='navbar'>
+
       <NavLink to="/" className="logo">
         <img
-          src="/src/assets/icon-last.png"
+          src="/src/assets/icon-white-transparent.png"
           alt="logo for Apriapps"
           className="img-logo"
         />
         <div className="name-app">
-          <h2>Apriapps</h2>
-          <h3>Digital Solutions</h3>
+          <h2>apriapps</h2>
         </div>
       </NavLink>
 
-      <div className="header">
+      <div className="header-desktop">
+        <ul>
+          <NavLink to="/about" className="item-menu">
+            About
+          </NavLink>
+          <NavLink to="/project" className="item-menu">
+            Project
+          </NavLink>
+          <NavLink to="/contact" className="item-menu">
+            Contact
+          </NavLink>
+        </ul>
+
+      </div>
+
+
+      <div className="header-mobile">
         <div className="menu-wrapper"> 
           {isOpen ? (
             <div className='close-icon' onClick={() => setIsOpen(false)}>
               Close <Minus className='close-icon-icon' />
             </div>
           ) : (
-            <div className="cta-menu">            
+            <div className="cta-menu">             
               <div className='close-icon' onClick={() => setIsOpen(true)}>
                 Menu <Plus className='close-icon-icon' />
               </div>

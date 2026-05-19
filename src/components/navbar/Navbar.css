@@ -1,31 +1,30 @@
 .navbar{
     width: 100%;
     height: fit-content;
-    /* backdrop-filter: blur(20px);  */
     display: flex;
     flex-flow: row nowrap;
-    text-align: center;
-    align-items: center;
+    justify-content: space-between;
     z-index: 2000;
     box-sizing: border-box;
     position: fixed;
-    left: 50%;
-    top: 0rem;
-    transform: translateX(-50%);
-    border-radius:var(--border-radius);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    top: 1rem;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 
 .logo{
-    flex: 1;
+    width: fit-content;
     display: flex;
     flex-flow: row nowrap;
     justify-content: start;
     align-items: center;
     padding: 0;
     text-decoration: none;
+    backdrop-filter: blur(10px); 
+    /* border: 1px solid rgba(255, 255, 255, 0.204); */
+    padding: 0.8rem;
+    border-radius:var(--border-radius);
 }
 .logo:hover{
     text-decoration: none;
@@ -37,40 +36,64 @@
     margin-left: 0.5rem;
 }
 .logo .name-app h2{
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--white-color);
     text-align: start;
     padding: 0;
     margin: 0;
+    letter-spacing: -1px;
+    font-family: "Geist", sans-serif;
 }
-
-.logo .name-app h3{
-    font-size: 0.5rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--white-color);
-    text-align: start;
-    display: none;
-}
-
 
 
 .img-logo{
-    width: 40px;
-    height: 40px;
-    object-fit: fill;
+    width: 2rem;
+    aspect-ratio: 1;
+    object-fit: contain;
     display: inline-block;
 }
 
-.header {
-    flex: 1;
+.header-desktop {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.204);
+    border-radius:var(--border-radius);
+}
+
+
+.header-desktop ul{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.header-desktop ul .item-menu{
+    padding: 0.8rem;
+    height: fit-content;
+    cursor: pointer;
+    font-size: .7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+.header-mobile {
+    width: fit-content;
     height: fit-content;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.204);
+    border-radius:var(--border-radius);
+    display: none;
 }
 
 .menu-wrapper {
@@ -102,7 +125,7 @@
     text-transform: uppercase;
 }
 
-.header .close-icon{
+.header-mobile .close-icon{
     min-width:4rem;
     padding: 0.8rem;
     height: fit-content;
@@ -237,8 +260,6 @@
 /* RESPONSIVE NAVBAR */
 @media screen and (max-width:480px) {
     .navbar{
-      width: 100vw;
-      padding: 0;
       height: fit-content;
     }
 
@@ -253,7 +274,6 @@
     .openMenu{
         padding:0 1rem 2rem 1rem;
     }
-
 
     .nav-open{
         display: flex;
@@ -285,6 +305,13 @@
         padding-right: 0rem;
     }
 
+    .header-desktop {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+    }
 
 }
 
@@ -307,7 +334,7 @@
     .name-app{
         font-size: 0.8em;
     }
-    .navbar .header .menu-icon{
+    .navbar .header-mobile .menu-icon{
        margin-right: 5%;
     }
 
@@ -315,6 +342,10 @@
          font-size: 1.2rem;
          font-weight: 300;
          margin-top: 20px;
+    }
+
+    .header-desktop {
+        display: none;
     }
 }
 
@@ -338,8 +369,7 @@
         font-size: 0.8em;
     }
 
-
-    .navbar .header .menu-icon{
+    .navbar .header-mobile .menu-icon{
        margin-right: 5%;
     }
 }
@@ -362,7 +392,7 @@
         font-size: 0.8em;
     }
 
-    .navbar .header .menu-icon{
+    .navbar .header-mobile .menu-icon{
        margin-right: 5%;
     }
 
