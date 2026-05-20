@@ -22,9 +22,13 @@
     padding: 0;
     text-decoration: none;
     backdrop-filter: blur(10px); 
-    /* border: 1px solid rgba(255, 255, 255, 0.204); */
     padding: 0.8rem;
     border-radius:var(--border-radius);
+
+}
+
+.border{
+    border: 1px solid rgba(255, 255, 255, 0.204);
 }
 .logo:hover{
     text-decoration: none;
@@ -33,7 +37,9 @@
 .logo .name-app{
     display: flex;
     flex-flow: column nowrap;
-    margin-left: 0.5rem;
+     margin-left: 0.5rem;
+    transition: all 0.3s ease;
+   
 }
 .logo .name-app h2{
     font-size: 1.5rem;
@@ -44,6 +50,13 @@
     margin: 0;
     letter-spacing: -1px;
     font-family: "Geist", sans-serif;
+}
+
+.logo .hide-name {
+  display:none;
+  transform: translateX(-20px);
+  pointer-events: none;
+  
 }
 
 
@@ -317,7 +330,7 @@
 
 @media screen and (min-width:481px)  and (max-width:768px){
     .navbar{
-      width: 100%;
+      width: 97%;
       padding: 0;
       padding: 0 5%;
       height: fit-content;
@@ -346,6 +359,10 @@
 
     .header-desktop {
         display: none;
+    }
+
+    .header-mobile {
+        display: block;
     }
 }
 
