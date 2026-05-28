@@ -55,20 +55,18 @@ const Welcome = () => {
     { scope: containerWelcome }
   );
     
-{/* <span className='span-highlight'>growth</span> 
-<span className='span-highlight'>digital solutions.</span> */}
-
   return (
     <>
       <div className='welcomeintro padding-space' ref={containerWelcome} > 
         <FadeText>< Span title="Our Studio"/></FadeText>
-          <p className='title-bold-extra' ref={welcomeText}>
-            We transform technology into growth by delivering smart digital solutions. from custom software,web and mobile apps to cloud systems that help businesses succeed in the modern digital world.
-          </p>
-            
-          <Link to="/about" className='navigation-link'>
-           <Button text="Agency" />
-          </Link>
+
+        <p className='title-bold-extra' ref={welcomeText}>
+          We transform technology into growth by delivering smart digital solutions. from custom software,web and mobile apps to cloud systems that help businesses succeed in the modern digital world.
+        </p>
+          
+        <Link to="/about" className='navigation-link'>
+          <Button text="Agency" />
+        </Link>
 
       </div>
     </>

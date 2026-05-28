@@ -2,7 +2,6 @@ import Navbar from "../../components/navbar/Navbar";
 import './about.css';
 import Footer from "../../components/footer/Footer";
 import Form from "../../components/form/Form";
-import { Const } from "three/tsl";
 
 const sts=[{no:"08", name:"years"},{no:"12", name:"projects"},{no:"120", name:"clients"},{no:"12", name:"countries"},]
 
