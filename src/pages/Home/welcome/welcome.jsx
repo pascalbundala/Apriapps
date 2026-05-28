@@ -9,6 +9,8 @@ import { SplitText } from "gsap/SplitText";
 import Span from '../../../components/span/span';
 import Button from '../../../components/button/Button';
 import FadeText from '../../../components/FadeText';
+import officeImage from "../../../assets/office-image.jpg";
+
 
 
 gsap.registerPlugin(useGSAP,ScrollTrigger,ScrollSmoother,SplitText);
@@ -58,16 +60,25 @@ const Welcome = () => {
   return (
     <>
       <div className='welcomeintro padding-space' ref={containerWelcome} > 
-        <FadeText>< Span title="Our Studio"/></FadeText>
+        <span className='line-span'></span>
 
-        <p className='title-bold-extra' ref={welcomeText}>
-          We transform technology into growth by delivering smart digital solutions. from custom software,web and mobile apps to cloud systems that help businesses succeed in the modern digital world.
-        </p>
-          
-        <Link to="/about" className='navigation-link'>
-          <Button text="Agency" />
-        </Link>
+        <div className="container-holder flex row space-between">
+            <FadeText>< Span title="Our Studio"/></FadeText>
+            <FadeText>< Span title="Est 2019"/></FadeText>
+        </div>
 
+
+        <div className="container-holder flex row space-between">
+          <FadeText>
+              <p className='title-bold-extra' ref={welcomeText}>
+                We transform technology into growth by delivering smart digital solutions.From custom software,web and mobile apps to cloud systems that help businesses succeed in the modern digital world.
+            </p>
+          </FadeText>
+
+          <FadeText>
+            <img className="abx-image" src={officeImage} alt="About us" />
+          </FadeText>
+        </div>
       </div>
     </>
   )

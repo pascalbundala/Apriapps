@@ -2,20 +2,36 @@
     width: 100%;
     height:100vh;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--white-color);
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+    padding-top:4rem;
 }
 
-.welcomeintro .title-bold-extra{
-    width:70%;
+.line-span{
+    width: 100%;
+    height: 1px;
+    display: block;
+    background-color: var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.welcomeintro p{
+    width:50%;
     text-align: start;
-    font-size: 2.5rem;
-    line-height: 3.3rem;
+    font-size: 1.96rem;
+    line-height:2.7rem;
     font-weight: 500;
-    margin: 0 auto;
-    color: var(--text-color);
+    margin-top: 4rem;
+    color: #454545;
+}
+
+.abx-image{
+    width: 200px;
+    height: 300px;
+    display: block;
+    object-fit: contain;
+    margin-top: 10rem;
 }
 
 .welcomeintro .title-bold-extra .span-highlight{

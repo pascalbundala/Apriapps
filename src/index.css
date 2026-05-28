@@ -64,8 +64,6 @@
     .container-holder{
         width: 100%;
         height: fit-content;
-        padding: 0 5%;
-        margin: 20px 0px 50px 0px;
     }
 
     .g-holder{
@@ -204,7 +202,6 @@
     --white-color:#ffffff;
     --white-fade-color:#b4b4b4;
     --dark-white:#edf1f2;
-
     --accent-color:#33ccff;
 
     /* black color */
@@ -212,7 +209,8 @@
     --black-2-color:#181b1f;
     --black-fade-color:#161616;
 
-    --text-color:#212121;
+    /* Text Color */
+    --text-color:#121212;
 
     /* border-color */
     --border-color:#e5e5e5;
