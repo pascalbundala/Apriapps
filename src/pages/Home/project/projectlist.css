@@ -1,107 +1,118 @@
-.projectList{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    overflow-x: hidden;
-    padding-top: 8rem;
-    padding-bottom: 3rem;
-    background-color: var(--black-color);
-    color: var(--white-color);
-}
+    .projectList{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-flow: column nowrap;
+        position: relative;
+        z-index: 4;
+        background-color: var(--black-color);
+        color: var(--text-whitefade-color);
+    }
 
-.grid{
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-}
+    .projectList .container-holder{
+        margin: 1rem 0;
+    }
 
-.rows{
-    display: flex;
-    padding: 0;
-    margin-top: 6rem;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap:wrap;
-}
+    .intro-project{
+        display: block;
+        margin: auto 0;
+        position:absolute;
+        z-index: 2;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%);
+        display: block;
+    }
 
-.item{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    overflow: hidden;
-    padding: 0;
-    width: 22rem;
-    height: 27rem;
-    overflow: hidden;
-    margin-bottom: 10rem;
-    margin-right: 2rem;
-}
+    .intro-project p{
+        width: 100%;
+        font-size: 2.7rem;
+        line-height: 2rem;
+        font-weight: 900;
+        text-align: center;
+    }
 
-.item:nth-child(2){
-    margin-top: 4rem;
-}
-.item:nth-child(3){
-    margin-top: 7rem;
-}
+    .project-slide{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr  0fr;
+        gap: 0;
+        z-index: 3;
+        padding: 0;
+        margin: 0;
+        row-gap: 7rem;
+        margin-top:14rem;
+        padding-bottom: 2rem;
+    }
 
-.item:nth-child(5){
-    margin-top: 4rem;
-}
-
-.item:nth-child(6){
-    margin-top: 7rem;
-}
+    .item{
+        width: 20rem;
+        height: 20rem;
+        margin-bottom: 10rem;
+        position: relative;
+        transition: all ease-in-out;
+        border-radius: var(--border-radius);
+    }
 
 
+    .img-holder{
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        overflow: hidden;
+    }
 
-.img-holder{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
 
-.img-holder img{
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    object-fit: cover;
-    overflow-x: hidden;
-    border-radius: inherit;
-}
+    .img-holder img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow-x: hidden;
+        border-radius: inherit;
+        transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+        transform: scale(1);
+    }
 
-.item:hover{
-    cursor: pointer;
-}
+    .img-holder:hover img {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
 
-.item h3{
-    font-size: 1.3rem;
-    width: 100%;
-    text-align: start;
-    margin-top: 1rem;
-    margin-bottom: 0;
-    text-transform: capitalize;
-    font-weight: 700;
-}
+    .pr-d{
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
 
-.item p{
-    width: 100%;
-    text-align: start;
-    margin: 0.5rem 0px;
-    font-size: 0.7rem;
-    line-height: 0.65rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--white-fade-color);
-}
+    .item h3{
+        font-size: 1.1rem;
+        width: fit-content;
+        text-align: start;
+        font-weight: 600;
+        margin: 0;
+    }
 
-.projectList .navigation-link{
-    margin: 0rem auto 6rem auto;
-    text-decoration: none;
-}
+    .tags-column{
+        width: fit-content;
+        padding:0 0.5rem;
+    }
+
+    .item .tags-column p{
+        text-align: start;
+        font-size: 0.55rem;
+        line-height: 0.55rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-top: 0.3rem;
+        color: var(--text-grey-color);
+    }
+
+    .projectList .navigation-link{
+        margin: 0rem auto 6rem auto;
+        text-decoration: none;
+    }
 
 @media screen and (max-width:480px) {
 

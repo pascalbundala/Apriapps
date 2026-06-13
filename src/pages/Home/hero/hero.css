@@ -4,19 +4,19 @@
   position: relative;
   display: flex;
   justify-content: center;
-  background-color: #161616;
+  background-color: var(--black-color);
   background-image: url("/new-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
+  z-index: 2;
 }
-
 
 .hero .larger-h1{
   width: fit-content;
-  color: var(--white-fade-color);
+  color: var(--text-whitefade-color);
   margin-top: 2rem;
   font-weight: 500;
   font-size: 5rem;
@@ -31,13 +31,12 @@
 }
 
 .hero .larger-h1 .white-span{
-  color: var(--white-color);
+  color: var(--text-grey-color);
 }
 
 .hero .span-list{
   width: fit-content;
   height: fit-content;
-  color: var(--white-fade-color);
   align-self: center;
   position: absolute;
   top: 38%;
@@ -46,13 +45,14 @@
 }
 
 .span-list span{
-  border: 0.5px solid var(--white-fade-color);
-  font-size: 0.7rem;
-  margin-right: 1rem;
-  padding: 0.35rem;
+  border: 0.5px solid var(--border-fade-color);
+  font-size: 0.75rem;
+  margin-right: 1.2rem;
+  padding: 0.35rem 0.6rem;
   border-radius: var(--border-radius);
-  color: var(--white-fade-color);
+  color: var(--text-grey-color);
   opacity: 0.8;
+  font-weight: 400;
 }
 
 .scroll{
@@ -77,14 +77,14 @@
   position: absolute;
   bottom: 40px;
   left: 3%;
-  color: var(--white-fade-color);
+  color: var(--text-grey-color);
   font-size: 0.85rem;
 }
 .time-location{
   position: absolute;
   bottom: 40px;
   right: 3%;
-  color: var(--white-fade-color);
+  color: var(--text-grey-color);
   font-size: 0.85rem;
 }
 

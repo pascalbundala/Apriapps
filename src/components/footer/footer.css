@@ -1,162 +1,71 @@
-.footer{
+ .footer{
     width: 100%;
-    padding: 0% 0 0% 0;
     height: fit-content;
+    padding: 5rem 0 1rem 0;
     display: flex;
     flex-flow: column  nowrap;
-    justify-content: center;
-    color: var(--white-color);
-    background-color: var(--black-color);
-    position: relative;
+    justify-content: flex-end;
+    color: var(--text-blackfade-color);
+    background-color: var(--white-fade-color);
     overflow: hidden;
+    z-index: 10;
+    bottom: 0;
 }
 
-.x-footer{
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    padding-top: 2rem;
-    padding-bottom: 5rem;
-    margin: 0rem auto;
-}
-
-.xx{
+.footer .footer-abv{
     width: 100%;
     height: fit-content;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    padding: 0;
-    align-items: center;
-}
-
-.xx img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.xx p{
-    margin: 2rem 0;
-    width: 50%;
-}
-
-
-.x-fed{
-    width: 100%;
-    display:flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin-top: 7rem;
-    height: fit-content;
-}
-
-.x-feds-o{
-    width: 52%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: start;
-}
-
-.x-feds{
-    width: 48%;
-    display: flex;
-    flex-flow: column;
-    align-items: end;
-    justify-content: center;
-}
-
-.subscribe{
-    width: 60%;
-    border: 1px solid var(--border-color);
-    height: 3rem;
-    background-color: transparent;
-    color: var(--white-color);
-    font-size: 2rem;
-    padding: 0 1rem;
-    font-family: "Kaushan Script",cursive;
-
-}
-
-.x-feds p{
-    width: 60%;
-    margin: 1rem 0;
-    color: var(--white-color);
-    font-weight: 400;
-}
-
-.footer .x-footer .xx .title-bold-extra{
-    text-align: start;
-    margin: 0;
-    text-transform: uppercase;
-    color: var(--white-color);
-}
-
-.office{
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    flex-flow: column;
-    align-items: start;
-    align-self: start;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .f-links{
-    width: 50%;
-}
-
-.contact-office{
     width: 60%;
-}
-
-.fade-title{
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: var(--white-fade-color);
-    text-transform: uppercase;
-    margin-bottom: 0rem;
 }
 
 .f-links .small-title{
     margin-bottom: 0.5rem;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     width: fit-content;
     text-transform: uppercase;
-    color: var(--white-color);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
 }
 
-.office .small-title-large{
-    font-size: 2rem;
-    font-weight: 600;
-    margin-top: 0.5rem;
-    width: 100%;
-}
 
-.office .small-title:hover{
-    color: var(--white-color);
-    font-weight: 600;
-}
-
-.footer .legal{
-    display: flex;
-    width: 100%;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    height: fit-content;
-}
-
-.footer .legal a{
-    margin-right: 1rem;
+.footer .footer-abv .office{
     width: fit-content;
-    padding: 0;
-    color: var(--white-color);
-    text-transform: capitalize;
+    display: flex;
+    flex-flow: column;
+    align-self: flex-start;
+}
+
+.footer .footer-abv .office h3{
+    font-size: 1rem;
     font-weight: 400;
+    margin-bottom: 0.1rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer .footer-abv .f-social{
+    width:fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    height: fit-content;
+    padding: 0;
+}
+
+
+.footer .footer-abv .f-social a{
+    width: fit-content;
+    height: fit-content;
+    text-align: start;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-left: 1rem;
+    color: var(--black-color);
 }
 
 
@@ -171,90 +80,42 @@
     padding-top: 0rem;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
+    border-top: 1px solid var(--black-color);
+    padding-top: 1rem;
 }
 
-.footer .footer-end .f-end{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-    height: fit-content;
-    text-transform: capitalize;
-    color: var(--white-color);
-    font-weight: 400;
-}
 
 .footer .footer-end h6{
-    width: 100%;
-    text-align: start;
-    padding: 0;
-    font-weight: 400;
-}
-
-.footer .footer-end .f-social{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    height: fit-content;
-    height: fit-content;
-    padding: 0;
-}
-
-.footer .footer-end .f-social a{
     width: fit-content;
-    height: fit-content;
     text-align: start;
+    padding: 0;
     font-weight: 400;
-    color: var(--white-color);
-    text-transform: capitalize;
-    margin-left: 2rem;
-   
 }
 
-.footer .amexs{
-    width: 100%;
-    height: fit-content;
-    overflow: hidden;
+
+
+.footer .footer-end .legal{
     display: flex;
-    width: 100%;
-    margin-top: 0rem;
+    width: fit-content;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    height: fit-content;
 }
-.footer .amexs h2{
-    font-size: 23rem;
-    line-height: 26rem;
-    font-weight: 900;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    margin-bottom: -5rem;
-    text-transform: lowercase;
-    display: block;
-    transform:perspective(600px)  rotateX(40deg) rotateY(0deg);
-    background: linear-gradient(120deg, var(--accent-color), #3f5efb, #2a3278);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+
+.footer .footer-end .legal a{
+    margin-right: 1rem;
+    width: fit-content;
+    padding: 0;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: var(--black-color);
 }
 
 
-.shadow{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 0;
-    left: 0;
-    border-radius: 0%;
-    background: radial-gradient(
-        circle at center,
-        rgb(0, 200, 255) 0%,   
-        rgba(0, 170, 255, ) 20%,
-        rgba(63, 94, 251, 1) 50%,
-        rgba(15, 49, 218, 0.929) 100%,
-    );
-  filter: blur(30px);
-  display: block;
-}
+
+
+
+
 
 
 @media screen and (max-width:480px) {
@@ -486,7 +347,6 @@
         font-weight: 300;
         line-height: 0.8rem;
         margin: 0px 5px;
-        color: white;
     }
     
 }
@@ -544,7 +404,7 @@
         font-size: 0.92rem;
         line-height: 0.92rem;
         margin: 0px 5px;
-        color: white;
+        
     }
     
 }

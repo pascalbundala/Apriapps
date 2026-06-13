@@ -44,7 +44,6 @@ function Particles() {
       targetY,
       0.05
     )
-
     // subtle floating motion
     pointsRef.current.rotation.y += 0.0005
   })
@@ -98,7 +97,8 @@ const Hero = () => {
     <div className="hero flex column padding-space ">
             <div className="span-list flex row center ">
               <span>Design</span>
-              <span>Development</span>
+              <span>Websites</span>
+              <span>Software Development</span>
               <span>Digital solutions </span>
             </div>
 

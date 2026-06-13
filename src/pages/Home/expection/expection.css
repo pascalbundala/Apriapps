@@ -1,0 +1,104 @@
+*{margin: 0;}
+
+.expection{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--white-color);
+    padding: 4rem 0 1rem 0;
+    z-index: 6;
+}
+
+.ex-intro{
+    width: 50%;
+}
+.expection .title-bold-extra,.expection .title-bold-extra .span-highlight{
+    height: fit-content;
+    color: var(--black-color);
+}
+
+.expection .span-text,.expection .span-icon{
+    height: fit-content;
+    color: var(--black-color);
+}
+
+.expection .ex-intro .small-title {
+    text-align: start;
+    margin-top: 2rem;
+    font-weight: 300;
+    width: 60%;
+}
+
+.expection .ex-intro img{
+    width: 50vh;
+    height: 70vh;
+    border-radius: var(--border-radius);
+    align-self: flex-start;
+    margin-top: 5rem;
+    object-fit: cover;
+}
+
+.expection .value-container{
+    height: fit-content;
+    width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top:10rem;
+}
+
+.expection .value-container .value{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    overflow: hidden;
+    color: var(---text-blackfade-color);
+    border-bottom: 1px solid var(--border-fade-color);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.expection .value-container .value:last-child{
+    border-bottom: none;
+}
+
+.expection .value-container .value .title-bold{
+    width: 90%;
+    font-weight: 700;
+}
+
+.expection .value-container .value .value-icon{
+    width: 70px;
+    height: 3rem;
+    margin: 0;
+    display: block;
+    color: var(--text-blackfade-color);
+
+}
+
+.expection .value-container .value .small-title{
+    width: 50%;
+    text-align: start;
+    display: block;
+    margin: 0;
+    padding-bottom: 10px;
+    font-weight: 300;
+    color: var(---text-blackfade-color);
+}
+
+@media screen and (max-width:480px) {
+    .expection{
+        padding: 3rem 0;
+    }
+
+    .expection .small-title {
+        width: 80%;
+    }
+
+    
+}

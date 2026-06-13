@@ -1,6 +1,6 @@
 
     .span-text{
-        font-weight: 600;
+        font-weight: 400;
         font-size: 0.65rem;
         line-height: 0.65rem;
         letter-spacing: 0px;
@@ -10,7 +10,7 @@
     }
 
     .span-icon{
-        color: var(--accent-color);
+        color: var(--white-color);
         stroke-width: 0.8;
         display: flex;
 

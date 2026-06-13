@@ -1,8 +1,11 @@
 .testmonial{
-    padding: 10rem 0 10rem 0;
+    padding: 3rem 0 1rem 0;
     display: flex;
     flex-flow:  column nowrap;
     justify-content: space-between;
+    background-color: var(--white-fade-color);
+    color: var(--text-blackfade-color);
+    z-index: 7;
 }
 
 .t-header{
@@ -12,11 +15,13 @@
 .testmonial .title-bold-extra{
     text-align: start;
     width: 120%;
-    color: var(--black-color);
+    color: var(--text-blackfade-color);
+    
 }
 
 .testmonial .span-text,.testmonial .span-icon{
-    color: var(--black-color);
+    width: fit-content;
+    color: var(--text-blackfade-color);
 }
 
 .slider-track {
@@ -25,155 +30,170 @@
     width: 100%;
 }
 
-.slide-holder{
+.main-card{
+    width: 100%;
+    display: flex;
+    height: fit-content;
+    margin: 4rem auto;
+}
+
+.card-test{
+   width: 100%;
+   height: 50vh;
+   display: flex;
+   flex-flow: row nowrap;
+   justify-content: space-between;
+   overflow: hidden;
+   position: relative;
+}
+
+
+.card-test .slider{
+    width: 15%;
+    height: 10vh;
+}
+
+.card-test .slider .controller{
+    align-items: center;
+}
+
+
+.card-test .slider .progress-container{
+    width:100%;
+    height:1px;
+    background:var(--white-fade-color);
+    overflow:hidden;
+    margin-bottom:1rem;
+    display: block;
+}
+
+.card-test .slider .progress-line{
+    width:0%;
+    height:100%;
+    background:var(--black-color);
+}
+
+.card-test .slider .numbers{
     width: 100%;
     height: fit-content;
-    margin-bottom: 3rem;
-    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: flex-end;
-    margin: 0 auto;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: var(--black-fade-color);
 }
-.slide-button{
+.card-test .slider .slide-holder{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.card-test .slider .slide-holder .slide-button{
     height: fit-content;
     width: fit-content;
-    padding: 0.8rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 1rem;
     cursor: pointer;
-    border: 1px solid var(--black-color);
+    padding: 5px;
+    border-radius: var(--border-radius);
+    background-color: var(--white-color);
+}
+
+.card-test .slider .slide-holder .slide-button:nth-child(2){
+    margin-left: 0.5rem;
+}
+
+.card-test .slider .slide-holder .slide-button:hover{
+    cursor: pointer;
+    background-color: var(--accent-color);
 }
 
 .slide-arrow{
     color: var(--black-border-color);
     size: 2rem;
-    stroke-width: 1;
-}
-.prev{
-    left: 10px;
+    stroke-width:1;
 }
 
-.next{
-    right: 10px;
+.card-test .slide-wrapper{
+    height:400px;
+    overflow:hidden;
+    width: 85%;
+    margin-left: 3rem;
 }
 
-
-.main-card{
+.card-test .slide-track{
     width: 100%;
+    height: 100%;
     display: flex;
-    height: fit-content;
-    margin: 60px auto;
-    overflow: hidden;
-    white-space: nowrap; 
-    position: relative;
+    flex-flow: column nowrap;
+    justify-content: space-between;
 }
 
-.card-test{
-    border-radius: var(--border-radius);
-    height: fit-content;
-    width: 30%;
-    padding: 4rem 0;
-    opacity: 1;
-    margin-right:0rem;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+.card-test .slides{
+    width: 100%;
+    min-height:100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: relative;
     white-space: normal;
-    color: var(--black-color);
-    background-color: var(--dark-white);
-    position: relative;
-    overflow: hidden;
+    flex-shrink: 0;
+    margin-top: 0;
 }
 
-.testmonial .background-shadow{
-    top: -150px;
-    left: -100px;
-}
-
-.card-test .title-c{
+.card-test .slides .names{
+    width: 30%;
+    height: fit-content;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    height: fit-content;
-    width: fit-content;
-    align-items: center;
-    margin: 0px auto 3rem auto ;
+    color: var(--black-fade-color);
 }
 
-.card-test .title-c img{
-    border-radius: 50%;
-    width: 4rem;
-    height:4rem;
-}
-
-.card-test .title-c .names{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    height: fit-content;
-    width: fit-content;
-    margin-left: 20px;
-}
-
-.card-test .title-c .names h4{
-    font-size: 1.2rem;
+.card-test .slides .names h4{
+    font-size: 0.9rem;
     font-weight: 700;
-    line-height: 1rem;
+    line-height: 1.2rem;
     margin: 0;
     padding: 0;
     text-align: start;
     text-transform: capitalize;
 }
 
-.card-test .title-c .names h3{
-    font-size: 0.7rem;
+.card-test .slides .names h3{
+    font-size: 0.65rem;
     font-weight: 500;
     font-style: normal;
-    line-height: 1.2rem;
-    margin-top: 0.3rem;
+    line-height: 1rem;
+    margin-top: 0.1rem;
     padding: 0;
     text-align: start;
     text-transform: uppercase;
 }
 
-.card-test .small-title{
-    width: 80%;
-    text-align: start;
-    margin: 0 auto;
-    font-weight: 400;
-}
-
-.card-test .test-icon{
-    position: absolute;
-    font-size: 3rem;
-    bottom: 6rem;
-    right: 20%;
-    stroke-width: 1;
-}
-
-.card-test .stars{
-    width: fit-content;
+.card-test .slides .testmonial-text{
+    width: 65%;
     height: fit-content;
+    position: relative;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    margin: 3rem auto 0 auto;
-
-}
-
-.card-test .stars span{
-    height: fit-content;
-    width: fit-content;
-    display: block;
+    flex-flow: column nowrap;
+    text-align: start;
+    font-weight: 700;
+    font-size: 1.7rem;
+    line-height: 2.25rem;
+    color: var(--text-color);
     padding: 0;
+    margin-bottom: 1rem;
 }
-.card-test .stars span img{
-    width: 0.8rem;
-    height: 0.8rem;
-    margin-right: 0rem;
+
+.card-test .quote{
+    font-size: 3rem;
+    stroke-width: 1;
+    position: absolute;
+    top: 10%;
+    left: 44%;
+    transform: translate(-50%,-50%);
 }
+
 
 
 @media screen and (max-width:480px) {
@@ -214,34 +234,34 @@
         white-space: normal; 
         border-right: 1px solid var(--black-border-color);
     }
-    .card-test .title-c{
+    .card-test {
         margin-bottom: 20px;
         width: 100%;
     }
 
-    .card-test .title-c .img-pass{
+    .card-test  .img-pass{
         width: 50px;
         height:50px;
         border-radius: 50%;
     }
 
-    .card-test .title-c .img-pass img{
+    .card-test  .img-pass img{
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .card-test .title-c .names{
+    .card-test  .names{
         margin-left: 20px;
     }
 
-    .card-test .title-c .names h4{
+    .card-test  .names h4{
         font-size: 1rem;
         line-height: 1rem;
     }
 
-    .card-test .title-c .names h3{
+    .card-test  .names h3{
         font-size: 0.8rem;
         font-weight: 600;
         line-height: 0.8rem;
@@ -288,26 +308,26 @@
         padding: 20px;
         margin-right:50px;
     }
-    .card-test .title-c{
+    .card-test {
         margin: 0px auto 20px auto ;
     }
 
-    .card-test .title-c img{
+    .card-test  img{
         width: 50px;
         height:50px;
     }
 
-    .card-test .title-c .names{
+    .card-test  .names{
         margin-left: 20px;
     }
 
-    .card-test .title-c .names h4{
+    .card-test  .names h4{
         font-size: 1.1rem;
         font-weight: 700;
         line-height: 0.7rem;
     }
 
-    .card-test .title-c .names h3{
+    .card-test  .names h3{
         font-size: 0.8rem;
         line-height: 0.8rem;
         margin-top: 0.5rem;
@@ -321,15 +341,6 @@
         margin: 25px auto;
     }
 
-    .card-test .stars{
-        margin: 40px auto 10px auto ;
-    }
-
-    .card-test .stars span img{
-        width: 10px;
-        height: 10px;
-        margin-right: 2px;
-    }
 
     
 }
@@ -362,26 +373,26 @@
         padding: 20px;
         margin-right:50px;
     }
-    .card-test .title-c{
+    .card-test {
         margin: 0px auto 20px auto ;
     }
 
-    .card-test .title-c img{
+    .card-test  img{
         width: 50px;
         height:50px;
     }
 
-    .card-test .title-c .names{
+    .card-test  .names{
         margin-left: 20px;
     }
 
-    .card-test .title-c .names h4{
+    .card-test  .names h4{
         font-size: 1.1rem;
         font-weight: 700;
         line-height: 0.6rem;
     }
 
-    .card-test .title-c .names h3{
+    .card-test  .names h3{
         font-size: 0.8rem;
         line-height: 0.85rem;
         margin-top: 0.6rem;
@@ -395,15 +406,7 @@
         margin: 25px auto;
     }
 
-    .card-test .stars{
-        margin: 40px auto 10px auto ;
-    }
 
-    .card-test .stars span img{
-        width: 10px;
-        height: 10px;
-        margin-right: 2px;
-    }
 
     
 }
@@ -437,26 +440,26 @@
         padding: 20px 60px;
         margin-right:100px;
     }
-    .card-test .title-c{
+    .card-test {
         margin: 0px auto 40px auto ;
     }
 
-    .card-test .title-c img{
+    .card-test  img{
         width: 90px;
         height:90px;
     }
 
-    .card-test .title-c .names{
+    .card-test  .names{
         margin-left: 40px;
     }
 
-    .card-test .title-c .names h4{
+    .card-test  .names h4{
         font-size: 2rem;
         font-weight: 700;
         line-height: 2rem;
     }
 
-    .card-test .title-c .names h3{
+    .card-test  .names h3{
         font-size: 1.3rem;
         line-height: 0.6rem;
         margin-top: 0.6rem;
@@ -470,16 +473,4 @@
         margin: 40px auto;
     }
 
-    .card-test .stars{
-        margin: 100px auto 50px auto ;
-    }
-
-    .card-test .stars span img{
-        width: 25px;
-        height: 25px;
-        margin-right: 5px;
-    }
-
-
-    
 }

@@ -39,14 +39,15 @@
     }
 
     body {
-        margin-top: 0px;
-        padding:0%   !important;
         height: fit-content !important;  
         width: 100% !important;
         font-family: "Geist", sans-serif;
         display: flex;
         flex-flow: column nowrap;
         justify-content: start;
+        position: relative;
+        margin: 0;
+        padding: 0;
     }
 
     /* project title */
@@ -93,10 +94,14 @@
     a:hover {
         text-decoration: underline;
     }
-    /* ALIGNMENT */
 
+    /* ALIGNMENT */
     .w-100{
         width: 100%;
+    }
+
+    .w-50{
+        width: 50%;
     }
     .flex{
         display: flex;
@@ -200,36 +205,27 @@
     /* white color */
     --primary_color: #ffffff;
     --white-color:#ffffff;
-    --white-fade-color:#b4b4b4;
-    --dark-white:#edf1f2;
+    --white-fade-color:#f0f0f0;
     --accent-color:#33ccff;
-
+    
     /* black color */
-    --black-color:#0F172A;
-    --black-2-color:#181b1f;
-    --black-fade-color:#161616;
+    --black-color:#1b1b1b;
+    --black-fade-color:#343434;
 
     /* Text Color */
-    --text-color:#121212;
+    --text-grey-color:#9e9e9e;
+    --text-blackfade-color:#3a3a3a;
+    --text-whitefade-color:#e9e9e9;
+    --text-black-color:#000000;
+    --text-white-color:#ffffff;
 
     /* border-color */
     --border-color:#e5e5e5;
-    --border-fade-color:#333;
-
-    /* fade-color */
-    --fade-color:#303030;
+    --border-fade-color:#5959596d;
 
     /* border-radius */
     --border-radius:0.5rem;
-    --background-variation:radial-gradient(
-        45deg,
-        rgba(252, 70, 106, 0.636) 0%,
-        rgba(252, 70, 106, 0.543) 20%,
-        rgba(63, 94, 251, 0.64) 50%,
-        rgba(63, 94, 251, 0.15) 70%,
-        rgba(63, 94, 251, 0.223) 85%,
-        rgba(63, 94, 251, 0) 100%
-  );
+
 }
 
 @media screen and (max-width:480px) {

@@ -4,7 +4,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    z-index: 2000;
+    z-index: 10;
     box-sizing: border-box;
     position: fixed;
     top: 1rem;
@@ -43,7 +43,7 @@
 .logo .name-app h2{
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--white-color);
+    color: var(--text-white-color);
     text-align: start;
     padding: 0;
     margin: 0;
@@ -55,7 +55,6 @@
   display:none;
   transform: translateX(-20px);
   pointer-events: none;
-  
 }
 
 
@@ -73,7 +72,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     backdrop-filter: blur(20px); 
-    border: 1px solid rgba(255, 255, 255, 0.204);
+    border: 1px solid var(--border-fade-color);
     border-radius:var(--border-radius);
 }
 
@@ -90,10 +89,10 @@
     padding: 0.8rem;
     height: fit-content;
     cursor: pointer;
-    font-size: .7rem;
+    font-size: 0.60rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--white-color);
+    color: var(--text-whitefade-color);
 }
 .header-mobile {
     width: fit-content;
@@ -120,7 +119,7 @@
     width: calc(93.2vw);
     height: 85vh;
     position: absolute;
-    background-color: var(--black-fade-color);
+    background-color: var(--black-color);
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -164,7 +163,7 @@
     justify-content: space-between;
     width: 100%;
     height: 50%;
-    color: var(--white-color);
+    color: var(--text-whitefade-color);
 }
 
 .nav-open h1{
@@ -181,7 +180,7 @@
 }
 
 .links .title-bold{
-    color: var(--white-color);
+    color: var(--text-whitefade-color);
     font-size: 3rem;
     line-height: 3rem;
     margin-bottom: 1rem;
@@ -231,7 +230,7 @@
     font-weight: 400;
     text-transform: lowercase;
     margin-top: 0.3rem;
-    color: var(--white-fade-color);
+    color: var(--text-whitefade-color);
 }
 
 .social-links{
@@ -241,7 +240,7 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: end;
-    border-top: 1px solid var(--white-fade-color);
+    border-top: 1px solid var(--border-fade-color);
     padding-top: 1rem;
 }
 
@@ -249,7 +248,7 @@
     text-decoration: none;
     width: fit-content;
     margin: 0 1rem;
-    color: var(--white-fade-color);
+    color: var(--text-whitefade-color);
     text-transform: capitalize;
     text-decoration: none;
 }

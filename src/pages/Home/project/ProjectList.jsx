@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import './projectlist.css';
-import { Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react"; 
@@ -25,88 +24,111 @@ const projectData=[
 const ProjectList = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const container = useRef(null)
+  const stickTitle = useRef(null)
   const lenis = useLenis() 
 
-  useGSAP(
-    () => {
-      // Sync Lenis with ScrollTrigger
+    useGSAP(() => {
       if (lenis) {
         lenis.on("scroll", ScrollTrigger.update)
       }
-      
-      const wrappers = gsap.utils.toArray(".img-holder")
-      wrappers.forEach((wrapper) => {
-        const img = wrapper.querySelector("img")
-        let skewSetter = gsap.quickSetter(img, "skewY", "deg")
-        let proxy = { skew: 0 }
-        let clamp = gsap.utils.clamp(-17, 17)
+      const items = gsap.utils.toArray(".item");
+      items.forEach((item, index) => {
+      const isEven = index % 2 === 0;
 
-        ScrollTrigger.create({
-          trigger: wrapper,
-          start: "top bottom",
-          end: "bottom top",
-          onUpdate: (self) => {
-            let skew = clamp(self.getVelocity() / -300)
-            if (Math.abs(skew) > Math.abs(proxy.skew)) {
-              proxy.skew = skew
-              gsap.to(proxy, {
-                skew: 0,
-                duration: 0.8,
-                ease: "power3",
-                overwrite: true,
-                onUpdate: () => skewSetter(proxy.skew)
-              })
-            }
-          }
-        })
-      })
+      gsap.to(item, {
+          y: isEven ? -300 : -50, 
+          ease: "none",
+          scrollTrigger: {
+            trigger: container.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      });
 
-      return () => {
-        ScrollTrigger.getAll().forEach((t) => t.kill())
-        if (lenis) {
-          lenis.off("scroll", ScrollTrigger.update)
+      // gsap.timeline({
+      //     scrollTrigger:{
+      //       trigger:'.project-slide',
+      //       start:"top center",
+      //       endTrigger:container.current,
+      //       end:"bottom top",
+      //       toggleActions: 'play reverse play reverse',
+      //       markers:false
+      //     }
+      // })
+      // .to(container.current, {
+      //   backgroundColor: "var(--white-color)",
+      //   ease: "none"
+      // }, 0)
+      // .to(".pr-d", {
+      //   color: "var(--text-color)",
+      //   ease: "none"
+      // }, 0);
+
+      gsap.fromTo(
+        stickTitle.current,
+        {
+          scale: 4,
+        },
+        {
+          scale: 1,
+          opacity:0,
+          ease: "none",
+          scrollTrigger: {
+            trigger: stickTitle.current,
+            start: "top center",
+            end: "+=300",
+            scrub: true,
+            pin: true,
+          },
         }
-      }
-    },
-    { scope: container }
-  )
-
-
-
+      );
+    },{ scope: container });
 
   return (
           <div className='projectList padding-space' ref={container}>
+            <div className="container-holder flex row space-between">
+                <FadeText>< Span title="selected work"/></FadeText>
+                <FadeText>< Span title="2019-present"/></FadeText>
+            </div>
 
-            <FadeText>
+            {/* <FadeText>
               <Span title="selected project"/>
-            </FadeText>
+            </FadeText> */}
 
-            <FadeText>
+            {/* <FadeText>
               <h2 className="title-bold-extra">A selected project showcasing strategic <br/> planning and measurable <br/> <span className="span-highlight">outcomes.</span></h2>
-            </FadeText>
+            </FadeText> */}
 
-                <div className="grid" >
-                  <div className="rows">
-                    {
-                    projectData .map((data,index)=>(
-                        <div className="item" key={index}>
-                          <div className="img-holder">
-                            <img src={data.img} alt=""/>
-                          </div>
-                          <h3>{data.name}</h3>
+            <div className="flex row" >
+              <div className="intro-project" ref={stickTitle}>
+                <p>Projects shaped <br/> by strategy.</p>
+              </div>
+              <div className="project-slide">
+                {
+                projectData .map((data,index)=>(
+                    <div className="item" key={index}>
+                      <div className="img-holder">
+                        <img src={data.img} alt=""/>
+                      </div> 
+                      <div className="pr-d">
+                        <h3>{data.name}</h3>
+                        <div className="tags-column flex column">
                           <p>{data.tags}</p>
                         </div>
-                    ))
-                    }
-                  </div>
-                </div>
+                      </div>
+                    </div>
+                ))
+                }
+              </div>
+            </div>
 
-                <Link to="/project" className='navigation-link'>
-                <Button text="all work" />
-                </Link>
+            {/* <Link to="/project" className='navigation-link'>
+            <Button text="all work" />
+            </Link> */}
 
           </div>  
-
   )
 }
 

@@ -19,17 +19,8 @@ const logos=[
 
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 const Partner = () => {
-  const isMobile =useMediaQuery("(max-width:768px)");
-
   return (
       <div className="partner">
-
-        <div className={ `padding-space ${isMobile?"flex-column":"flex space-between"}`}>
-            <p className="title-bold-extra">
-              Partnering with <br/>innovators worldwide.
-            </p>
-        </div>
-
         <div className="logos-container ">
           <div className="logos-fader">
                   <div className="logos-wrapper" >

@@ -44,11 +44,22 @@ const Welcome = () => {
         tl.from(
           split.words,
           {
-            opacity: 0.1,
+            opacity: 0.15,
             stagger: 0.1
           },
           0.1
         );
+
+        tl.to(
+          ".abx-image",
+          {
+            clipPath: "inset(0 0 0% 0)",
+            duration: 1,
+            ease: "none",
+          },
+          "<70%"
+        );
+
         ScrollTrigger.refresh();
       };
 
@@ -60,8 +71,6 @@ const Welcome = () => {
   return (
     <>
       <div className='welcomeintro padding-space' ref={containerWelcome} > 
-        <span className='line-span'></span>
-
         <div className="container-holder flex row space-between">
             <FadeText>< Span title="Our Studio"/></FadeText>
             <FadeText>< Span title="Est 2019"/></FadeText>
@@ -69,11 +78,21 @@ const Welcome = () => {
 
 
         <div className="container-holder flex row space-between">
-          <FadeText>
-              <p className='title-bold-extra' ref={welcomeText}>
-                We transform technology into growth by delivering smart digital solutions.From custom software,web and mobile apps to cloud systems that help businesses succeed in the modern digital world.
-            </p>
-          </FadeText>
+          <div className="flex column w-intro">
+              <FadeText>
+                <p className='title-bold-extra' ref={welcomeText}>
+                  We transform technology into growth by delivering smart digital solutions.From custom software,web and mobile apps to cloud systems that help businesses succeed in the modern digital world.
+              </p>
+            </FadeText>
+
+            <FadeText>
+              <div className="myself">
+                <img src="/profile/pascalbundala.jpg" alt="" />
+                <h3>pascal bundala</h3>
+              </div>
+            </FadeText>
+          </div>
+
 
           <FadeText>
             <img className="abx-image" src={officeImage} alt="About us" />
