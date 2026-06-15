@@ -1,7 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import './footer.css';
 
-
 const socialAccount=[{name:"instagram",link:"https://www.instagram.com/apriapps/"},{name:"linkedln",link:""},{name:"facebook",link:"https://www.facebook.com/14apriapps/"},
   {name:"dribble",link:""}
 ]
@@ -41,6 +40,10 @@ const Footer = () => {
             ))
             }
         </div>
+      </div>
+
+      <div className="locs">
+        <p>Based in Kilimanjaro City,Tanzania Working Worldwide.</p>
       </div>
       
       <div className="footer-end">

@@ -44,7 +44,7 @@
 
 .footer .footer-abv .office h3{
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 0.1rem;
     padding-bottom: 0.5rem;
 }
@@ -68,8 +68,20 @@
     color: var(--black-color);
 }
 
+.footer .locs{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+}
 
+.footer .locs p{
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding: 0;
 
+}
 .footer .footer-end{
     width: 100%;
     display: flex;
@@ -78,7 +90,7 @@
     align-items: center;
     height: fit-content;
     padding-top: 0rem;
-    margin-top: 2rem;
+    margin-top: 0rem;
     margin-bottom: 0.5rem;
     border-top: 1px solid var(--black-color);
     padding-top: 1rem;

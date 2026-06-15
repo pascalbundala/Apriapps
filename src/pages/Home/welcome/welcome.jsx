@@ -88,7 +88,10 @@ const Welcome = () => {
             <FadeText>
               <div className="myself">
                 <img src="/profile/pascalbundala.jpg" alt="" />
-                <h3>pascal bundala</h3>
+                <div className="flex column">
+                   <h3>pascal bundala</h3>
+                   <h3>Founder-apriapps</h3>
+                </div>
               </div>
             </FadeText>
           </div>
