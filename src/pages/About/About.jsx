@@ -11,116 +11,89 @@ const images=['/office/office-code.jpg','/office/office.jpg','/office/swimming.j
 
 const why=[{name:"Strategy Solutions",p:"We take time to understand your business goals before writing a single line of code. Every project is built with purpose, clarity and measurable outcomes in mind."},{name:"Focused Design",p:"Great products are built for people. Our UI/UX approach ensures intuitive experiences, clean interfaces, and seamless interactions across all devices."},{name:"Partnership Mindeset",p:"We go beyond project delivery. ApriApps acts as a technology partner, providing ongoing support, optimization, and continuous improvement."},{name:"Transparent collaboration",p:"Clear communication, defined timelines, and honest feedback are core to how we work. You stay informed and involved at every stage."},]
 
+const skills=['reactjs','tailwinds','css3','javascript','PHP','html5','Gsap','ThreeJs','Laravel','flutter','API','firebase','Mysql','UX Design','UI Design','Web Design','visual identity','visual direction'];
+
+const tools=['figma','vscode']
+
 const Home = () => {
   return (
     <div className="g-holder abt" >
         <Navbar/>
-        <div className="big-image">
-              <h1 className="larger-h1">
-                The Fusion of Strategy, Creativity and Technology.
-              </h1>
-        </div>
 
-        <div className="container-holder ">
-            <div className="big-title">
-              <p className="small-title">We craft digital experiences that connect ideas with people. We are working with clients  worldwide, we design and build meaningful digital products that inspire growth and create impact,Blending creativity, technology and strategy.</p>
-            </div>
-        </div>
+        <h1 className="larger-h1">
+          The Fusion of Strategy, Creativity and Technology.
+        </h1>
 
-        <div className="why padding-space">
-            <div className="img-container img-chess ">
+        <p className="small-title">We craft digital experiences that connect ideas with people. We are working with clients  worldwide, we design and build meaningful digital products that inspire growth and create impact,Blending creativity, technology and strategy.
+        </p>
+
+        <div className="why">
+            <div className="img-container about-image ">
               <img src="/images/office.jpg" alt="" />
             </div>  
-            <div className="strategyContainer ">
-              <div className="why-uss">
-
+            <div className="strgt padding-space">
                 {
-                  why.map((y,i)=>(<div className="reas" key={i}>
-                  <h3 className="title-bold-extra" >{y.name}</h3>
-                  <p className="small-title">{y.p}</p>
+                  why.map((y,i)=>(
+                  <div className="reas" key={i}>
+                      <h3>{y.name}</h3>
+                      <p>{y.p}</p>
                 </div>))
                 }
-
-              </div>
-
             </div>
         </div>
 
         <div className="team padding-space">
-
-            <p className="title-bold-extra">Direct collaboration, fewer intermediaries, faster execution by transparent support and strategic Team.</p>
-
-
+          <p className="title-bold-extra">
+            Direct collaboration<br/> and strategic Team.</p>
            <div className="team-list">
               <div className="team-container">
                   <img src="images/pass.jpeg" alt="" />
-
-                  <div className="container-hover">
-                    <div className="inside">
+                  <div className="team-detail">
                         <h3>Pascal Bundala</h3>
-                        <h4>CEO</h4>
-                    </div>
-
+                        <h4>Ceo & Founder</h4>
                   </div>
               </div>
            </div>
-
         </div>
 
         <div className="phil padding-space">
-          <span>WHAT WE BELIEVE</span>
+            <div className="flex row space-between">
 
-          <p className="title-bold-extra">Every digital product we build must serve a purpose, deliver measurable value, and enhance the user experience.
-          </p>
+                <p className="title-bold-extra">
+                  Every digital product.
+                </p>
 
-          <div className="statics">
-              {
-                sts.map((s,index)=>(
-                  <div className="st" key={index}>
-                    <h4>{s.no}</h4>
-                    <p>{s.name}</p>
-                  </div>
-                ))
-              }
+                <p className="small-title">
+                  Design does not end with websites and apps for me. I am also interested in 3D, motorsport, visual experiments, and personal projects where I can explore ideas without a client brief.
+                  One of these projects was a fan-made 3D printed Formula 1 model inspired by Red Bull Racing, created as my final school project. It took over 200 hours to build and reached more than 30,000 views after I shared it online.
+                  Projects like this remind me why I enjoy design in the first place: the mix of detail, patience, technical problem-solving, and the satisfaction of turning an idea into something real.
+                </p>
 
-          </div>
+                <div className="statics">
+                    {
+                      sts.map((s,index)=>(
+                        <div className="st" key={index}>
+                          <h4>{s.no}</h4>
+                          <p>{s.name}</p>
+                        </div>
+                      ))
+                    }
+                </div>
 
-        </div>
+            </div>
 
-        <div className="industries padding-space">
-          <span>industries </span>
-          <ul>
-            <li>E-Commerce</li>
-            <li>Technology</li>
-            <li>Lifestyle</li>
-            <li>Fashion</li>
-            <li>Tourism</li>
-            <li>Hospitality</li>
-            <li>Beverage</li>
-            <li>Real Estate</li>
-          </ul>
-
-        </div>
-
-        <div className="office-gallery">
-          {
-            images.map((image,index)=>(
-                <img src={image} alt="" key={index} />
-            ))
-          }
-        </div>
-
-        <div className="partner padding-space">
-          <span>partner</span>
-          <div className="partners-list">
-                {
-                  partners.map((logo,index)=>(            
-                  <div className="logo" key={index}>
-                    <img src={logo} alt="" />
-                  </div>))
-                }
-          </div>
-
+            <div className="flex row space-between ">
+              <div className="tools">
+                    <span>skills </span>
+                  <ul>
+                    {
+                      skills.map((skill,index)=>{
+                          return <li key={index}>{skill}</li>
+                      })
+                    }
+                  </ul>
+              </div>
+            </div>
         </div>
         <Form/>
         <Footer/>

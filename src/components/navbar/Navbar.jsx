@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import './navbar.css';
 import { Plus, Minus } from 'lucide-react';
+import {useContact} from "../../context/contactContext"
 
 const Navbar = () => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [hideName, setHideName] = useState(false);
   const [border, setBorder] = useState(false);
+  const { openContact } = useContact();
 
   useEffect(() => {
 
@@ -68,9 +70,10 @@ const Navbar = () => {
             Project
           </NavLink>
 
-          <NavLink to="/contact" className="item-menu">
+
+          <button onClick={openContact} className="button-cta">
             Contact
-          </NavLink>
+          </button>
         </ul>
       </div>
 
