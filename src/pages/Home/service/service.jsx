@@ -20,29 +20,29 @@ const serviceList=[
     },
 
     {
-    image:"/services/development.jpg",  
+    image:"/services/design.jpg",  
     name: ["Design."],
     listitem:["User Interfaces design","User Experiences Design","Wireframes and prototypes"],
     text:"We design clean, modern, and visually engaging interfaces that enhance usability and user satisfaction.Our approach focuses on intuitive navigation, seamless user experience (UX), and conversion-driven design,leading to higher engagement and business growth.",
     },
 
     {
-    image:"/services/marketing.png",     
+    image:"/services/websites.jpg",     
     name: ["Websites."],
     listitem:["Business and corporate websites","Landing pages and portfolios","responsiveness"],
     text:"We build reliable, secure, and scalable digital products tailored to your business needs.Our solutions are designed for high performance, seamless user experience, and long-term growth. we ensure flexibility, efficiency, and easy integration with your existing systems.",
     },
 
     {
-    image:"/services/marketing.png",     
+    image:"/services/development.jpg",     
     name: ["Custom software."],
-    listitem:["Custom software systems","Mobile app (Android & iOS)","Web applications & platforms"],
+    listitem:["Custom softwares","Android apps","iOS apps","Web apps","dashboard"],
     text:"We build reliable, secure, and scalable digital products tailored to your business needs,Using modern technologies and best practices, we deliver high-performance solutions that grow with your business.Our focus is on efficiency, flexibility, and long-term value to support your success in a competitive digital landscape.",
     },
     {
-    image:"/services/marketing.png",     
+    image:"/services/marketing.jpg",     
     name: ["Digital","Marketing."],
-    listitem:["Search Engine Optimization (SEO)","Social Media Marketing & Management","Google & Social Media Advertising","Content Marketing Strategy"],
+    listitem:["SEO","Social Media","Advertising","Marketing Strategy"],
     text:"We help businesses grow and reach the right audience by turning online attention into real customers. Using data-driven strategies, creative campaigns, and modern digital marketing tools, we increase visibility, generate leads, and drive measurable growth.ensuring maximum impact in a competitive digital landscape.",
     },
 ]

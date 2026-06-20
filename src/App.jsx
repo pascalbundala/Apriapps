@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Project from "./pages/Project/Project";
 import Service from "./pages/service/Service";
+import ProjectDetails from "./pages/ProjectDetails/Projectdetails";
 import ScrollToTop from './components/scrollToTop';
 import { ReactLenis } from 'lenis/react';
 import ContactOverlay from "./components/ContactOverlay";
@@ -32,6 +33,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/service" element={<Service />} />
               <Route path="/project" element={<Project />} />
+              <Route path="/projects/:name" element={<ProjectDetails />} />
             </Routes>
             <ContactOverlay />
         </>
