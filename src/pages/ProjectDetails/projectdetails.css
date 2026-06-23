@@ -1,19 +1,190 @@
 .prj{
     width: 100%;
-    padding: auto;
-    background-color: var(--black-color);
+    height: fit-content;
     color: var(--white-color);
+    background-color: var(--black-color);
+    position: relative;
 }
 .prj-container{
     width: 100%;
-    height: 50vh;
+    height: 40vh;
+    margin-bottom: 0rem;
 }
 
 .prj-heading{
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 900;
     text-transform: uppercase;
     width: 50%;
-    line-height: 6rem;
-    margin-top: 8rem;
+    line-height: 5rem;
+    margin-top: 15rem;
+}
+
+.prj .image-description{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-left: 5%;
+}
+
+.prj .title{
+    text-transform: uppercase;
+    font-size: 0.70rem;
+    font-weight: 500;
+    color: var(--text-white-color);
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.prj  p{
+    font-size: 0.88rem;
+    width: 40%;
+    line-height: 1.35rem;
+    color: var(--text-grey-color);
+}
+
+.prj .description-link{
+    width: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.prj .description-link p{
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.prj .description-link a{
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+    color: var(--text-white-color);
+}
+
+.prj .description-link a:hover{
+    color: var(--accent-color);
+}
+.prj .image-description img{
+    width: 30%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.prj .border-top{
+    border-top:1px solid var(--border-fade-color);
+}
+
+.prj .challenge{
+    width: 100%;
+    height: fit-content;
+    padding-top:3rem ;
+    margin-top: 2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top:6rem;
+    padding-bottom: 6rem;
+}
+
+.prj .challenge .problem-solution p{
+    font-size: 0.85rem;
+    font-size: 500;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+.prj .challenge .problem-solution{
+    width: 40%;
+}
+
+.prj .challenge .extra-space{
+    width: 30%;
+}
+
+.prj .challenge .extra-space img{
+    width: 30rem;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.prj .techstack {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+    border-top: 1px solid var(--border-fade-color);
+}
+
+.prj .techstack .tech-other{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+.prj .techstack .tech-other ul{
+    width: 20%;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0;
+}
+.prj .techstack .tech-other ul li{
+    font-size: 0.8rem;
+    color: var(--text-grey-color);
+    list-style: none;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-fade-color);
+    padding-bottom: 0.3rem;
+}
+
+.prj .techstack .tech-other .process{
+    width: 30%;
+    height:fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: start;
+
+}
+
+.prj .techstack .tech-other .process .steps{
+    width: fit-content;
+    height: fit-content;
+    text-transform: capitalize;
+    color: var(--text-grey-color);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+.prj .techstack .tech-other .process .steps h2{
+    font-size: 1rem;
+    font-weight: 800;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.4rem;
+    color: var(--text-grey-color);
+    background-color: var(--black-fade-color);
+    text-align: center;
+    margin-right: 0.5rem;
+    border-radius: var(--border-radius);
+} 
+
+.prj .techstack .tech-other .process .steps h3{
+    font-size: 1rem;
+    font-weight: 600;
+    width: fit-content;
+    color: var(--text-grey-color);
+}
+
+.prj .techstack .tech-other img {
+    width: 20rem;
+    height: 20rem;
 }

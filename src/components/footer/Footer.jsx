@@ -28,8 +28,14 @@ const Footer = () => {
         </div>
 
         <div className="office">
-          <h3>+255 (0)785-492-267</h3>
-          <h3>hello@apriapps.com</h3>
+          <a
+              href="https://wa.me/255785492267"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +255-785-492-267
+            </a>
+          <a href="mailto:hello@apriapps.com?subject=Website Inquiry&body=Hello ApriApps,">hello@apriapps.com</a>
         </div>
 
         <div className="f-social">

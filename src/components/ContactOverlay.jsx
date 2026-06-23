@@ -214,8 +214,14 @@ const ContactOverlay = () => {
 
             <div className="extra-c">
                 <div className="contacts">
-                    <h3>project@apriapps.com</h3>
-                    <h3>+255(0) 785-577-807</h3>
+          <a
+              href="https://wa.me/255785492267"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +255-785-492-267
+            </a>
+          <a href="mailto:hello@apriapps.com?subject=Website Inquiry&body=Hello ApriApps,">hello@apriapps.com</a>
                 </div>
                 <div className="socials">
                     {

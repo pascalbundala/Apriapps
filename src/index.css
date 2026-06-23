@@ -439,7 +439,7 @@
         margin-bottom: 3rem;
     }
 
-    .extra-c h3{
+    .extra-c a{
         font-size: 1rem;
         color: var(--text-grey-color);
         margin-bottom: 0.5rem;
@@ -447,7 +447,7 @@
         text-align: start;
     }
 
-    .extra-c h3:hover{
+    .extra-c a:hover{
         text-decoration: underline;
         color: var(--text-white-color);
         cursor: pointer;

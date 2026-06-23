@@ -49,6 +49,19 @@
     padding-bottom: 0.5rem;
 }
 
+
+.footer .footer-abv .office a{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+    padding-bottom: 0.5rem;
+    color: var(--text-blackfade-color);
+}
+
+.footer .footer-abv .office a:hover{
+    text-decoration: underline;
+}
+
 .footer .footer-abv .f-social{
     width:fit-content;
     display: flex;
