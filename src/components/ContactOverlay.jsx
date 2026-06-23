@@ -19,10 +19,23 @@ const ContactOverlay = () => {
     const [formData, setFormData] = useState({
       username: "",
       email: "",
-      message:""
+      message:"",
+      services: [],
+
     });
 
-     if (!isOpen) return null;
+    if (!isOpen) return null;
+
+    const handleCheckboxChange = (e) => {
+      const { value, checked } = e.target;
+
+      setFormData((prev) => ({
+        ...prev,
+        services: checked
+          ? [...prev.services, value]
+          : prev.services.filter((service) => service !== value),
+      }));
+    };
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -49,7 +62,7 @@ const ContactOverlay = () => {
         }
   
         if (!data.message) {
-          errs.message = "message is required";
+          errs.message = "Message is required";
         } 
   
         return errs;
@@ -70,9 +83,9 @@ const ContactOverlay = () => {
           await new Promise((res) => setTimeout(res, 1500));
   
           console.log(formData);
-  
-        setFormData({ username: "", email: "", message: "" });
-        setErrors({});
+
+          setFormData({ username: "", email: "", message: "" });
+          setErrors({});
         
         } finally {
           setIsSubmitting(false);
@@ -89,32 +102,101 @@ const ContactOverlay = () => {
 
         <div className="flex row">
             <div className="form-c">
-                   <div className='form-group'>
-                      {errors.username && <small className="small">{errors.username}</small>}
-                      <input
-                      type="text"
-                      name="username" 
-                      id="username" 
-                      placeholder='Name*'
-                      autoComplete='name' 
-                      ref={userNameRef} 
-                      tabIndex="1" 
-                      aria-invalid={!!errors.username}
-                      onChange={handleInputChange}
-                      value={formData.username}
-                      />
+
+                    <div className="naemail">
+                          <div className='form-group'>
+                            {errors.username && <small className="small">{errors.username}</small>}
+                            <input
+                            type="text"
+                            name="username" 
+                            id="username" 
+                            placeholder='Name*'
+                            autoComplete='name' 
+                            ref={userNameRef} 
+                            tabIndex="1" 
+                            aria-invalid={!!errors.username}
+                            onChange={handleInputChange}
+                            value={formData.username}
+                            />
+                          </div>
+
+                          <div className='form-group' >
+                            {errors.email && <small className="small">{errors.email}</small>}
+                            <input type="email" name="email" id="email" placeholder='E-mail address *' 
+                            autoComplete='email' ref={emailRef} tabIndex="2" onChange={handleInputChange}
+                            value={formData.email}  aria-invalid={!!errors.email} />
+                          </div>
                     </div>
 
-                    <div className='form-group' >
-                      {errors.email && <small className="small">{errors.email}</small>}
-                      <input type="email" name="email" id="email" placeholder='Email*' 
-                      autoComplete='email' ref={emailRef} tabIndex="2" onChange={handleInputChange}
-                      value={formData.email}  aria-invalid={!!errors.email} />
+                    <div className="chooselist">
+                      <h4>choose the service</h4>
+                      <div className="list-choice">
+
+                        <div className="checkbox-service">
+                          <input type="checkbox" id="branding" value="Branding"
+          onChange={handleCheckboxChange} />
+                          <label htmlFor="branding">
+                            <span className="custom-checkbox"></span>
+                            branding
+                          </label>
+                        </div>
+
+                        <div className="checkbox-service">
+                          <input type="checkbox" id="design" value="design"
+          onChange={handleCheckboxChange} />
+                          <label htmlFor="design">
+                            <span className="custom-checkbox"></span>
+                            Design</label>
+                        </div>
+                        
+                        <div className="checkbox-service">
+                          <input type="checkbox" id="website" value="website"
+          onChange={handleCheckboxChange} />
+                          <label htmlFor="website">
+                          <span className="custom-checkbox"></span>
+                          Website</label>
+                        </div>
+
+                        <div className="checkbox-service">
+                          <input type="checkbox" id="web-app" value="web application"
+          onChange={handleCheckboxChange} />
+                          <label htmlFor="web-app">
+                            <span className="custom-checkbox"></span>
+                            Web app</label>
+                        </div>
+
+                        <div className="checkbox-service">
+                          <input type="checkbox" id="android" value="Android"
+          onChange={handleCheckboxChange}/>
+                          <label htmlFor="android">
+                            <span className="custom-checkbox"></span>
+                            Android App</label>
+                        </div>
+                        
+                        <div className="checkbox-service">
+                          <input type="checkbox" id="ios-app" value="ios"
+          onChange={handleCheckboxChange} />
+                          <label htmlFor="ios-app">
+                            <span className="custom-checkbox"></span>
+                            IOS app</label>
+                        </div>
+
+                        <div className="checkbox-service">
+                          <input type="checkbox" id="marketing" value="market "
+          onChange={handleCheckboxChange} />
+                          <label htmlFor="marketing">
+                            <span className="custom-checkbox"></span>
+                            Marketing</label>
+                        </div>
+
+                      </div>
                     </div>
-                    
+
+
+
                     <div className='form-group'>
                       {errors.message && <small className="small">{errors.message}</small>}
-                      <textarea id='detail' name='message' rows="5" cols="50" placeholder="Describe project here..." autoComplete='off' ref={messageRef} tabIndex="3" onChange={handleInputChange}
+                      <textarea id='detail' name='message' rows="5" cols="50" placeholder="Describe project here" autoComplete='off' ref={messageRef} tabIndex="3" onChange={handleInputChange}
                       value={formData.message}   aria-invalid={!!errors.message}></textarea>
                     </div>
 
@@ -122,7 +204,7 @@ const ContactOverlay = () => {
                       disabled={isSubmitting}
                       onClick={handleSubmit}
                       className='button-cta'>
-                      {isSubmitting ? "Submitting..." : "Send Inquiry"}
+                      {isSubmitting ? "Submitting..." : "Get Quote"}
                     </button>
             </div>
 

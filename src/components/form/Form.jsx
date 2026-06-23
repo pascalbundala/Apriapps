@@ -2,7 +2,7 @@ import React, {useState,useRef} from 'react';
 import { Link } from "react-router-dom";
 import './form.css';
 import useMediaQuery from '../useMediaQuery';
-import Button from '../../components/button/Button';
+import {useContact} from "../../context/contactContext"
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitText from "gsap/SplitText";
@@ -12,9 +12,10 @@ gsap.registerPlugin(SplitText,ScrollTrigger);
 
 
 const Form = () => {
-
+  const { openContact } = useContact();
   const isMobile =useMediaQuery("(max-width:768px)");
   const formWrapper=useRef();
+  const contactRef=useRef();
   const textRef=useRef();
 
   useGSAP(()=>{
@@ -27,18 +28,12 @@ const Form = () => {
     const tl = gsap.timeline({
     scrollTrigger:{
       trigger:formWrapper.current,
-      start:"top 60%",
+      start:"top 70%",
       end:"top top",
       scrub:true,
       markers:false,
       },
     });
-
-    tl.to(".image-c",{
-      xPercent:-50,
-      duration:6,
-      ease:"none"
-    })
 
       tl.from(split.lines, {
       yPercent: 100,
@@ -47,18 +42,16 @@ const Form = () => {
       ease: "power4.out",
     })
     .from(
-      ".navigation-link",
+      contactRef.current,
       {
         y: 30,
         opacity: 0,
-        duration: 0.8,
+        duration: 0.6,
         ease: "power3.out",
       },
       "+=0.2" 
     );
   return () => split.revert();
-
-
     } 
     init();
 
@@ -67,24 +60,17 @@ const Form = () => {
 
   return (
     <div className='form' ref={formWrapper} >
-
         <div className="image-c">
           <img src="/office/office-code.jpg" alt="" />
         </div>
-
         <div className="form-link">
-            <p className="larger-h1" ref={textRef}>
-              Ready to create your next project.
-            </p>
-
-            <Link to="/contact" className='navigation-link'>
-              <Button text="start project" />
-            </Link>
-
+          <p className="larger-h1" ref={textRef}>
+            Ready to create your next project.
+          </p>
+          <button onClick={openContact} className="button-cta" ref={contactRef}>
+            Start project
+          </button>
         </div>
-
-
-      
     </div>
   )
 }

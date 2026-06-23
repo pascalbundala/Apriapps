@@ -38,7 +38,7 @@
     }
 
     .item{
-        width: 25rem;
+        width: 28rem;
         height: fit-content;
         position: relative;
         transition: all ease-in-out;
@@ -118,14 +118,12 @@
 
     .item .tags-column p{
         width: fit-content;
-        padding: 0.3rem 0.4rem;
+        padding: 0.20rem 0.4rem;
         text-align: start;
         font-size: 0.5rem;
         text-transform: uppercase;
         font-weight: 300;
-        margin-top: 0.3rem;
-        border-radius: 0.2rem;
-        background-color: var(--black-fade-color);
+        margin-top: 0rem;
     }
 
     .projectList .navigation-link{

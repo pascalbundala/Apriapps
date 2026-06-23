@@ -21,7 +21,7 @@ const Home = () => {
         <Navbar/>
 
         <h1 className="larger-h1">
-          The Fusion of Strategy, Creativity and Technology.
+          The Fusion of Strategy,Creativity and Technology.
         </h1>
 
         <p className="small-title">We craft digital experiences that connect ideas with people. We are working with clients  worldwide, we design and build meaningful digital products that inspire growth and create impact,Blending creativity, technology and strategy.

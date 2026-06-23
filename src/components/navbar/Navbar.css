@@ -266,13 +266,7 @@
     filter: blur(350px);
 }
 
-.button-cta{
-    background-color: var(--accent-color);
-    border-radius: var(--border-radius);
-    padding: 0 1rem;
-    border: none;
-    cursor: pointer;
-}
+
 
 /* RESPONSIVE NAVBAR */
 @media screen and (max-width:480px) {
