@@ -43,12 +43,12 @@
 
 .project-item {
     width: 100%;
-    height: 70vh;
-    min-height: 50vh;
+    height: fit-content;
     cursor: pointer;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    padding-bottom: 4rem;
 }
 
 .project-item:not(:last-child){
@@ -57,8 +57,8 @@
 }
 
 .project-item img{
-    width: 40%;
-    height: 80%;
+    width: 26rem;
+    height: 28rem;
     display: block;
     object-fit: cover;
     border-radius: var(--border-radius);
@@ -73,6 +73,24 @@
 
 .project-title{
     width: 50%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.project-title .linkto{
+    margin-top: 3rem;
+    color: var(--text-whitefade-color);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    background-color: transparent;
+    padding: 0.4rem 0.7rem;
+    text-decoration: none;
+}
+
+.project-title .linkto:hover{
+    text-decoration: underline;
+    color: var(--accent-color);
 }
 
 .simple-description{
@@ -90,24 +108,29 @@
     line-height: 1.4rem;
     font-weight: 800;
     text-transform: uppercase;
+    margin-bottom: 0.4rem;
 }
 
 .simple-description p{
     font-size: 0.6rem;
     line-height: 0.6rem;
     font-weight: 500;
-    display: block;
     text-transform: uppercase;
     margin-top: 0.85rem;
-    width: 100%;
+    width: fit-content;
+    text-align: center;
     color: var(--text-grey-color);
+    margin-right: 0.6rem;
+    border: 1px solid var(--border-fade-color);
+    padding: 0.3rem 0.5rem;
+    border-radius: var(--border-radius);
 }
 
 .project-title .large-description{
     font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.35rem;
-    color: var(--text-whitefade-color);
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--text-grey-color);
 }
 
 .how-we-work{

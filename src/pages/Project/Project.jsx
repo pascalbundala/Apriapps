@@ -3,26 +3,8 @@ import Navbar from '../../components/navbar/Navbar';
 import './project.css';
 import Footer from '../../components/footer/Footer';
 import Form from '../../components/form/Form';
-
-const projectList=[
-{
-name:"REFEREEE",
-image:"/projects/image1.jpg",
-description:"BRAND | WEBSITE-DESIGN ",
-},
-
-{
-name:"SECONDPROJECT",
-image:"/projects/image2.jpg",
-description:"BRAND | WEBSITE-DESIGN ",
-},
-
-{
-name:"BRANDOX",
-image:"/projects/image3.jpg",
-description:"BRAND | DESIGN |VISUAL ",
-},
-]
+import projectData from '../../data/project';
+import { Link } from 'react-router-dom';
 
 const steps = [
   {
@@ -67,17 +49,29 @@ const Project = () => {
 
         <div className="project-list">
           {
-            projectList.map((project,index)=>(            
+            projectData.map((project,index)=>(            
             <div className="project-item" key={index}>
-              <img src={project.image} alt="" />
+              <img src={project.img} alt="" />
               <div className="project-title">
                   <div className="simple-description">
                     <h3>{project.name}</h3>
-                    <p>{project.description}</p>
+                    <div className="flex row">
+                      {
+                      project.tags.map((tag,i)=>(
+                        <p key={i}>{tag}</p>
+                      ))
+                    }
+                    </div>                   
                   </div>
                   <p className="large-description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptatem quam voluptate atque nam nisi tenetur quidem nemo esse, dolorum assumenda optio aliquid aliquam neque in at? Non, quos deleniti!
+                    {
+                      project.description
+                    }
                   </p>
+
+                  <Link className='linkto'  to={`/projects/${project.name}`} key={project.name}>
+                    view more
+                  </Link>
               </div>
             </div>))
           }

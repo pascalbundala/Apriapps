@@ -38,13 +38,6 @@
     margin-bottom: 1rem;
 }
 
-.prj  p{
-    font-size: 0.88rem;
-    width: 40%;
-    line-height: 1.35rem;
-    color: var(--text-grey-color);
-}
-
 .prj .description-link{
     width: 40%;
     display: flex;
@@ -54,6 +47,8 @@
 .prj .description-link p{
     width: 100%;
     margin-bottom: 4rem;
+    color: var(--text-grey-color);
+    line-height: 1.45rem;
 }
 
 .prj .description-link a{
@@ -95,6 +90,8 @@
     margin: 0 auto;
     padding-bottom: 2rem;
     margin-top: 0.5rem;
+    color: var(--text-grey-color);
+    line-height: 1.45rem;
 }
 
 .prj .challenge .problem-solution{

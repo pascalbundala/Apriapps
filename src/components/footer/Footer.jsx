@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <div className="locs">
-        <p>Based in Kilimanjaro City,Tanzania Working Worldwide.</p>
+        <p className='pax'>Based in Kilimanjaro City,Tanzania Working Worldwide.</p>
       </div>
       
       <div className="footer-end">

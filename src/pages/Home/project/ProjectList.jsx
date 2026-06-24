@@ -70,7 +70,7 @@ const ProjectList = () => {
                         <div className="pr-d">
                           <div className="pr">
                             <h3>{data.name}</h3>
-                            <p>{data.description}</p>
+                            <p>{data.intro}</p>
                           </div>
 
                           <div className="tags-column">
@@ -78,7 +78,6 @@ const ProjectList = () => {
                                 data.tags.map((tag,id)=>(<p key={id}>{tag}</p>))
                               }
                           </div>
-                          
                         </div>
                       </Link>
                   </div>
