@@ -62,7 +62,7 @@ const ProjectList = () => {
                 {
                 projectData .map((data,index)=>(
                   <div className="item-s" key={index}>
-                      <Link className="item" to={`/projects/${data.name}`}
+                      <Link className="item" to={`/project/${data.name}`}
                       key={data.name} >
                         <div className="img-holder">
                           <img src={data.img} alt=""/>

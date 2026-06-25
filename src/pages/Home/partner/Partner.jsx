@@ -25,7 +25,7 @@ const Partner = () => {
           <div className="logos-fader">
                   <div className="logos-wrapper" >
                   <div className="logos-track">
-                    {logos.map((logo,i)=>(
+                    {[...logos, ...logos].map((logo,i)=>(
                       <div className="box" key={i}>
                           <img src={logo.logo} alt="" />
                       </div>

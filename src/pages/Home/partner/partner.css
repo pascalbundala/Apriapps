@@ -54,11 +54,12 @@
   flex-wrap: nowrap;
   padding: 0;
   position: relative;
+  animation: slide 20s linear infinite;
 }
 
 .logos-track .box{
   border-radius: 0px;
-  padding: 0 2rem;
+  padding: 0rem 2rem;
 }
 
 .logos-track .box img{
@@ -70,8 +71,18 @@
   filter: grayscale(100%);
 }
 
-.logos-track .box img:hover{
+.logos-track:hover{
   filter: grayscale(0%);
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 @media screen and (max-width:480px) {

@@ -8,6 +8,7 @@ import ProjectList from './project/ProjectList'
 import Service from './service/service'
 import Expection from "./expection/Expection";
 import Form from "./../../components/form/Form";
+import Faq from "./faq/Faq";
 
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
         <Expection/>
         <Partner/>
         <Testmonial/>
+        <Faq/>
         <Form/>
         <Footer/>
     </>

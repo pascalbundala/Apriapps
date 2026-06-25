@@ -43,36 +43,3 @@ function App() {
 
 export default App;
 
-
-// function App() {
-//   const lenisRef = useRef();
-
-//   useEffect(() => {
-//     function update(time) {
-//       lenisRef.current?.lenis?.raf(time * 1000);
-//     }
-
-//     gsap.ticker.add(update);
-//     return () => gsap.ticker.remove(update);
-//   }, []);
-
-//   return (
-//     <>
-//       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef} />
-//       <ScrollToTop />
-
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/about" element={<About />} />
-//         <Route path="/service" element={<Service />} />
-//         <Route path="/project" element={<Project />} />
-//       </Routes>
-
-//       {/* GLOBAL OVERLAY */}
-//       <ContactOverlay />
-//     </>
-//   );
-// }
-
-// export default App;
-

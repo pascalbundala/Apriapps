@@ -69,7 +69,7 @@ const Project = () => {
                     }
                   </p>
 
-                  <Link className='linkto'  to={`/projects/${project.name}`} key={project.name}>
+                  <Link className='linkto'  to={`/project/${project.name}`} key={project.name}>
                     view more
                   </Link>
               </div>

@@ -62,6 +62,9 @@ const Navbar = () => {
 
       <div className="header-desktop">
         <ul>
+          <NavLink to="/" className="item-menu">
+            Home
+          </NavLink>
           <NavLink to="/about" className="item-menu">
             About
           </NavLink>

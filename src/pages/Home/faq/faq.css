@@ -1,0 +1,101 @@
+.faq{
+    width: 100%;
+    height: fit-content;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-flow: column wrap;
+    color: var(--text-black-color);
+    background-color: var(--white-color);
+    z-index: 13;
+}
+
+.faq .span-text,.faq .span-icon, .faq .title-bold-extra{
+    width: fit-content;
+    color: var(--text-blackfade-color);
+}
+
+.faq .faqsection{
+    display: flex;
+    width: 100%;
+    flex-flow: column nowrap;
+    margin-top: 4rem;
+}
+
+.faq .faqblock{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    border-bottom: 0.5px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.faq .faqblock .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.faq .faqblock .faq-question .h43 {
+    width: 50%;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-blackfade-color);
+    font-weight: 700;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+}
+
+.faq .faqblock .faq-question .h43 h3:first-child{
+    margin-right: 2rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.faq .faqblock .faq-question .h43 h3:nth-child(2){
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+.faq .faqblock .faq-question span {
+    font-size: 2rem;
+    font-weight: 100;
+    cursor: pointer;
+    color: var(--text-black-color);
+
+}
+
+
+.faq .faqblock .faq-answer {
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-5px);
+  padding-bottom: 0rem;
+}
+
+.faq .faqblock .faq-answer p{
+    width: 40%;
+    margin-left: 10%;
+}
+
+.faq .faqblock .faq-answer.show {
+  max-height: 300px; 
+  opacity: 1;
+  transform: translateY(0);
+  padding-bottom: 2rem;
+}
