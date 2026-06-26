@@ -6,7 +6,7 @@
     display: flex;
     flex-flow: column wrap;
     color: var(--text-black-color);
-    background-color: var(--white-color);
+    background-color: var(--white-fade-color);
     z-index: 13;
 }
 
@@ -23,12 +23,13 @@
 }
 
 .faq .faqblock{
-    width: 100%;
+    width: 50%;
     height: fit-content;
     display: flex;
     flex-flow: column nowrap;
     border-bottom: 0.5px solid var(--border-color);
-    margin-bottom: 1rem;
+    align-self:center;
+    margin-bottom: 1.2rem;
 }
 
 .faq .faqblock .faq-question {
@@ -37,12 +38,12 @@
     align-items: center;
     cursor: pointer;
     width: 100%;
+    margin-bottom: 0.5rem;
 }
 
 .faq .faqblock .faq-question .h43 {
-    width: 50%;
+    width: 100%;
     margin: 0;
-    font-size: 1rem;
     color: var(--text-blackfade-color);
     font-weight: 700;
     display: flex;
@@ -52,16 +53,18 @@
 
 .faq .faqblock .faq-question .h43 h3:first-child{
     margin-right: 2rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 300;
     margin-top: 0;
+    display: none;
 }
 
 .faq .faqblock .faq-question .h43 h3:nth-child(2){
-    margin-right: 1rem;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 1.35rem;
+    font-weight: 800;
     margin-top: 0;
+    color: var(--text-blackfade-color);
+
 }
 
 .faq .faqblock .faq-question span {
@@ -75,9 +78,9 @@
 
 .faq .faqblock .faq-answer {
   width: 100%;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
-  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  font-weight: 300;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -85,17 +88,16 @@
   overflow: hidden;
   opacity: 0;
   transform: translateY(-5px);
-  padding-bottom: 0rem;
+  padding-bottom: 1rem;
 }
 
 .faq .faqblock .faq-answer p{
-    width: 40%;
-    margin-left: 10%;
+    width: 100%;
 }
 
 .faq .faqblock .faq-answer.show {
   max-height: 300px; 
   opacity: 1;
   transform: translateY(0);
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }

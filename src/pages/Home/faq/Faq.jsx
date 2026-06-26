@@ -19,7 +19,7 @@ const Faq = () => {
             <div className="column">
                 <FadeText><Span title="F.A.Q"/></FadeText>
                 <FadeText><p className="title-bold-extra" >
-                    What our clients <br/>ask Us.
+                    What clients <br/>ask Us.
                 </p></FadeText>
             </div>
         </div>
