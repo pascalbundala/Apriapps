@@ -2,6 +2,12 @@ import Navbar from "../../components/navbar/Navbar";
 import './about.css';
 import Footer from "../../components/footer/Footer";
 import Form from "../../components/form/Form";
+import skillData from "../../data/skills";
+import why from "../../data/values";
+import workProcess from "../../data/workprocess";
+import serviceList from "../../data/serviceList";
+import React, {useState,useRef} from 'react';
+
 
 const sts=[{no:"08", name:"years"},{no:"12", name:"projects"},{no:"120", name:"clients"},{no:"12", name:"countries"},]
 
@@ -9,37 +15,116 @@ const partners=['/partner/deloitte-1.svg','/partner/google-1.svg','/partner/nasa
 
 const images=['/office/office-code.jpg','/office/office.jpg','/office/swimming.jpg','/office/puto.jpg']
 
-const why=[{name:"Strategy Solutions",p:"We take time to understand your business goals before writing a single line of code. Every project is built with purpose, clarity and measurable outcomes in mind."},{name:"Focused Design",p:"Great products are built for people. Our UI/UX approach ensures intuitive experiences, clean interfaces, and seamless interactions across all devices."},{name:"Partnership Mindeset",p:"We go beyond project delivery. ApriApps acts as a technology partner, providing ongoing support, optimization, and continuous improvement."},{name:"Transparent collaboration",p:"Clear communication, defined timelines, and honest feedback are core to how we work. You stay informed and involved at every stage."},]
-
-const skills=['reactjs','tailwinds','css3','javascript','PHP','html5','Gsap','ThreeJs','Laravel','flutter','API','firebase','Mysql','UX Design','UI Design','Web Design','visual identity','visual direction'];
-
-const tools=['figma','vscode']
 
 const Home = () => {
+  const skills = skillData[0];
+
   return (
     <div className="g-holder abt" >
         <Navbar/>
 
         <h1 className="larger-h1">
-          The Fusion of Strategy,Creativity and Technology.
+          The Fusion of Strategy Creativity and Technology.
         </h1>
 
-        <p className="small-title">We craft digital experiences that connect ideas with people. We are working with clients  worldwide, we design and build meaningful digital products that inspire growth and create impact,Blending creativity, technology and strategy.
+        <p className="small-title">
+          We craft digital experiences that connect ideas with people. We are working with clients  worldwide, we design and build meaningful digital products that inspire growth and create impact,Blending creativity, technology and strategy.
         </p>
 
-        <div className="why">
-            <div className="img-container about-image ">
-              <img src="/images/office.jpg" alt="" />
-            </div>  
-            <div className="strgt padding-space">
-                {
-                  why.map((y,i)=>(
-                  <div className="reas" key={i}>
-                      <h3>{y.name}</h3>
-                      <p>{y.p}</p>
-                </div>))
-                }
+        <div className="why padding-space">
+             <img src="/images/office.jpg" alt="" />
+             <img src="/office/office-code.jpg" alt="" />
+
+             <div className="intro-about padding-space">
+               <h2 className="title-bold-extra">our profile</h2>
+               <p className="small-title">
+                  We create magnetic commerce that attracts, resonates and converts, helping brands turn brave ideas into digital experiences that captivate their audience, build trust, and drive lasting growth.
+               </p> 
+
+              <div className="scrolling-stats">
+                    {
+                      sts.map((s,index)=>(
+                        <div className="st" key={index}>
+                          <p className="small-title">{s.name}:</p>
+                          <h4>{s.no}</h4>
+                        </div>
+                      ))
+                    }
+            </div>              
             </div>
+        </div>
+         
+        <div className="profile padding-space">
+          <div className="intro-v">
+              <h2 className="title-bold-extra">
+                about us
+              </h2>
+          </div>
+        </div>
+
+        <div className="our-services" ref={serviceList}>
+          <h2 className="title-bold-extra padding-space">Built to Move <br/>Brands Forward</h2>
+          <p className="small-title padding-space">
+            We combine strategy, creativity and technology to create digital solutions that strengthen brands, engage audiences and drive sustainable business growth.
+          </p>
+
+          <ul>
+            {
+              serviceList.map((service,index)=>(
+                <div className="servitm padding-space" key={index}> <h4>{index+1}</h4><span></span> <h3>{service.name} </h3><img src={service.image} alt={service.name} /></div>
+              ))
+            }
+          </ul>
+        </div>
+
+        <div className="strategy padding-space">
+          <div className="intro-v">
+                <h2 className="title-bold-extra">
+                our core values.
+              </h2>
+              <p className="small-title">our core values guide everything we do. They inspire us to deliver innovative, reliable, and high-quality digital solutions while building lasting relationships with our clients.</p>
+          </div>
+          <div className="strgt">
+                  {
+                    why.map((y,i)=>{
+                    const Icon = y.icon;
+                    return(
+                    <div className="reas" key={i}>
+                        <div className="flex row space-between">
+                          <h1 className="larger-h1">{i +1}</h1>
+                          <Icon size={40} strokeWidth={1.5} />
+                        </div>
+                        <h3 className="title-bold">{y.name}</h3>
+                        <p className="small-title">{y.p}</p>
+                    </div>
+                  )})
+                  }
+          </div>
+        </div>
+
+        <div className="how-work padding-space">
+          <h3 className="title-bold-extra">
+            how we work.
+          </h3>
+          <p className="small-title">
+            we follow a structured development process that ensures every project is delivered on time, within budget, and aligned with your business goals.
+          </p>
+
+          <div className="steps">
+            {
+              workProcess.map((process,index)=>(            
+              <div className="step" key={index}>
+                <h4 className="fc">Step-{process.step}</h4>
+                <div className="flex column">
+                <h3 className="title-bold">{process.title}</h3>
+                <p className="small-title">{process.description}</p>
+                </div>
+
+              </div>
+            ))
+            }
+          </div>
+
         </div>
 
         <div className="team padding-space">
@@ -57,44 +142,32 @@ const Home = () => {
         </div>
 
         <div className="phil padding-space">
-            <div className="flex row space-between">
 
-                <p className="title-bold-extra">
-                  Every digital product.
+                <p className="larger-h1">
+                 product
+                  build with precision.
                 </p>
 
                 <p className="small-title">
-                  Design does not end with websites and apps for me. I am also interested in 3D, motorsport, visual experiments, and personal projects where I can explore ideas without a client brief.
-                  One of these projects was a fan-made 3D printed Formula 1 model inspired by Red Bull Racing, created as my final school project. It took over 200 hours to build and reached more than 30,000 views after I shared it online.
-                  Projects like this remind me why I enjoy design in the first place: the mix of detail, patience, technical problem-solving, and the satisfaction of turning an idea into something real.
+                  Every product is carefully designed and developed with a focus on quality, performance, scalability, and user experience delivering reliable digital solutions that create lasting value.
                 </p>
-
-                <div className="statics">
-                    {
-                      sts.map((s,index)=>(
-                        <div className="st" key={index}>
-                          <h4>{s.no}</h4>
-                          <p>{s.name}</p>
-                        </div>
-                      ))
-                    }
-                </div>
-
-            </div>
-
-            <div className="flex row space-between ">
-              <div className="tools">
-                    <span>skills </span>
-                  <ul>
-                    {
-                      skills.map((skill,index)=>{
-                          return <li key={index}>{skill}</li>
-                      })
-                    }
-                  </ul>
-              </div>
-            </div>
         </div>
+
+        <div className="skill padding-space">
+            <p className="title-bold-extra">
+            technology<br/> stack.</p>
+           {Object.entries(skills).map(([category, items]) => (
+              <div className="skill-group" key={category}>
+                <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+                <ul className="skill-list">
+                  {items.map((skill, index) => (
+                    <li key={index}>{skill}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+        </div>
+
         <Form/>
         <Footer/>
         

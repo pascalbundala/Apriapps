@@ -7,82 +7,364 @@
     justify-content: center;
     align-items: center;
     padding-top: 15rem;
+
 }
 
 .abt .larger-h1{
     width: 50%;
+    line-height: 4.7rem;
 }
 
 .abt .small-title{
     width: 30%;
     text-align: start;
-    margin: 3rem auto;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    font-weight: 400;
+    margin: 5rem auto;
     color: var(--text-grey-color);
 }
 
-.abt .standard-text{
-    font-size: 0.95rem;
-    line-height: 1.4rem;
-    font-weight: 400;
-    width: 70%;
-}
 
 .abt .why{
     width: 100%;
-    height: fit-content;
+    height: 85vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+}
+
+
+.abt .why img{
+    display: block;
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.abt .why img:nth-child(2){
+    width: 300px;
+    height: 200px;
+    align-self: flex-end;
+}
+
+
+.abt .why .intro-about{
+    width: 30%;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-    border-bottom: 1px solid var(--border-fade-color);
-}
-.abt .about-image{
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    height: 80vh;
-    margin-bottom: 5rem;
+    overflow: hidden;
+    align-items: start;
 }
 
-.abt .about-image img{
-    display: block;
+.abt .why .intro-about .small-title{
+    margin: 1rem 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
+}
+.abt .why .scrolling-stats{
+    width: 60%;
+    margin-top: 3rem;
 }
 
-.abt .why .strgt{
-    height: fit-content;
+.abt .why .scrolling-stats .st{
     width: 100%;
+    text-align: center;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: start;
-    margin-top: 5vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+    padding-bottom: 0;
+    border-bottom: 1px solid var(--border-fade-color);
+
 }
 
-.abt .reas{
-    width:19rem;
+.abt .why .scrolling-stats .st h4{
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    width: 30%;
+    text-align: start;
+    color: var(--text-whitefade-color);
+}
+
+.abt .why .scrolling-stats .st p{
+    font-weight: 300;
+    color: var(--text-grey-color);
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+    width: 50%;
+}
+.abt .profile{
+    width: 100%;
+    height: 50vh;
+    display: none;
+}
+
+.abt .profile .intro-v{
+    width: 100%;
     height: fit-content;
+    justify-content: start;
+}
+
+.abt .profile .intro-v .title-bold-extra{
+    text-transform: capitalize;
+}
+
+.abt .profile .intro-v .small-title{
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+/* our-services */
+.abt .our-services{
+    width: 100%;
+    height: fit-content;
+    position: relative;
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
     align-items: start;
+    padding-top: 5rem;
 }
 
-.abt .reas h3{
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+.abt .our-services .small-title {
+    margin: 1rem 0;
 }
-.abt .reas p{
-    width: 80%;
-    font-size: 0.85rem;
+
+.abt .our-services ul{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    margin:6rem 0;
+    padding: 0;
+    position: relative;
+}
+
+.abt .our-services ul .servitm{
+    width: 100%;
+    border-bottom: 1px solid var(--border-fade-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    color: var(--text-white-color);
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+.abt .our-services ul .servitm:hover {
+    background-color: var(--text-grey-color);
+}
+
+.abt .our-services ul .servitm:hover h3{
+    color: var(--text-black-color);
+}
+.abt .our-services ul .servitm:hover h4{
+    color: var(--text-black-color);
+}
+
+.abt .our-services ul .servitm:first-child{
+    border-top: 1px solid var(--border-fade-color);
+}
+
+.abt .our-services ul .servitm h3{
+    font-size: 0.65rem;
     font-weight: 400;
+    list-style: none;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    color: var(--text-whitefade-color);
+    padding-top: 1rem;
+    padding-bottom: 0.7rem;
+    margin-left: 1rem;
+}
+
+
+.abt .our-services ul .servitm h4{
+    font-size: 0.7rem;
+    font-weight: 300;
+    list-style: none;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    color: var(--text-whitefade-color);
+    padding-top: 0.5rem;
+}
+
+.abt .our-services ul .servitm span{
+    width: 1rem;
+    height: 0.4px;
+    background-color: var(--text-grey-color);
+    margin-left: 0.5rem;
+}
+
+.abt .our-services ul .servitm:hover span{
+    background-color: var(--text-black-color);
+}
+
+.abt .our-services ul .servitm img{
+    width: 50vh;
+    height: 50vh;
+    position: absolute;
+    left: 70%;
+    top: 100%;
+    transform: translate(-10%,-50%) scale(0.8);
+    opacity: 0;
+    transform-origin: center;
+    transition: transform 0.5s ease,opacity 0.5s ease;
+    border-radius: var(--border-radius);
+    z-index: 15;
+}
+
+.abt .our-services ul .servitm:hover img{
+    transform: translate(-10%,-60%) scale(1);
+    opacity: 1;
+}
+
+
+.abt .strategy{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-top: 5vh;
+    padding-top: 2rem;
+}
+
+.abt .strategy .intro-v{
+    width: 30%;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.abt .strategy .title-bold-extra{
+    text-transform: capitalize;
+}
+
+.abt .strategy .small-title{
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.abt .strategy .strgt{
+    width: 90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-self: flex-end;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.abt .strategy .strgt .reas{
+    width:25rem;
+    height: 25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    position: relative;
+    border: 1px solid var(--border-fade-color);
+    padding: 2rem 1rem;
+    border-radius: var(--border-radius);
+    background-color: var(--accent-color);
+    color: var(--black-color);
+}
+
+.abt .strategy .strgt .reas:nth-child(2){
+    background-color: violet;
+}
+
+.abt .strategy .strgt .reas:nth-child(3){
+    background-color: black;
+    color: white;
+}
+
+.abt .strategy .strgt .reas:nth-child(3) .small-title{
+    color: var(--text-white-color);
+}
+
+
+.abt .reas .title-bold{
+    margin-bottom: 0rem;
+    font-weight: 900;
+    margin-top: 2rem;
+}
+.abt .reas .small-title{
+    width: 100%;
+    color: var(--black-color);
+}
+
+/* how-work */
+.how-work{
+    width: 100%;
+    height: fit-content;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+}
+
+.how-work .small-title{
+    margin: 1rem 0;
+    width: 25%;
+}
+
+.how-work .steps{
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: start;
+    align-self: flex-end;
+    padding-left: 10rem;
+}
+
+.how-work .steps .step{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 17rem;
+    border-bottom: 1px solid var(--border-fade-color);
+    padding: 2rem 0rem;
+}
+
+.how-work .steps .step:nth-child(2){
+    margin-left:10rem;
+    margin-top: 0rem;
+}
+
+.how-work .steps .step:nth-child(3){
+    margin-left:0rem;
+    margin-top: 2rem;
+}
+
+.how-work .steps .step:nth-child(4){
+    margin-left:10rem;
+    margin-top: 2rem;
+}
+
+
+.how-work .steps .step .fc{
     color: var(--text-grey-color);
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.how-work .steps .step .small-title{
+    margin: 1rem 0;
+    width: 100%;
 }
 
 
@@ -94,6 +376,7 @@
     height: fit-content;
     padding-top: 10vh;
     width: 100%;
+    display: none;
 }
 
 .abt .team p{
@@ -112,8 +395,6 @@
     height: 20rem;
     border-radius: var(--border-radius);
 }
-
-
 
 .abt .team-container img{
     width: 100%;
@@ -166,29 +447,28 @@
 
 .abt .phil{
     width: 100%;
-    height: 115vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    padding-top: 5rem;
-    padding-bottom: 3rem;
+    align-items: center;
+    padding-top: 8rem;
+    padding-bottom: 7rem;
     background-color: var(--black-fade-color);
 }
 
-.abt .phil .title-bold-extra{
-    width: 10%;
-    line-height: 2rem;
+.abt .phil .larger-h1{
+    width: 60%;
+    text-align: center;
+    margin-bottom: 4rem;
+    text-transform: capitalize;
 }
 
 
 .abt .phil .small-title{
-    width: 40%;
-    font-size: 1rem;
-    line-height: 1.55rem;
+    width: 30%;
     margin-top: 0;
-    font-weight: 300;
     color: var(--text-grey-color);
+    text-align: center;
 }
 
 
@@ -229,39 +509,45 @@
     color: var(--text-grey-color);
 }
 
-.abt .tools{
-    width: 50%;
+
+.abt .skill{
+    width: 100%;
     height: fit-content;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-fade-color);
+
 }
 
-.abt .tools span{
-    margin-bottom:0.6rem;
-    width: fit-content;
-    padding: 0.3rem 0rem;
-    text-transform: capitalize;
-    font-weight: 400;
-    color: var(--text-grey-color);
-}
-.abt .tools ul {
-    display: flex;
-    flex-flow:row wrap;
-    padding: 0;
-    width: 80%;
+.abt .skill .title-bold-extra {
+    margin-right: 13rem;
+
 }
 
-.abt .tools ul li{
+.abt .skill .skill-group{
     width: fit-content;
-    font-size: 0.7rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    list-style: none;
+}
+
+
+.abt .skill .skill-group h2 {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.abt .skill .skill-group .skill-list {
+  display: flex;
+  flex-flow: column nowrap;
+  list-style: none;
+  padding: 0;
+}
+
+.abt .skill .skill-group .skill-list li {
+    font-size: 0.75rem;
     margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
-    padding: 0.6rem;
-    border: 1px solid var(--border-fade-color);
-    border-radius: var(--border-radius);
-    background-color: var(--border-fade-color);
-
+    text-transform: capitalize;
+    color: var(--text-grey-color);
 }

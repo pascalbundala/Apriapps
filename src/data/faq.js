@@ -1,5 +1,5 @@
 const faqData = [
- {
+  {
     qn: "What digital services we provide?",
     answer:
       "We offers end-to-end digital solutions including website development, mobile app development, custom web applications, UI/UX design, branding, SEO (Search Engine Optimization), digital marketing, e-commerce development, web hosting, and website maintenance. Our focus is to help businesses build a strong online presence and achieve scalable digital growth through modern software development solutions."
