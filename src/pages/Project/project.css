@@ -2,34 +2,62 @@
     padding: 0;
     display: flex;
     flex-flow: column;
-    padding-top: 10rem;
     background-color: var(--black-color);
-    color: var(--text-whitefade-color);
+    color: var(--text-white-color);
 }
 
 .work-title{
     width: 100%;
-    height: fit-content;
+    height: 80vh;
     display: flex;
     flex-flow: column nowrap;
-    margin-bottom: 5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8rem;
+
 }
 
 .work-title h1{
     width: 100%;
-    text-align: start;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-white-color);
 }
 
-.project-page .title{
-    width: 50%;
-    margin-top: 0;
-    margin-bottom: 0%;
-}
-
-.title .small-title{
-    width: 50%;
+.work-title .small-title{
+    width: 20%;
     font-weight: 300;
+    text-align: center;
+    color: var(--text-whitefade-color);
+}
+
+.short-description{
+    width: 100%;
+    height: fit-content;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    color: var(--text-whitefade-color);
+    border-top: 1px solid var(--border-fade-color);
+    margin-top: 3rem;
+}
+
+.short-description h3{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.short-description p{
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.short-description p:nth-child(2){
+    color: var(--text-grey-color);
 }
 
 .project-list{
@@ -37,102 +65,119 @@
     height: fit-content;
     padding-bottom: 5rem;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 
 .project-item {
-    width: 100%;
+    width: 23rem;
     height: fit-content;
     cursor: pointer;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    padding-bottom: 4rem;
+    flex-flow: column nowrap;
+    justify-content: start;
+    margin-bottom: 12rem;
 }
 
-.project-item:not(:last-child){
-    border-bottom: 1px solid var(--border-fade-color);
-    margin-bottom: 8rem;
+.project-item:nth-child(even){
+    width: 18rem;
+    margin-left: 10rem;
 }
+.project-item:nth-child(even) img{
+    height: 16rem;
+}
+
+
 
 .project-item img{
-    width: 26rem;
-    height: 28rem;
+    width: 100%;
+    height: 23rem;
     display: block;
     object-fit: cover;
-    border-radius: var(--border-radius);
 }
 
-.large-description{
-    font-size: 0.7rem;
-    font-weight: 400;
-    line-height: 1.3rem;
-    margin-top: 3rem;
-}
-
-.project-title{
-    width: 50%;
+.project-list .project-item .projectData{
+    width: 100%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-.project-title .linkto{
-    margin-top: 3rem;
-    color: var(--text-whitefade-color);
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    background-color: transparent;
-    padding: 0.4rem 0.7rem;
-    text-decoration: none;
-}
 
-.project-title .linkto:hover{
-    text-decoration: underline;
-    color: var(--accent-color);
-}
-
-.simple-description{
+.project-list .project-item .simple-description{
     width: 100%;
     height: fit-content;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: start;
-    margin: 0px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
 }
 
-.simple-description h3{
-    font-size: 2rem;
-    line-height: 1.4rem;
-    font-weight: 800;
+.project-list .project-item  .simple-description h3{
+    font-size: 0.9rem;
+    font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0rem;
 }
 
-.simple-description p{
-    font-size: 0.6rem;
-    line-height: 0.6rem;
-    font-weight: 500;
+.project-list .project-item  .simple-description p{
+    font-size: 0.48rem;
+    font-weight: 400;
     text-transform: uppercase;
-    margin-top: 0.85rem;
     width: fit-content;
     text-align: center;
     color: var(--text-grey-color);
-    margin-right: 0.6rem;
-    border: 1px solid var(--border-fade-color);
-    padding: 0.3rem 0.5rem;
-    border-radius: var(--border-radius);
+    margin-right: 0.2rem;
 }
 
-.project-title .large-description{
-    font-size: 0.88rem;
-    font-weight: 300;
-    line-height: 1.4rem;
+.project-list .projectData .large-description{
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: 400;
+    line-height: 0.9rem;
     color: var(--text-grey-color);
+    margin: 1rem 0;
+    display: none;
 }
 
+.projectData .linkto{
+    text-transform: capitalize;
+    padding: 0.2rem 0.9rem;
+    text-decoration: none;
+    background-color: var(--black-fade-color);
+    width: fit-content;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-white-color);
+    margin-top: 1rem;
+}
+
+.projectData .linkto h4{
+    font-size: 0.55rem;
+    font-weight: 400;
+    color: var(--text-white-color);
+    margin-right: 0.5rem;
+    text-transform: uppercase;
+}
+
+.projectData .linkto:hover{
+    color: var(--text-black-color);
+    background-color: var(--accent-color);
+    font-weight: 400;
+}
+
+.projectData .linkto:hover h4{
+    color: var(--text-black-color);
+}
+
+
+
+/* how we work */
 .how-we-work{
     width: 100%;
     height: fit-content;

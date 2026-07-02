@@ -1,10 +1,11 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import './project.css';
 import Footer from '../../components/footer/Footer';
 import Form from '../../components/form/Form';
 import projectData from '../../data/project';
 import { Link } from 'react-router-dom';
+import { MoveRight } from 'lucide-react';
 
 const steps = [
   {
@@ -34,25 +35,37 @@ const steps = [
 ];
 
 const Project = () => {
+  const projectContainerRef=useRef();
+  const workTitle =useRef();
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <Navbar/>
-      <div className="project-page padding-space">
-        <div className="work-title">
-          <h1 className='larger-h1'>work</h1>
-          <div className="title">
+      <div className="project-page padding-space" ref={projectContainerRef}>
+        <div className="work-title" ref={workTitle}>
+            <h1 className='larger-h1'>work.</h1>
             <p className='small-title'>
                 Every project we deliver is a reflection of our commitment to quality, designed to inspire and drive success.
             </p>
-          </div>
+
+            <div className="short-description">
+              <h3>DEFINING BRAND AESTHETICS</h3>
+              <p>selected quality work <br /> <br /> @2018-{currentYear}</p>
+              <p>Branding | Design | websites | software solution</p>
+            </div>
         </div>
+
+
+
+
 
         <div className="project-list">
           {
             projectData.map((project,index)=>(            
             <div className="project-item" key={index}>
-              <img src={project.img} alt="" />
-              <div className="project-title">
+              <img src={project.img} alt={project.name} />
+              <div className="projectData">
                   <div className="simple-description">
                     <h3>{project.name}</h3>
                     <div className="flex row">
@@ -63,14 +76,11 @@ const Project = () => {
                     }
                     </div>                   
                   </div>
-                  <p className="large-description">
-                    {
-                      project.description
-                    }
-                  </p>
+                  <p className="large-description">{project.description}
+</p>
 
                   <Link className='linkto'  to={`/project/${project.name}`} key={project.name}>
-                    view more
+                    <h4>view more</h4> <MoveRight strokeWidth={0.9} />
                   </Link>
               </div>
             </div>))
