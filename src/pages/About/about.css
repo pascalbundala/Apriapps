@@ -17,22 +17,23 @@
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 5rem;
 }
 
 .abt .larger-intro .larger-h1{
     width: 50%;
     line-height: 4.7rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
-.abt .larger-intro .title-bold{
-    width: 30%;
+.abt .larger-intro .title-bold-extra{
+    width: 50%;
     text-align: start;
     color: var(--text-whitefade-color);
     text-transform: uppercase;
     align-self: flex-start;
     font-weight: 600;
-    line-height: 1.6rem;
+    line-height: 2rem;
 }
 
 .abt .title-bold-extra{
@@ -97,14 +98,15 @@
     margin: 0;
     text-align: start;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 900;
+    color: var(--text-whitefade-color);
 }
 
 .abt .why .intro-about .small-title{
     margin: 1rem 0;
     width: 100%;
-    color: var(--text-whitefade-color);
-    line-height: 1.2rem;
+    color: var(--text-grey-color);
+    line-height: 1.25rem;
 }
 .abt .why .scrolling-stats{
     width: fit-content;
@@ -133,7 +135,7 @@
 
 .abt .why .scrolling-stats .st p{
     font-weight: 300;
-    color: var(--text-white-color);
+    color: var(--text-grey-color);
     text-transform: capitalize;
     margin: 0.5rem 0;
     width: 60%;

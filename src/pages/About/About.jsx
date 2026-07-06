@@ -27,7 +27,7 @@ const Home = () => {
             <span className="line-span"></span>
           </div>
 
-            <p className="title-bold">
+            <p className="title-bold-extra">
               We craft digital experiences that connect ideas with people. We are working with clients  worldwide, we design and build meaningful digital products that inspire growth and create impact,Blending creativity, technology and strategy.
             </p>
         </div>
