@@ -9,7 +9,7 @@ import { SplitText } from "gsap/SplitText";
 import Span from '../../../components/span/span';
 import Button from '../../../components/button/Button';
 import FadeText from '../../../components/FadeText';
-import officeImage from "../../../assets/office-image.jpg";
+import Partner from '../partner/Partner';
 
 
 
@@ -50,16 +50,6 @@ const Welcome = () => {
           0.1
         );
 
-        tl.to(
-          ".abx-image",
-          {
-            clipPath: "inset(0 0 0% 0)",
-            duration: 1,
-            ease: "none",
-          },
-          "<70%"
-        );
-
         ScrollTrigger.refresh();
       };
 
@@ -77,29 +67,29 @@ const Welcome = () => {
         </div>
 
 
-        <div className="container-holder flex row space-between">
-          <div className="flex column w-intro">
+        <div className="intro-container">
+          <div className="w-intro">
               <FadeText>
                 <p className='title-bold-extra' ref={welcomeText}>
                   We transform technology into growth by delivering smart digital solutions.From custom software,web and mobile apps to cloud systems that help businesses succeed in the modern digital world.
               </p>
             </FadeText>
 
-            <FadeText>
+             <FadeText>
               <div className="myself">
                 <img src="/profile/pascalbundala.jpg" alt="" />
                 <div className="flex column">
                    <h3>pascal bundala</h3>
-                   <h3>Founder-apriapps</h3>
+                   <h3>Founder & CEO</h3>
                 </div>
               </div>
             </FadeText>
+
+            <div className="logopartners">
+              <Partner/>
+            </div>
           </div>
 
-
-          <FadeText>
-            <img className="abx-image" src={officeImage} alt="About us" />
-          </FadeText>
         </div>
       </div>
     </>

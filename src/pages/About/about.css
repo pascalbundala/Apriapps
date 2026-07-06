@@ -10,112 +10,134 @@
 
 }
 
-.abt .larger-h1{
+.abt .larger-intro{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.abt .larger-intro .larger-h1{
     width: 50%;
     line-height: 4.7rem;
+    text-transform: uppercase;
 }
 
-.abt .small-title{
+.abt .larger-intro .title-bold{
     width: 30%;
     text-align: start;
-    margin: 5rem auto;
-    color: var(--text-grey-color);
+    color: var(--text-whitefade-color);
+    text-transform: uppercase;
+    align-self: flex-start;
+    font-weight: 600;
+    line-height: 1.6rem;
 }
 
+.abt .title-bold-extra{
+    width: 60%;
+    margin-top: 4rem;
+    line-height: 2.3rem;
+    text-align: center;
+}
+
+.span-h{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: space-between;
+}
+.span-h .line-span{
+    background-color: var(--border-fade-color);
+    width: 100%;
+    height: 1px;
+}
+
+.span-h .p{
+    font-size: 0.6rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--text-grey-color);
+    align-self: flex-end;
+}
 
 .abt .why{
     width: 100%;
-    height: 85vh;
+    height: 150vh;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    margin-bottom: 6rem;
-    margin-top: 6rem;
+    justify-content: start;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
 }
 
 
 .abt .why img{
     display: block;
-    width: 30%;
+    width: 40%;
     height: 100%;
     object-fit: cover;
-    border-radius: var(--border-radius);
 }
-
-.abt .why img:nth-child(2){
-    width: 300px;
-    height: 200px;
-    align-self: flex-end;
-}
-
 
 .abt .why .intro-about{
-    width: 30%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     overflow: hidden;
     align-items: start;
+    margin-left: 8rem;
+    
+}
+.abt .why .intro-about .title-bold{
+    margin: 0;
+    text-align: start;
+    text-transform: uppercase;
+    font-weight: 400;
 }
 
 .abt .why .intro-about .small-title{
     margin: 1rem 0;
     width: 100%;
+    color: var(--text-whitefade-color);
+    line-height: 1.2rem;
 }
 .abt .why .scrolling-stats{
-    width: 60%;
-    margin-top: 3rem;
+    width: fit-content;
+    margin-top: 5rem;
 }
 
 .abt .why .scrolling-stats .st{
-    width: 100%;
-    text-align: center;
+    text-align:start;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
-    margin-bottom: 0.3rem;
+    margin-bottom: 1rem;
     padding-bottom: 0;
     border-bottom: 1px solid var(--border-fade-color);
-
 }
 
 .abt .why .scrolling-stats .st h4{
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 700;
     text-transform: capitalize;
-    width: 30%;
     text-align: start;
-    color: var(--text-whitefade-color);
+    color: var(--text-white-color);
+    width: 40%;
 }
 
 .abt .why .scrolling-stats .st p{
     font-weight: 300;
-    color: var(--text-grey-color);
+    color: var(--text-white-color);
     text-transform: capitalize;
     margin: 0.5rem 0;
-    width: 50%;
-}
-.abt .profile{
-    width: 100%;
-    height: 50vh;
-    display: none;
-}
-
-.abt .profile .intro-v{
-    width: 100%;
-    height: fit-content;
-    justify-content: start;
-}
-
-.abt .profile .intro-v .title-bold-extra{
-    text-transform: capitalize;
-}
-
-.abt .profile .intro-v .small-title{
-    text-transform: capitalize;
-    margin: 1rem 0;
+    width: 60%;
+    margin-right: 1rem;
 }
 
 /* our-services */
@@ -127,7 +149,17 @@
     flex-flow: column nowrap;
     justify-content: start;
     align-items: start;
-    padding-top: 5rem;
+    padding-top: 1rem;
+}
+
+.abt .our-services .title-bold-extra{
+    margin: 0;
+    text-align: start;
+}
+
+.abt .our-services .small-title{
+    width: 25%;
+    color: var(--text-whitefade-color);
 }
 
 .abt .our-services .small-title {
@@ -157,7 +189,7 @@
 }
 
 .abt .our-services ul .servitm:hover {
-    background-color: var(--text-grey-color);
+    background-color: var(--text-white-color);
 }
 
 .abt .our-services ul .servitm:hover h3{
@@ -172,8 +204,8 @@
 }
 
 .abt .our-services ul .servitm h3{
-    font-size: 0.65rem;
-    font-weight: 400;
+    font-size: 0.8rem;
+    font-weight: 600;
     list-style: none;
     text-transform: uppercase;
     margin-bottom: 0.2rem;
@@ -232,7 +264,7 @@
     flex-flow: column nowrap;
     justify-content: space-between;
     margin-top: 5vh;
-    padding-top: 2rem;
+    padding-top: 0rem;
 }
 
 .abt .strategy .intro-v{
@@ -241,15 +273,19 @@
     flex-flow: column;
     justify-content: start;
     align-items: start;
+    padding-top: 0;
 }
 
-.abt .strategy .title-bold-extra{
+.abt .strategy .intro-v .title-bold-extra{
     text-transform: capitalize;
+    text-align: start;
+    margin-top: 0;
 }
 
-.abt .strategy .small-title{
+.abt .strategy .intro-v .small-title{
     margin: 1rem 0;
-    width: 100%;
+    width: 80%;
+    color: var(--text-whitefade-color);
 }
 
 .abt .strategy .strgt{
@@ -267,7 +303,7 @@
     height: 25rem;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
     margin-bottom: 1rem;
     margin-right: 1rem;
@@ -275,28 +311,24 @@
     border: 1px solid var(--border-fade-color);
     padding: 2rem 1rem;
     border-radius: var(--border-radius);
-    background-color: var(--accent-color);
-    color: var(--black-color);
-}
-
-.abt .strategy .strgt .reas:nth-child(2){
-    background-color: violet;
-}
-
-.abt .strategy .strgt .reas:nth-child(3){
-    background-color: black;
-    color: white;
-}
-
-.abt .strategy .strgt .reas:nth-child(3) .small-title{
+    background-color: var(--black-fade-color);
     color: var(--text-white-color);
 }
+.abt .strategy .strgt .reas .c{
+    width: 40%;
+    align-items: center;
+    color: var(--text-grey-color);
+}
 
+.abt .strategy .strgt .reas .small-title{
+    color: var(--text-grey-color);
+} 
 
 .abt .reas .title-bold{
     margin-bottom: 0rem;
     font-weight: 900;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     text-transform: capitalize;
 }
 .abt .reas .small-title{
@@ -313,6 +345,24 @@
     display: flex;
     flex-flow: column nowrap;
     align-items: start;
+    color: var(--text-white-color);
+    background-color: var(--black-color);
+    background-image: url("/backimage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.how-work .title-bold-extra{
+    color: var(--text-white-color);
+    margin: 0;
+    text-align: start;
+}
+
+.how-work .small-title{
+    color: var(--text-whitefade-color);
 }
 
 .how-work .small-title{
@@ -355,7 +405,6 @@
 
 
 .how-work .steps .step .fc{
-    color: var(--text-grey-color);
     font-size: 0.6rem;
     text-transform: uppercase;
     font-weight: 400;
@@ -366,6 +415,7 @@
 .how-work .steps .step .small-title{
     margin: 1rem 0;
     width: 100%;
+    color: var(--text-grey-color);
 }
 
 
@@ -452,8 +502,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 8rem;
-    padding-bottom: 7rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     background-color: var(--black-fade-color);
 }
 
@@ -468,46 +518,28 @@
 .abt .phil .small-title{
     width: 30%;
     margin-top: 0;
-    color: var(--text-grey-color);
+    color: var(--text-whitefade-color);
     text-align: center;
 }
-
-
-.abt .phil .statics{
+.abt .phil .fo{
+    margin-top: 4rem;
     width: 20%;
-    height: fit-content;
-    display: flex;
-    flex-flow: wrap;
+    align-items: center;
 }
 
-.abt .phil .statics .st{
+.abt .phil .fo img{
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%);
+    border-radius: 50%;
+}
+
+.abt .phil .fo p{
+    margin-left: 1rem;
     width: fit-content;
-    height: fit-content;
-    padding-top:0px;
-    margin: 0 0px;
-}
-
-
-.abt .phil .statics .st:not(:last-child){
-    margin-right: 20px;
-    margin-bottom: 1rem;
-}
-
-
-.abt .phil .statics .st h4{
-    font-size: 3rem;
-    font-weight: 100;
-    margin: 0;
-}
-
-.abt .phil .statics .st p{
-    font-size: 0.8rem;
-    width: fit-content;
-    font-weight: 400;
-    line-height: 0.7rem;
-    text-transform: capitalize;
-    margin: 1rem auto 0 auto;
-    color: var(--text-grey-color);
+    font-weight: 900;
 }
 
 
@@ -519,13 +551,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 1px solid var(--border-fade-color);
-
+    align-items: start;
+    background-color: var(--black-fade-color);
+    border-top: 1px solid var(--border-fade-color);
 }
 
 .abt .skill .title-bold-extra {
-    margin-right: 13rem;
-
+    width: fit-content;
+    text-align: start;
+    margin-top: 0;
+    padding: 0;
 }
 
 .abt .skill .skill-group{

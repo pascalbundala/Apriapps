@@ -129,7 +129,7 @@ const ContactOverlay = () => {
                     </div>
 
                     <div className="chooselist">
-                      <h4>choose the service</h4>
+                      <h4>choose service</h4>
                       <div className="list-choice">
 
                         <div className="checkbox-service">

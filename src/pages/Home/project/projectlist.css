@@ -6,15 +6,43 @@
         position: relative;
         z-index: 4;
         background-color: var(--black-color);
-        color: var(--text-whitefade-color);
+        padding-bottom: 4rem;
     }
 
-    .projectList .container-holder{
-        margin: 1rem 0;
+    .projectList .pin-intro{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
     }
 
+    .projectList .pin-intro span{
+        color: var(--text-grey-color);
+        font-size: 0.70rem;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
 
-    .project-slide{
+    .projectList .pin-intro .larger-h1{
+        color: var(--text-white-color);
+        font-weight: 700;
+        font-size: 4.5rem;
+        line-height:4.5rem;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        text-align: center;
+        margin: 1rem auto;
+    }
+
+    .projectList .pin-intro .small-title{
+        width: 25%;
+        color: var(--text-grey-color);
+        text-align: center;
+    }
+
+  .projectList  .project-slide{
         width: 100%;
         height: fit-content;
         display: flex;
@@ -22,9 +50,10 @@
         justify-content: space-between;
         z-index: 3;
         padding: 0;
+        margin-bottom: 5rem;
     }
 
-    .item-s{
+   .projectList  .item-s{
         width: 100%;
         height: fit-content;
         display: flex;
@@ -34,15 +63,17 @@
 
     .item-s:nth-child(even) {
         justify-content: flex-end;
-        margin-top: -20rem;
+    }
+
+    .item-s:nth-child(even) .pr-d {
+        justify-content: flex-end;
     }
 
     .item{
-        width: 28rem;
+        width: 25rem;
         height: fit-content;
         position: relative;
         transition: all ease-in-out;
-        border-radius: var(--border-radius);
         text-decoration: none;
         color: var(--text-whitefade-color);
     }
@@ -83,53 +114,16 @@
         margin-top: 1.2rem;
     }
 
-    .pr{
-        width: 90%;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content:start;
-    }
-
-    .pr p{
-        width: 100%;
-        font-size: 0.78rem;
-        line-height: 1.1rem;
-        font-weight: 400;
-        margin-top: 1rem;
-        color: var(--text-grey-color);
-    }
-
     .item h3{
-        font-size: 1.5rem;
+        font-size: 0.94rem;
         width: fit-content;
         text-align: start;
         font-weight: 800;
-        margin: 0;
-    }
-
-    .tags-column{
-        width: 30%;
-        height: fit-content;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: start;
-        align-items: flex-end;
-    }
-
-    .item .tags-column p{
-        width: fit-content;
-        padding: 0.20rem 0.4rem;
-        text-align: start;
-        font-size: 0.5rem;
         text-transform: uppercase;
-        font-weight: 300;
-        margin-top: 0rem;
+        margin: 0;
+        color: var(--text-whitefade-color);
     }
 
-    .projectList .navigation-link{
-        margin: 0rem auto 3rem auto;
-        text-decoration: none;
-    }
 
 @media screen and (max-width:480px) {
 

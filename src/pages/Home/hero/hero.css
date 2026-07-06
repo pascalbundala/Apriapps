@@ -16,7 +16,7 @@
 
 .hero .larger-h1{
   width: fit-content;
-  color: var(--text-whitefade-color);
+  color: var(--text-white-color);
   margin-top: 2rem;
   font-weight: 500;
   font-size: 5rem;

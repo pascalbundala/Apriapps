@@ -4,25 +4,44 @@
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     padding-top:2rem;
     position: relative;
     z-index: 3;
     background-color: var(--black-color);
-    border-bottom: 1px solid var(--border-fade-color);
-}
+ }
 
-.welcomeintro p{
-    width:50%;
-    text-align: start;
-    font-size:2.1rem;
-    line-height:2.35rem;
-    font-weight: 700;
+ .intro-container{
+    width: 100%;
+ }
+
+.welcomeintro .w-intro{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:start;
+    align-items: center;
     margin-top: 5rem;
 }
 
-.myself{
-    width: fit-content;
+.welcomeintro .w-intro .title-bold-extra{
+    width:40%;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 2rem;
+    align-self: center;
+    margin: 0 auto;
+    
+}
+
+.welcomeintro .w-intro .logopartners{
+    height: fit-content;
+    width: 50%;
+    margin-top: 6rem;
+}
+
+.welcomeintro .w-intro .myself{
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-flow: row nowrap;
@@ -30,33 +49,39 @@
     margin-top: 4rem;
 }
 
-.myself img{
+.welcomeintro .w-intro .myself img{
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
     object-fit: cover;
-    filter: grayscale(100%);
+    filter: grayscale(0%);
 }
 
-.myself h3{
-    width: 8rem;
-    font-size: 0.85rem;
+.welcomeintro .w-intro .myself h3{
+    width: fit-content;
     color: var(--text-grey-color);
-    text-transform: capitalize;
-    font-weight: 600;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 700;
     margin-left: 1rem;
 }
 
-.abx-image{
+.welcomeintro .w-intro .myself h3:nth-child(2){
+    font-size: 0.55rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--text-white-color);
+}
+
+.welcomeintro .abx-image{
     width: 200px;
     height: 300px;
     display: block;
     object-fit: cover;
     margin-top: 10rem;
-    border-radius: var(--border-radius);
     clip-path: inset(0 0 100% 0);
     transition: none !important; 
-    clip-path: inset(0 0 100% 0)
+    clip-path: inset(0 0 100% 0);
 }
 
 

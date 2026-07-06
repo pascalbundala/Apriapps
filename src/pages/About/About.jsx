@@ -7,13 +7,7 @@ import why from "../../data/values";
 import workProcess from "../../data/workprocess";
 import serviceList from "../../data/serviceList";
 import React, {useState,useRef} from 'react';
-
-
-const sts=[{no:"08", name:"years"},{no:"12", name:"projects"},{no:"120", name:"clients"},{no:"12", name:"countries"},]
-
-const partners=['/partner/deloitte-1.svg','/partner/google-1.svg','/partner/nasa-6.svg','/partner/trustpilot-1.svg','/partner/database-labs.svg']
-
-const images=['/office/office-code.jpg','/office/office.jpg','/office/swimming.jpg','/office/puto.jpg']
+import sts from "../../data/abtStatics";
 
 
 const Home = () => {
@@ -23,45 +17,43 @@ const Home = () => {
     <div className="g-holder abt" >
         <Navbar/>
 
-        <h1 className="larger-h1">
-          The Fusion of Strategy Creativity and Technology.
-        </h1>
+        <div className="larger-intro padding-space">
+            <h1 className="larger-h1">
+              The Fusion of  Creativity and Technology.
+            </h1>
 
-        <p className="small-title">
-          We craft digital experiences that connect ideas with people. We are working with clients  worldwide, we design and build meaningful digital products that inspire growth and create impact,Blending creativity, technology and strategy.
-        </p>
+          <div className="span-h">
+            <div className="p padding-space">scroll</div>
+            <span className="line-span"></span>
+          </div>
+
+            <p className="title-bold">
+              We craft digital experiences that connect ideas with people. We are working with clients  worldwide, we design and build meaningful digital products that inspire growth and create impact,Blending creativity, technology and strategy.
+            </p>
+        </div>
 
         <div className="why padding-space">
              <img src="/images/office.jpg" alt="" />
-             <img src="/office/office-code.jpg" alt="" />
-
-             <div className="intro-about padding-space">
-               <h2 className="title-bold-extra">our profile</h2>
-               <p className="small-title">
-                  We create magnetic commerce that attracts, resonates and converts, helping brands turn brave ideas into digital experiences that captivate their audience, build trust, and drive lasting growth.
-               </p> 
-
-              <div className="scrolling-stats">
-                    {
-                      sts.map((s,index)=>(
-                        <div className="st" key={index}>
-                          <p className="small-title">{s.name}:</p>
-                          <h4>{s.no}</h4>
-                        </div>
-                      ))
-                    }
-            </div>              
+             <div className="intro-about">
+                  <h2 className="title-bold">info</h2>
+                  <p className="small-title">
+                      Founded in 2018, ApriApps was established with a vision to empower businesses through innovative software development and digital solutions. What started as a passionate team focused on solving real-world business challenges has evolved into a trusted technology partner, delivering impactful solutions to clients across diverse industries.
+                      Our expertise includes custom software development, website design and development, mobile application development, UI/UX design, branding, digital marketing, and business automation. By combining technical excellence with creative thinking, we develop solutions that improve efficiency, strengthen brands, and drive sustainable business growth.
+                      Over the years, we have remained committed to innovation, quality, and long-term client partnerships. Every project is built around understanding our clients' unique goals and delivering reliable, scalable, and user-focused digital solutions. Today, ApriApps continues to help businesses embrace digital transformation with confidence, creating technology that delivers measurable results and lasting value.
+                  </p> 
+                  <div className="scrolling-stats">
+                        {
+                          sts.map((s,index)=>(
+                            <div className="st" key={index}>
+                              <p className="small-title">{s.name}:</p>
+                              <h4>{s.no}</h4>
+                            </div>
+                          ))
+                        }
+                </div>              
             </div>
         </div>
          
-        <div className="profile padding-space">
-          <div className="intro-v">
-              <h2 className="title-bold-extra">
-                about us
-              </h2>
-          </div>
-        </div>
-
         <div className="our-services" ref={serviceList}>
           <h2 className="title-bold-extra padding-space">Built to Move <br/>Brands Forward</h2>
           <p className="small-title padding-space">
@@ -90,7 +82,7 @@ const Home = () => {
                     const Icon = y.icon;
                     return(
                     <div className="reas" key={i}>
-                        <div className="flex row space-between">
+                        <div className="flex c row space-between">
                           <h1 className="larger-h1">{i +1}</h1>
                           <Icon size={40} strokeWidth={1.5} />
                         </div>
@@ -151,10 +143,15 @@ const Home = () => {
                 <p className="small-title">
                   Every product is carefully designed and developed with a focus on quality, performance, scalability, and user experience delivering reliable digital solutions that create lasting value.
                 </p>
+
+                <div className="flex row fo">
+                  <img src="/profile/pascalbundala.jpg" />
+                  <p className="small-title">Founder & CEO</p>
+                </div>
         </div>
 
         <div className="skill padding-space">
-            <p className="title-bold-extra">
+          <p className="title-bold-extra">
             technology<br/> stack.</p>
            {Object.entries(skills).map(([category, items]) => (
               <div className="skill-group" key={category}>

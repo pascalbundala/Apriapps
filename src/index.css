@@ -185,9 +185,8 @@
     }
 
     .button-cta{
-        font-family: "Inter", sans-serif;
-        background-color: var(--white-color);
-        border-radius: var(--border-radius);
+        font-family: "Inter",sans-serif;
+        background-color: var(--white-fade-color);
         padding:0rem 1rem;
         border: none;
         cursor: pointer;
@@ -203,7 +202,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.837);
+        background-color: rgba(0, 0, 0, 0.608);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -232,19 +231,18 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        margin-bottom: 3rem;
     }
 
     .contact-modal .intro-close h3{
-        font-size: 0.7rem;
+        font-size: 1.2rem;
         text-transform: uppercase;
-        font-weight: 700;
-        color: var(--text-grey-color);
+        font-weight: 900;
+        color: var(--text-white-color);
         text-decoration: underline;
     }
     .contact-modal .intro-close button{
         font-size: 1.1rem;
-        color: var(--text-grey-color);
+        color: var(--text-whitefade-color);
         padding: 0.3rem 0.6rem;
         font-weight: 900;
         border: none;
@@ -266,6 +264,7 @@
 
     .contact-modal .form-c .form-group{
           width: 100%;
+      
     }
 
     .contact-modal .form-c .form-group .small{
@@ -280,6 +279,9 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
+        color: var(--text-white-color);
+        
+
     }
 
     .contact-modal .form-c .chooselist{
@@ -288,9 +290,9 @@
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
-        color: var(--text-grey-color);
+        color: var(--text-whitefade-color);
         margin: 1rem 0;
-        background-color: var(--black-fade-color);
+        background-color: var(--black-color);
         border-radius: var(--border-radius);
         padding: 0.5rem;
     }
@@ -299,8 +301,9 @@
     .contact-modal .form-c .chooselist h4{
         font-size: 0.6rem;
         text-transform: uppercase;
-        font-weight: 700;
-        color: var(--text-grey-color);
+        font-weight: 500;
+        color: var(--text-whitefade-color);
+        text-decoration: underline;
     }
 
     .contact-modal .form-c .chooselist .list-choice{
@@ -311,7 +314,7 @@
     }
 
     .contact-modal .form-c .chooselist .list-choice .checkbox-service{
-        width: fit-content;
+        width: 20%;
         font-weight: 500;
         text-transform: capitalize;
         display: flex;
@@ -340,7 +343,7 @@
         display: block;
         width: 1rem;
         height: 1rem;
-        border: 1px solid var(--border-fade-color);
+        border: 1px solid var(--text-whitefade-color);
         border-radius: 4px;
         position: relative;
         transition: all 0.3s ease;
@@ -368,18 +371,19 @@
 
 
     .contact-modal .form-c .form-group input[type="text"], .contact-modal .form-c .form-group  input[type="email"]{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding: 0.5rem;
         background-color: var(--black-fade-color);
         color: var(--text-white-color);
         border: none;
         outline: none;
-        font-weight: 400;
-        border-radius: var(--border-radius);
+        font-family: "Inter", sans-serif;
+        font-weight: 600;
+        border: 1px solid var(--border-fade-color);
     }
 
     .contact-modal .form-c .form-group input[type="text"]{
-        width: 95%;
+        width: 98%;
     }
 
     .contact-modal .form-c .form-group input[type="email"]{
@@ -394,14 +398,15 @@
         background-color: var(--black-fade-color);
         color: var(--text-white-color);
         padding: 0.7rem;
-        font-weight: 400;
+        font-weight: 600;
         font-family: "Inter", sans-serif;
-        border-radius: var(--border-radius);
+        border: 1px solid var(--border-fade-color);
     }
 
     .contact-modal .form-c .button-cta{
         margin-top: 2rem;
         padding: 0.5rem 1rem;
+        border-radius: none;
     }
 
     .space-c{
@@ -441,7 +446,7 @@
 
     .extra-c a{
         font-size: 1rem;
-        color: var(--text-grey-color);
+        color: var(--text-whitefade-color);
         margin-bottom: 0.5rem;
         font-weight: 400;
         text-align: start;
@@ -449,7 +454,7 @@
 
     .extra-c a:hover{
         text-decoration: underline;
-        color: var(--text-white-color);
+        color: var(--text-whitefade-color);
         cursor: pointer;
     }
 
@@ -464,13 +469,13 @@
 
     .extra-c .socials a{
         text-decoration: none;
-        color: var(--text-grey-color);
+        color: var(--text-whitefade-color);
         margin-left: 0.5rem;
     }
 
     .extra-c .address{
         font-size: 0.85rem;
-        color: var(--text-grey-color);
+        color: var(--text-whitefade-color);
         font-weight: 500;
         text-align: end;
     }
@@ -487,14 +492,14 @@
     /* Text Color */
     --text-grey-color:#9e9e9e;
     --text-blackfade-color:#3a3a3a;
-    --text-whitefade-color:#d2d2d2;
+    --text-whitefade-color:#c1c1c1;
     --text-black-color:#000000;
     --text-white-color:#ffffff;
     /* border-color */
     --border-color:#e5e5e5;
     --border-fade-color:#5959596d;
     /* border-radius */
-    --border-radius:0.3rem;
+    --border-radius:0.5rem;
 
 }
 

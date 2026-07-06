@@ -181,19 +181,19 @@
 .how-we-work{
     width: 100%;
     height: fit-content;
-    background-color: var(--black-fade-color);
+    background-color: var(--white-fade-color);
     display: flex;
     flex-flow: column nowrap;
     padding-top: 4rem;
     padding-bottom: 4rem;
+    color: var(--text-black-color);
 }
 
 .how-we-work span{
     font-size: 0.7rem;
     margin-bottom: 2rem;
-    color: var(--text-whitefade-color);
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
 
 }
 
@@ -214,7 +214,6 @@
 }
 
 .how-we-work ul .listing-process h3{
-    color: var(--text-whitefade-color);
     font-size: 2rem;
     font-weight: 500;
     width: 60%;
@@ -228,7 +227,6 @@
 
 .how-we-work ul .listing-process .list-pr p{
     font-size: 0.80rem;
-    color: var(--text-grey-color);
     width: fit-content;
     text-transform: capitalize;
     font-weight: 300;
