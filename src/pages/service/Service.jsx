@@ -1,9 +1,11 @@
-import React from 'react';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from '../../components/navbar/Navbar';
 import './service.css';
 import Footer from '../../components/footer/Footer';
 import { MoveUpRight } from 'lucide-react';
 import Form from '../../components/form/Form';
+import serviceList from '../../data/serviceList';
 
 
 const techies=[
@@ -30,24 +32,23 @@ const techies=[
 
 ]
 
-const services=[
-  {
-    name:"Brand & Creative.",
-    serviceList:["Brand Strategy","Visual Identity","UI/UX Design","Creative Direction"]
-  },
-  {
-    name:"Software Development",
-    serviceList:["Web Applications","Mobile Applications","APIs & Integrations","Customs Systems"]
-  },
-
-  {
-    name:"Digital Products & Experience",
-    serviceList:["Website Development","SaaS & Platforms","Optimization & Scaling","Maintenance & Support"]
-  },
-
-]
-
 const Service = () => {
+
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [location]);
+
+
   return (
     <div className='sevc padding-space'>
         <Navbar/>
@@ -66,12 +67,12 @@ const Service = () => {
             </div>
 
 
-              {services.map((service,index)=>(
-                  <div className="sevc-list" key={index}>
+              {serviceList.map((service,index)=>(
+                  <div className="sevc-list" key={index} id={service.slug}>
                       <h3>{service.name}</h3>
                       <ul className='ul-list'>
                         {
-                          service.serviceList.map((list,index)=>(
+                          service.listitem.map((list,index)=>(
                             <li key={index}>{list}</li>
                           ))
                         }
@@ -98,7 +99,7 @@ const Service = () => {
 
                 <div className="hows flex nowrap">
                   <div className="how-image">
-                    <img src="/projects/research.png" alt="" srcset="" />
+                    <img src="/projects/research.png" alt=""  />
                   </div>
                   <div className="column nowrap width-50">
                       <h2>01</h2>
@@ -109,7 +110,7 @@ const Service = () => {
 
                 <div className="hows flex nowrap">
                   <div className="how-image">
-                    <img src="/projects/design.png" alt="" srcset="" />
+                    <img src="/projects/design.png" alt="" />
                   </div>
                   <div className="column nowrap width-50">
                       <h2>02</h2>
@@ -120,7 +121,7 @@ const Service = () => {
 
                 <div className="hows flex nowrap">
                   <div className="how-image">
-                    <img src="/projects/gear.png" alt="" srcset="" />
+                    <img src="/projects/gear.png" alt="" />
                   </div>
                   <div className="column nowrap width-50">
                       <h2>03</h2>
@@ -131,7 +132,7 @@ const Service = () => {
 
                 <div className="hows flex nowrap">
                   <div className="how-image">
-                    <img src="/projects/launch.png" alt="" srcset="" />
+                    <img src="/projects/launch.png" alt="" />
                   </div>
                   <div className="column nowrap width-50">
                       <h2>04</h2>

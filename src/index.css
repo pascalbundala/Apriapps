@@ -196,6 +196,46 @@
         text-transform: uppercase;
     }
 
+    .linkTo{
+        text-transform: capitalize;
+        padding: 0.2rem 0.9rem;
+        text-decoration: none;
+        background-color: var(--black-color);
+        width: fit-content;
+        border-radius: var(--border-radius);
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--text-white-color);
+        text-decoration: none;
+    }
+
+
+    .linkTo h4{
+        font-size: 0.74rem;
+        color: var(--text-whitefade-color);
+        font-weight: 400;
+        text-decoration: none;
+        margin-right: 0.5rem;
+        text-transform: capitalize;
+        letter-spacing: 0.001px;
+        text-decoration: none;
+    }
+
+    .linkTo:hover{
+        color: var(--text-black-color);
+        background-color: var(--accent-color);
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .linkTo:hover h4{
+        color: var(--text-black-color);
+    }
+
+
     .overlay {
         position: fixed;
         top: 0;

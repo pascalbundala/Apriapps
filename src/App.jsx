@@ -33,7 +33,8 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/service" element={<Service />} />
               <Route path="/project" element={<Project />} />
-              <Route path="/projects/:name" element={<ProjectDetails />} />
+              <Route path="/projects/:name" element={<ProjectDetails />}/>
+              <Route path="/service/:slug" element={<Service />} />
             </Routes>
             <ContactOverlay />
         </>

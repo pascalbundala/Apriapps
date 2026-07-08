@@ -5,7 +5,7 @@ import Footer from '../../components/footer/Footer';
 import Form from '../../components/form/Form';
 import projectData from '../../data/project';
 import { Link } from 'react-router-dom';
-import { MoveRight } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const steps = [
   {
@@ -79,8 +79,8 @@ const Project = () => {
                   <p className="large-description">{project.description}
 </p>
 
-                  <Link className='linkto'  to={`/project/${project.name}`} key={project.name}>
-                    <h4>view more</h4> <MoveRight strokeWidth={0.9} />
+                  <Link className='linkTo'  to={`/project/${project.name}`} key={project.name}>
+                    <h4>Discover more</h4> <ArrowUpRight strokeWidth={0.9} />
                   </Link>
               </div>
             </div>))

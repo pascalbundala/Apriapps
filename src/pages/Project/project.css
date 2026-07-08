@@ -112,6 +112,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .project-list .project-item  .simple-description h3{
@@ -140,41 +141,6 @@
     margin: 1rem 0;
     display: none;
 }
-
-.projectData .linkto{
-    text-transform: capitalize;
-    padding: 0.2rem 0.9rem;
-    text-decoration: none;
-    background-color: var(--black-fade-color);
-    width: fit-content;
-    border-radius: var(--border-radius);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--text-white-color);
-    margin-top: 1rem;
-}
-
-.projectData .linkto h4{
-    font-size: 0.55rem;
-    font-weight: 400;
-    color: var(--text-white-color);
-    margin-right: 0.5rem;
-    text-transform: uppercase;
-}
-
-.projectData .linkto:hover{
-    color: var(--text-black-color);
-    background-color: var(--accent-color);
-    font-weight: 400;
-}
-
-.projectData .linkto:hover h4{
-    color: var(--text-black-color);
-}
-
 
 
 /* how we work */
