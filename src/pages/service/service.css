@@ -186,19 +186,13 @@
 .how .hows .standard-text{
     width: 100%;
     color: var(--black-color);
-
 }
-
-
 
 /* TECH STACK */
 .techstack{
     height: fit-content;
     width: 100%;
     background-color: var(--black-color);
-    padding: 8rem 8%;
-    justify-content: center;
-    align-items: center;
 }
 
 .techstack span{
@@ -213,37 +207,62 @@
 }
 
 .techs{
-    width: 100%;
+    width: 57.182%;
     height: fit-content;
     display: flex;
     flex-flow: row wrap;
     justify-content: start;
-    margin-top: 30px;
+    margin: 10px auto;
+    padding: 0;
+}
+.techs .category{
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.techs .category:nth-child(1){
+    width: 20.0rem;
+}
+.techs .category:nth-child(2){
+    width: 10.001rem;
+}
+.techs .category:nth-child(3){
+    width: 16.5rem;
+}
+.techs .category:nth-child(4){
+    width: fit-content;
+}
+.techs .category:nth-child(5){
+    width: fit-content;
 }
 .tech {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow:column nowrap;
     justify-content: center;
     align-items: center;
-    height: 11rem;
-    width: 11rem;
-    padding: 20px 30px;
-    background-color: var(--blackfade-color);
-    color: var(--white-color);
-    margin: 10px;
+    height:5rem;
+    width:5rem;
+    padding-top:0.5rem;
+    background-color: var(--black-fade-color);
+    border-radius: var(--border-radius);
+    margin:  0.05rem 0;
+    border: 1px solid var(--border-fade-color);
+} 
+
+.tech .tech-logo{
+    font-size: 2rem;
+    color: var(--text-whitefade-color);
 }
 
-.tech img{
-    width: 60px;
-    height: 60px;
-    margin-bottom: 10px;
-    object-fit: contain;
-}
-
-.tech h3{
-    font-size: 1rem ;
-    line-height: 1rem;
-    font-weight: 400;
-    margin-top: 1rem;
+.tech .title-bold{
+    margin: 0;
     text-transform: capitalize;
+    font-size: 0.7rem;
+    color: var(--text-white-color);
+    text-align: center;
+    width: fit-content;
+    margin-top: 0.2rem;
 }

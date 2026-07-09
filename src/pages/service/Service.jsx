@@ -1,36 +1,13 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Navbar from '../../components/navbar/Navbar';
-import './service.css';
+import './Service.css';
 import Footer from '../../components/footer/Footer';
 import { MoveUpRight } from 'lucide-react';
 import Form from '../../components/form/Form';
 import serviceList from '../../data/serviceList';
+import skillData from "../../data/skills";
 
-
-const techies=[
-  {logo:"/brands/figma-icon.svg",name:"figma"},
-  {logo:"/brands/android-4.svg",name:"android"},
-  {logo:"/brands/java-4.svg",name:"java"},
-  {logo:"/brands/css-3.svg",name:"css3"},
-  {logo:"/brands/firebase-1.svg",name:"firebase"},
-  {logo:"/brands/flutter.svg",name:"flutter"},
-  {logo:"/brands/gsap-greensock.svg",name:"gsap"},
-  {logo:"/brands/html-1.svg",name:"html5"},
-  {logo:"/brands/javascript-1.svg",name:"javascript"},
-  {logo:"/brands/laravel-2.svg",name:"laravel"},
-  {logo:"/brands/mysql-3.svg",name:"mysql"},
-  {logo:"/brands/nodejs-3.svg",name:"nodejs"},
-  {logo:"/brands/react-native-1.svg",name:"react"},
-  {logo:"/brands/tailwind-css-2.svg",name:"tailwind"},
-  {logo:"/brands/threejs-1.svg",name:"threejs"},
-  {logo:"/brands/vercel.svg",name:"vercel"},
-  {logo:"/brands/github.svg",name:"github"},
-  {logo:"/brands/php-4.svg",name:"php"},
-  {logo:"/brands/postman.svg",name:"postman"},
-  {logo:"/brands/wordpress-icon-1.svg",name:"Wordpress"},
-
-]
 
 const Service = () => {
 
@@ -50,7 +27,7 @@ const Service = () => {
 
 
   return (
-    <div className='sevc padding-space'>
+    <div className='sevc'>
         <Navbar/>
         
         <div className="container-holder">
@@ -145,7 +122,7 @@ const Service = () => {
 
         </div>
 
-        <div className="techstack flex column">
+        <div className="techstack flex column padding-space">
 
           <span>Tools That Power Our Execution </span>
           <p className="title-bold">
@@ -153,13 +130,23 @@ const Service = () => {
           </p>
 
           <div className="techs">
-            {
-              techies.map((tech,id)=>(           
-              <div className="tech">
-              <img src={tech.logo} alt="technology logo" />
-              <h3>{tech.name}</h3>
-            </div>))
-            }
+            {Object.entries(skillData[0]).map(([category, items]) => (
+                  <div className="category"  key={category}>
+                      {
+                      items.map((skill, index) =>{
+                        const Logo = skill.icon;
+                        
+                        return(
+                        <div className="tech" key={index}>
+                          <Logo className="tech-logo"/>
+                          <p className="title-bold">{skill.name}</p>
+                        </div>)}
+                    
+                    )
+                      }
+                  </div>
+                ))
+             }
           </div>
         </div>
 

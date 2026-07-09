@@ -153,16 +153,18 @@ const Home = () => {
         <div className="skill padding-space">
           <p className="title-bold-extra">
             technology<br/> stack.</p>
-           {Object.entries(skills).map(([category, items]) => (
+           {
+           Object.entries(skills).map(([category, items]) => (
               <div className="skill-group" key={category}>
                 <h2>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
                 <ul className="skill-list">
                   {items.map((skill, index) => (
-                    <li key={index}>{skill}</li>
+                    <li key={index}>{skill.name}</li>
                   ))}
                 </ul>
               </div>
-            ))}
+            ))
+            }
         </div>
 
         <Form/>
