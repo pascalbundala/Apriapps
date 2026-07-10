@@ -1,35 +1,69 @@
 .faq{
     width: 100%;
-    height: fit-content;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    height: 100vh;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row nowrap;
     color: var(--text-black-color);
     background-color: var(--white-fade-color);
     z-index: 13;
 }
 
-.faq .span-text,.faq .span-icon, .faq .title-bold-extra{
-    width: fit-content;
-    color: var(--text-blackfade-color);
-}
-
-.faq .faqsection{
-    display: flex;
-    width: 100%;
-    flex-flow: column nowrap;
-    margin-top: 4rem;
-}
-
-.faq .faqblock{
+.faq .service-title{
     width: 50%;
     height: fit-content;
     display: flex;
     flex-flow: column nowrap;
-    border-bottom: 0.5px solid var(--border-color);
+    justify-content: center;
+    align-items: start;
+}
+
+.faq .service-title .larger-h1{
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.faq .service-title .small-title{
+    width: 50%;
+}
+
+
+.faq .service-title .img-x{
+    margin-top: 4rem;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.faq .service-title .img-x img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+}
+
+.faq .service-title .img-x .linkTo{
+    margin-top: 1rem;
+}
+
+.faq .faqsection{
+    display: flex;
+    width: 50%;
+    flex-flow: column nowrap;
+    margin-top: 0rem;
+}
+
+.faq .faqblock{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-flow: column nowrap;
     align-self:center;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.1rem;
+    background-color: var(--white-color);
+    padding: 0.7rem  1rem;
+    border-radius: var(--border-radius);
 }
 
 .faq .faqblock .faq-question {
@@ -38,66 +72,47 @@
     align-items: center;
     cursor: pointer;
     width: 100%;
-    margin-bottom: 0.5rem;
 }
 
-.faq .faqblock .faq-question .h43 {
-    width: 100%;
-    margin: 0;
-    color: var(--text-blackfade-color);
+.faq .faqblock .faq-question .small-title{
+    width: fit-content;
     font-weight: 700;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: start;
-}
-
-.faq .faqblock .faq-question .h43 h3:first-child{
-    margin-right: 2rem;
-    font-size: 1rem;
-    font-weight: 300;
-    margin-top: 0;
-    display: none;
-}
-
-.faq .faqblock .faq-question .h43 h3:nth-child(2){
-    font-size: 1.35rem;
-    font-weight: 800;
-    margin-top: 0;
+    font-size: 0.83rem;
     color: var(--text-blackfade-color);
-
+    opacity: 1;
 }
 
 .faq .faqblock .faq-question span {
-    font-size: 2rem;
-    font-weight: 100;
+    font-size: 1.2rem;
+    font-weight: 400;
     cursor: pointer;
-    color: var(--black-color);
-
+    color: var(--text-blackfade-color);
 }
 
 
 .faq .faqblock .faq-answer {
   width: 100%;
   font-size: 0.8rem;
-  line-height: 1.3rem;
+  line-height: 1.23rem;
   font-weight: 300;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: start;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transform: translateY(-5px);
-  padding-bottom: 1rem;
 }
 
 .faq .faqblock .faq-answer p{
-    width: 100%;
+    width: 90%;
+    font-weight: 300;
 }
 
 .faq .faqblock .faq-answer.show {
   max-height: 300px; 
   opacity: 1;
   transform: translateY(0);
-  padding-bottom: 3rem;
+  margin-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }

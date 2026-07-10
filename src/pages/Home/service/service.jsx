@@ -22,16 +22,16 @@ const Service = () => {
 
     useGSAP(()=>{
       if (lenis){lenis.on("scroll", ScrollTrigger.update)}
-
-            ScrollTrigger.create({
-              trigger: titleRef.current,
-              start: "top -100px",
-              endTrigger: serviceContainer.current,
-              end: "bottom bottom",
-              pin: true,
-              pinSpacing: false,
-              markers: false,
-            });
+      
+      ScrollTrigger.create({
+        trigger: titleRef.current,
+        start: "top -100px",
+        endTrigger: serviceContainer.current,
+        end: "bottom bottom",
+        pin: true,
+        pinSpacing: false,
+        markers: false,
+      });
 
       const serviceCard=gsap.utils.toArray(".service-item");
       serviceCard.forEach((card,i)=>{
@@ -60,15 +60,15 @@ const Service = () => {
   return (
     <div className="service-section" ref={serviceContainer}>
 
-              <div className="service-title" ref={titleRef}>
-                      <h1 className="larger-h1">
-                      our <br/>services.
-                    </h1>
+          <div className="service-title" ref={titleRef}>
+                  <h1 className="larger-h1">
+                  our <br/>services.
+                </h1>
 
-                    <p className="small-title">
-                      Our services combine technology, creativity, and strategy to deliver digital solutions that elevate brands, improve efficiency, and create meaningful user experiences.
-                    </p>
-              </div>
+                <p className="small-title">
+                  Our services combine technology, creativity, and strategy to deliver digital solutions that elevate brands, improve efficiency, and create meaningful user experiences.
+                </p>
+          </div>
         
 
           <div className="service-list" ref={serviceListRef}>
