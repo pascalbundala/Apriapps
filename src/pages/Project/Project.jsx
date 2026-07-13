@@ -80,7 +80,7 @@ const Project = () => {
 </p>
 
                   <Link className='linkTo'  to={`/project/${project.name}`} key={project.name}>
-                    <h4>Discover more</h4> <ArrowUpRight strokeWidth={0.9} />
+                    <h4>Discover more</h4> <ArrowUpRight className='lc-icon' />
                   </Link>
               </div>
             </div>))

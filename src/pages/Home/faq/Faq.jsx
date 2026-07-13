@@ -1,14 +1,15 @@
-import React, { useState,useRef } from 'react'
+import React, { useState,useRef } from 'react';
 import './faq.css';
 import faqData from '../../../data/faq';
 import { Link } from "react-router-dom";
-import { ArrowUpRight} from 'lucide-react';
 import { useContact } from '../../../context/contactContext';
 import FadeText from '../../../components/FadeText';
 import { useLenis } from 'lenis/react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-gsap.registerPlugin(useGSAP);
+import { ArrowUpRight } from "lucide-react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 
 const Faq = () => {
@@ -57,7 +58,8 @@ const Faq = () => {
                 <div className="img-x">
                     <img src="/profile/pascalbundala.jpg" alt="pascal profile" />
                     <Link className='linkTo' onClick={openContact}>
-                    <h4>More questions</h4><ArrowUpRight strokeWidth={0.9} />
+                    <h4>More questions</h4>
+                    <ArrowUpRight className='lc-icon'/>
                     </Link>
                 </div>
             </FadeText>
