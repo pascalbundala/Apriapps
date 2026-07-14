@@ -1,13 +1,13 @@
 import React, { useState,useRef } from 'react';
 import './faq.css';
 import faqData from '../../../data/faq';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { useContact } from '../../../context/contactContext';
 import FadeText from '../../../components/FadeText';
 import { useLenis } from 'lenis/react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from 'lucide-react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
