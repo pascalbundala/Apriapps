@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { NavLink } from "react-router-dom";
 import './navbar.css';
 import { Plus, Minus } from 'lucide-react';
-import {useContact} from "../../context/contactContext"
+import {useContact} from "../context/contactContext"
 
 const Navbar = () => {
 

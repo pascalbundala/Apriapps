@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 gsap.registerPlugin(useGSAP,ScrollTrigger,ScrollSmoother);
 import useMediaQuery from '../../../components/useMediaQuery';
-import FadeText from '../../../components/FadeText'
+import FadeText from '../../../components/FadeText';
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 
