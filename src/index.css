@@ -162,8 +162,9 @@
     .larger-h1{
         width: 60%;
         font-size: 5rem;
-        line-height:5rem;
+        line-height:5.3rem;
         font-weight: 500;
+        letter-spacing: -3px;
     }
 
     .title-bold-extra{
@@ -561,7 +562,6 @@
 
 :root {
     /* white color */
-    --primary_color: #ffffff;
     --white-color:#ffffff;
     --white-fade-color:#f0f0f0;
     --accent-color:#33ccff;
@@ -577,6 +577,7 @@
     /* border-color */
     --border-color:#e5e5e5;
     --border-fade-color:#5959596d;
+    --border-whitefade-color:#d7d6d66d;
     /* border-radius */
     --border-radius:0.5rem;
 

@@ -142,69 +142,6 @@
     display: none;
 }
 
-
-/* how we work */
-.how-we-work{
-    width: 100%;
-    height: fit-content;
-    background-color: var(--white-fade-color);
-    display: flex;
-    flex-flow: column nowrap;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    color: var(--text-black-color);
-}
-
-.how-we-work span{
-    font-size: 0.7rem;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    font-weight: 600;
-
-}
-
-.how-we-work ul{
-    width: 100%;
-    padding: 0;
-}
-
-.how-we-work ul .listing-process{
-    width: 100%;
-    height: fit-content;
-    border-bottom: 1px solid var(--border-fade-color);
-    padding: 1.6rem 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: start;
-}
-
-.how-we-work ul .listing-process h3{
-    font-size: 2rem;
-    font-weight: 500;
-    width: 60%;
-}
-
-.how-we-work ul .listing-process .list-pr{
-    display: flex;
-    height: fit-content;
-    width: fit-content;
-}
-
-.how-we-work ul .listing-process .list-pr p{
-    font-size: 0.80rem;
-    width: fit-content;
-    text-transform: capitalize;
-    font-weight: 300;
-    margin-top: 1rem;
-}
-
-.list-pr p:not(:last-child)::after {
-  content: "/";
-  margin: 0 8px;
-}
-
-
 @media screen  and (max-width:480px) {
 
     .project-page{

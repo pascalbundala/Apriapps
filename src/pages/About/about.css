@@ -250,7 +250,7 @@
     transform-origin: center;
     transition: transform 0.5s ease,opacity 0.5s ease;
     border-radius: var(--border-radius);
-    z-index: 15;
+    z-index: 13;
 }
 
 .abt .our-services ul .servitm:hover img{

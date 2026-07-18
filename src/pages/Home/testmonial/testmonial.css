@@ -1,209 +1,223 @@
 .testmonial{
-    padding: 3rem 0 1rem 0;
+    height: fit-content;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
     display: flex;
     flex-flow:  column nowrap;
     justify-content: space-between;
     background-color: var(--white-color);
     color: var(--text-blackfade-color);
-    z-index: 7;
+    z-index: 8;
 }
 
-.t-header{
-    justify-content: space-between;
-}
-
-.testmonial .title-bold-extra{
-    text-align: start;
-    width: 120%;
-    color: var(--text-blackfade-color);
-    
-}
-
-.testmonial .span-text,.testmonial .span-icon{
-    width: fit-content;
-    color: var(--text-blackfade-color);
-}
-
-.slider-track {
-    display: flex;
-    transition: transform 0.6s ease-in-out;
+.title-test{
     width: 100%;
-}
-
-.main-card{
-    width: 100%;
-    display: flex;
     height: fit-content;
-    margin: 4rem auto;
-}
-
-.card-test{
-   width: 100%;
-   height: 50vh;
-   display: flex;
-   flex-flow: row nowrap;
-   justify-content: space-between;
-   overflow: hidden;
-   position: relative;
-}
-
-
-.card-test .slider{
-    width: 15%;
-    height: 10vh;
-}
-
-.card-test .slider .controller{
+    color: var(--black-fade-color);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     align-items: center;
 }
 
-
-.card-test .slider .progress-container{
-    width:100%;
-    height:1px;
-    background:var(--white-fade-color);
-    overflow:hidden;
-    margin-bottom:1rem;
-    display: block;
-}
-
-.card-test .slider .progress-line{
-    width:0%;
-    height:100%;
-    background:var(--black-color);
-}
-
-.card-test .slider .numbers{
+.title-test .larger-h1{
     width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
-    font-size: 0.75rem;
-    font-weight: 300;
-    color: var(--black-fade-color);
+    color: var(--text-blackfade-color);
+    text-align: center;
+    line-height: 5rem;
 }
-.card-test .slider .slide-holder{
+
+.title-test .small-title{
+    margin: 3rem auto 0 auto;
+    width: 40%;
+    text-align: center;
+}
+
+
+/* main card */
+.main-card{
     width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-flow: row nowrap;
-}
-.card-test .slider .slide-holder .slide-button{
-    height: fit-content;
-    width: fit-content;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: var(--border-radius);
-    background-color: var(--white-color);
-}
-
-.card-test .slider .slide-holder .slide-button:nth-child(2){
-    margin-left: 0.5rem;
-}
-
-.card-test .slider .slide-holder .slide-button:hover{
-    cursor: pointer;
-    background-color: var(--accent-color);
-}
-
-.slide-arrow{
-    color: var(--black-border-color);
-    size: 2rem;
-    stroke-width:1;
-}
-
-.card-test .slide-wrapper{
-    height:400px;
-    overflow:hidden;
-    width: 85%;
-    margin-left: 3rem;
-}
-
-.card-test .slide-track{
-    width: 100%;
-    height: 100%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top: 7rem;
 }
 
-.card-test .slides{
-    width: 100%;
-    min-height:100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+.main-card .testmonials{
+    width: 40rem;
+    height: 60vh;
     position: relative;
-    white-space: normal;
-    flex-shrink: 0;
-    margin-top: 0;
+    margin: 1rem auto;
 }
 
-.card-test .slides .names{
-    width: 30%;
+
+.main-card .testmonial-slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset:0;
+    padding:30px;
+    border-radius:var(--border-radius);
+    background-color:var(--white-color);
+    box-shadow: 
+    0 10px 30px rgba(109, 109, 109, 0.027),
+    0 2px 8px rgba(92, 92, 92, 0.04);
+    border: 1px solid var(--border-whitefade-color);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.testmonial-slide .qoute{
+    color: var(--text-grey-color);
+    position: absolute;
+    top: 2rem;
+    left: 4rem;
+    opacity: 0.3;
+}
+
+.main-card .testmonial-slide .test-intro{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.main-card .testmonial-slide .test-intro h3{
+    font-weight: 600;
+    font-size: 0.65rem;
+    line-height: 0.65rem;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: var(--text-grey-color);
+}
+
+.main-card  .testmonial-slide .testmonial-text{
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    color: var(--text-blackfade-color);
+    font-family: "Newsreader", serif;
+}
+
+.main-card  .testmonial-slide .names{
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    color: var(--black-fade-color);
+    align-items: center;
+    margin-top: 4rem;
 }
 
-.card-test .slides .names h4{
-    font-size: 0.9rem;
-    font-weight: 700;
+.main-card  .testmonial-slide .names img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.main-card  .testmonial-slide .names h4{
+    font-size: 0.8rem;
+    font-weight: 900;
     line-height: 1.2rem;
     margin: 0;
     padding: 0;
     text-align: start;
     text-transform: capitalize;
+    color: var(--text-blackfade-color);
 }
 
-.card-test .slides .names h3{
-    font-size: 0.65rem;
+.main-card  .testmonial-slide .names h3{
+    font-size: 0.55rem;
     font-weight: 500;
     font-style: normal;
-    line-height: 1rem;
+    line-height: 0.55rem;
     margin-top: 0.1rem;
     padding: 0;
     text-align: start;
     text-transform: uppercase;
+    color: var(--text-grey-color);
 }
 
-.card-test .slides .testmonial-text{
-    width: 65%;
+
+/* controller */
+.main-card .controller{
+    width: fit-content;
+    margin: 0rem auto;
     height: fit-content;
-    position: relative;
     display: flex;
-    flex-flow: column nowrap;
-    text-align: start;
-    font-weight: 700;
-    font-size: 1.7rem;
-    line-height: 2.25rem;
-    color: var(--text-color);
-    padding: 0;
-    margin-bottom: 1rem;
+    flex-flow: row nowrap;
 }
 
-.card-test .quote{
-    font-size: 3rem;
-    stroke-width: 1;
-    position: absolute;
-    top: 10%;
-    left: 44%;
-    transform: translate(-50%,-50%);
+.main-card  .controller .slide-button{
+    height: fit-content;
+    width: fit-content;
+    cursor: pointer;
+    padding: 5px;
+    box-shadow:0 20px 50px rgba(0, 0, 0, 0.159);
+    border: 1px solid var(--border-whitefade-color);
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
 }
 
 
+.main-card  .controller .slide-button:hover{
+    cursor: pointer;
+    background-color: var(--black-fade-color);
+}
 
-@media screen and (max-width:480px) {
+.main-card .controller .slide-button:hover .slide-arrow{
+    color: var(--white-color);
+}
 
-    .testmonial .title-bold-extra{
+.main-card .controller .slide-button:nth-child(2){
+    margin-left: 0.5rem;
+}
+
+.slide-arrow{
+    color: var(--text-grey-color);
+    size: 2rem;
+    stroke-width:1;
+}
+
+.main-card .small-title{
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    text-transform: capitalize;
+    color: var(--text-grey-color);
+}
+
+/* images  */
+.main-card .slider-image{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    height: 10rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.main-card .slider-image img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius:50%;
+    filter: grayscale(100%);
+}
+
+
+/* @media screen and (max-width:480px) main.main-cardmonial .title-bold-extra{
         text-align: center;
         margin: 0 auto;
-    }
-
-    .testmonial .slide-holder{
+    main.main-cardmonial .slide-holder{
         margin: 2rem auto;
         justify-content: center;
     }
@@ -225,7 +239,7 @@
         white-space: nowrap;
     }
 
-    .card-test{
+    .main-card{
         width: 90%;
         padding: 20px;
         margin-right:5%;
@@ -234,41 +248,41 @@
         white-space: normal; 
         border-right: 1px solid var(--black-border-color);
     }
-    .card-test {
+    .main-card {
         margin-bottom: 20px;
         width: 100%;
     }
 
-    .card-test  .img-pass{
+    .main-card  .img-pass{
         width: 50px;
         height:50px;
         border-radius: 50%;
     }
 
-    .card-test  .img-pass img{
+    .main-card  .img-pass img{
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    .card-test  .names{
+    .main-card  .names{
         margin-left: 20px;
     }
 
-    .card-test  .names h4{
+    .main-card  .names h4{
         font-size: 1rem;
         line-height: 1rem;
     }
 
-    .card-test  .names h3{
+    .main-card  .names h3{
         font-size: 0.8rem;
         font-weight: 600;
         line-height: 0.8rem;
         margin-top: 5px;
     }
 
-    .card-test p{
+    .main-card p{
         width: fit-content;
         font-size: 0.82rem;
         line-height: 1.25rem;
@@ -278,7 +292,7 @@
 
 
     
-}
+} */
 
 @media screen and (min-width:481px)  and (max-width:768px){
 
@@ -302,38 +316,38 @@
         width: 100%;
     }
 
-    .card-test{
+    .main-card{
         min-height:250px;
         width: 60%;
         padding: 20px;
         margin-right:50px;
     }
-    .card-test {
+    .main-card {
         margin: 0px auto 20px auto ;
     }
 
-    .card-test  img{
+    .main-card  img{
         width: 50px;
         height:50px;
     }
 
-    .card-test  .names{
+    .main-card  .names{
         margin-left: 20px;
     }
 
-    .card-test  .names h4{
+    .main-card  .names h4{
         font-size: 1.1rem;
         font-weight: 700;
         line-height: 0.7rem;
     }
 
-    .card-test  .names h3{
+    .main-card  .names h3{
         font-size: 0.8rem;
         line-height: 0.8rem;
         margin-top: 0.5rem;
     }
 
-    .card-test p{
+    .main-card p{
         width: 100%;
         font-size: 0.85rem;
         font-weight: 300;
@@ -367,38 +381,38 @@
         width: 100%;
     }
 
-    .card-test{
+    .main-card{
         min-height:300px;
         width: 40%;
         padding: 20px;
         margin-right:50px;
     }
-    .card-test {
+    .main-card {
         margin: 0px auto 20px auto ;
     }
 
-    .card-test  img{
+    .main-card  img{
         width: 50px;
         height:50px;
     }
 
-    .card-test  .names{
+    .main-card  .names{
         margin-left: 20px;
     }
 
-    .card-test  .names h4{
+    .main-card  .names h4{
         font-size: 1.1rem;
         font-weight: 700;
         line-height: 0.6rem;
     }
 
-    .card-test  .names h3{
+    .main-card  .names h3{
         font-size: 0.8rem;
         line-height: 0.85rem;
         margin-top: 0.6rem;
     }
 
-    .card-test p{
+    .main-card p{
         width: 100%;
         font-size: 0.85rem;
         font-weight: 300;
@@ -434,38 +448,38 @@
         width: 80%;
     }
 
-    .card-test{
+    .main-card{
         min-height:400px;
         width: 60%;
         padding: 20px 60px;
         margin-right:100px;
     }
-    .card-test {
+    .main-card {
         margin: 0px auto 40px auto ;
     }
 
-    .card-test  img{
+    .main-card  img{
         width: 90px;
         height:90px;
     }
 
-    .card-test  .names{
+    .main-card  .names{
         margin-left: 40px;
     }
 
-    .card-test  .names h4{
+    .main-card  .names h4{
         font-size: 2rem;
         font-weight: 700;
         line-height: 2rem;
     }
 
-    .card-test  .names h3{
+    .main-card  .names h3{
         font-size: 1.3rem;
         line-height: 0.6rem;
         margin-top: 0.6rem;
     }
 
-    .card-test p{
+    .main-card p{
         width: 80%;
         font-size: 1.7rem;
         font-weight: 400;

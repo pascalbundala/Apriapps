@@ -136,8 +136,7 @@ const Home = () => {
         <div className="phil padding-space">
 
                 <p className="larger-h1">
-                 product
-                  build with precision.
+                 product build with precision.
                 </p>
 
                 <p className="small-title">

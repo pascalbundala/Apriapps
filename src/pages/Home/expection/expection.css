@@ -7,15 +7,15 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: start;
-    background-color: var(--white-color);
-    padding: 4rem 0 1rem 0;
+    background-color: var(--white-fade-color);
+    padding:10rem 0 20rem 0rem;
     z-index: 6;
 }
 
 .ex-intro{
     width: 50%;
 }
-.expection .title-bold-extra,.expection .title-bold-extra .span-highlight{
+.expection .title-bold-extra{
     height: fit-content;
     color: var(--black-color);
 }
@@ -28,13 +28,13 @@
 .expection .ex-intro .small-title {
     text-align: start;
     margin-top: 2rem;
-    font-weight: 300;
-    width: 60%;
+    font-weight: 400;
+    width: 40%;
 }
 
 .expection .ex-intro img{
-    width: 50vh;
-    height: 70vh;
+    width: 20vh;
+    height: 20vh;
     border-radius: var(--border-radius);
     align-self: flex-start;
     margin-top: 5rem;
@@ -46,39 +46,59 @@
     width: 50%;
     display: flex;
     flex-flow: column nowrap;
-    margin-top:10rem;
 }
 
 .expection .value-container .value{
     width: 100%;
     height: fit-content;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     position: relative;
     overflow: hidden;
     color: var(---text-blackfade-color);
-    border-bottom: 1px solid var(--border-fade-color);
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 3rem;
+    border-radius: var(--border-radius);
+    background-image: url(/backimage.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--white-fade-color);
 }
+
 
 .expection .value-container .value:last-child{
     border-bottom: none;
 }
 
 .expection .value-container .value .title-bold{
-    width: 90%;
+    width: 100%;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .expection .value-container .value .value-icon{
-    width: 70px;
-    height: 3rem;
+    width: 100%;
+    height: 4rem;
     margin: 0;
-    display: block;
-    color: var(--text-blackfade-color);
+    margin-bottom: 3rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.expection .value-container .value .value-icon .icon-c{
+    color: var(--accent-color);
+    font-size: 6rem;
+}
+
+.expection .value-container .value .value-icon .title-bold-extra{
+    font-size: 5rem;
+    color: var(--text-whitefade-color);
 }
 
 .expection .value-container .value .small-title{
@@ -87,7 +107,7 @@
     display: block;
     margin: 0;
     padding-bottom: 10px;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 @media screen and (max-width:480px) {

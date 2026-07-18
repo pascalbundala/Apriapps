@@ -1,0 +1,80 @@
+/* how we work */
+.how-we-work{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white-fade-color);
+    display: flex;
+    flex-flow: column nowrap;
+    color: var(--text-blackfade-color);
+}
+
+.how-we-work .spacer-list{
+    height:10vh;
+    width: 100%;
+    display: block;
+}
+
+
+.how-we-work ul{
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.how-we-work ul .listing-process{
+    width: 40%;
+    height: 50vh;
+    padding: 3rem 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+    border: 0.1px solid var(--border-fade-color);
+    margin-bottom: 5rem;
+    border-radius: var(--border-radius);
+    background-color: var(--white-color);
+    position: relative;
+}
+
+.how-we-work ul .listing-process h1{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: var(--text-blackfade-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.how-we-work ul .listing-process h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 100%;
+}
+
+.how-we-work ul .listing-process .list-pr{
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+}
+
+.how-we-work ul .listing-process .list-pr p{
+    font-size: 0.60rem;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: var(--text-blackfade-color);
+}
+
+.list-pr p:not(:last-child)::after {
+  content: "/";
+  margin: 0 8px;
+}
+
+.how-we-work .small-title{
+    margin: 1rem 0 0 0;
+    width: 80%;
+    font-weight: 400;
+}

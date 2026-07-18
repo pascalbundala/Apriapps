@@ -7,141 +7,163 @@ import useMediaQuery from '../../../components/useMediaQuery';
 import { ArrowLeft,ArrowRight,Quote} from 'lucide-react';
 import FadeText from '../../../components/FadeText';
 import Span from '../../../components/span/span';
-
+import testdata from '../../../data/testmonial';
+import { useLenis } from 'lenis/react';
 
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
-const testdata=[
-    {
-    name:"Sophia M.",
-    position:"Product Manager",
-    content:"Apriapps completely transformed our app design into a modern, intuitive, and visually appealing experience that our clients immediately loved. Their attention to detail, user-focused approach, and creative solutions have significantly increased engagement and retention, making our platform more effective and enjoyable to use.",
-   },
-
-   {
-    name:"David K.",
-    position:"Startup Founder",
-    content:"Working with Apriapps was seamless from start to finish. They enhanced both the look and functionality of our website, creating a professional, user-friendly platform that reflects our brand identity perfectly. The thoughtful design and smooth navigation have made a noticeable difference in client satisfaction and interaction.",
-   },
-
-      {
-    name:"Lina T.",
-    position:"Marketing Director",
-    content:"Apriapps delivered innovative, visually stunning designs that are highly functional and user-centered. They listened to our feedback and suggested creative improvements, resulting in a platform that elevates our branding and usability. Their professionalism and expertise have helped our business stand out in a competitive market.",
-   },
-
-   
-      {
-    name:"Julius R.",
-    position:"Tech Entrepreneur",
-    content:"Apriapps doesn't just create designs; they craft engaging digital experiences. By understanding our audience and brand story, they produced an intuitive, visually appealing app that keeps users engaged and encourages interaction. The positive feedback from our users highlights the effectiveness and quality of their work.",
-   },
-
-];
-
 const Testmonial = () => {
     const isMobile=useMediaQuery("(max-width:768px)");
+    const lenis=useLenis();
     const [current, setCurrent] = useState(0);
     const total = testdata.length;
-
     const wrapperRef = useRef();
-    const slidesRef = useRef();
-    const progressRef=useRef(); 
+    const containerRef = useRef();
+    const index = useRef(0);
+    const animating = useRef(false);
 
-    const next = () => {
-    setCurrent((prev) => (prev + 1) % total);
-    };
 
-    const prev = () => {
-    setCurrent((prev) => (prev === 0 ? total - 1 : prev - 1));
-    };
+  useGSAP(() => {
+    if(lenis){lenis.on("scroll",ScrollTrigger.update)}
+    const cards = gsap.utils.toArray(".slides");
 
-    useGSAP(() => {
-    const slideHeight = wrapperRef.current.offsetHeight;
-
-    const tl = gsap.timeline({repeat: -1 });
-
-    gsap.to(slidesRef.current, {
-        y: -(current * slideHeight),
-        duration: 0.8,
-        ease: "power3.inOut",
+    // Initial stack
+    gsap.set(cards, {
+      opacity: 0,
+      y: 60,
+      scale: 0.95,
+      zIndex: 0
     });
 
-    tl.fromTo(progressRef.current,
-        { width: "0%" },
-        {
-            width: "100%",
-            duration: 5,
-            ease: "none",
-            onComplete: () => {
-                setCurrent(prev =>
-                    (prev + 1) % testdata.length
-                );
-            }
-        }
+    gsap.set(cards[0], {
+      opacity: 1,
+      y:0,
+      scale:1,
+      zIndex:10
+    });
+
+  }, {scope:containerRef});
+
+
+  const changeCard = (direction)=>{
+    if(animating.current) return;
+    animating.current = true;
+    const cards = gsap.utils.toArray(".testmonial-slide");
+    const current = index.current;
+
+
+    // GSAP wrap gives infinite looping
+    const nextIndex = gsap.utils.wrap(
+      0,
+      cards.length,
+      current + direction
     );
+    const currentCard = cards[current];
+    const nextCard = cards[nextIndex];
 
-    return () => tl.kill();
+    // put next card above stack
+    gsap.set(nextCard,{
+      opacity:1,
+      zIndex:10,
+      y: direction === 1 ? 50 : -50,
+      scale:0.95
+    });
 
 
-    }, [current]);
+    const tl = gsap.timeline({
 
+      onComplete(){
+        gsap.set(currentCard,{
+          opacity:0,
+          zIndex:0
+        });
+
+        index.current = nextIndex;
+
+        animating.current=false;
+      }
+
+    });
+
+
+    tl.to(currentCard,{
+
+      y: direction === 1 ? -80 : 80,
+      opacity:0,
+      scale:0.9,
+      duration:.45,
+      ease:"power2.in"
+
+    });
+
+
+    tl.to(nextCard,{
+
+      y:0,
+      scale:1,
+      duration:.45,
+      ease:"power3.out"
+
+    },"<");
+
+  };
 
   return (
-    <div className='testmonial padding-space'>
-        <div className="flex row w-100 t-header">
-            <div className="column">
-                <FadeText><Span title="Testmonials"/></FadeText>
-                <FadeText><p className="title-bold-extra" >
-                    Our Clients <br/>Speak for Us.
-                </p></FadeText>
+    <div className='testmonial' ref={containerRef}>
+        <div className="title-test padding-space">
+            <FadeText><Span title="success stories"/></FadeText>
+            <FadeText>
+              <p className="larger-h1">Turning ideas into<br /> Success Stories.</p>
+            </FadeText>
+
+            <FadeText>
+                <p className="small-title">
+                    We partner with ambitious businesses to transform innovative ideas into high-performing digital solutions. See how our expertise has helped clients achieve meaningful growth and lasting success.
+                </p>
+            </FadeText>
+        </div>
+
+        <div className="main-card ">
+            <div className="testmonials">
+                    {testdata.map((data,index)=>(
+                        <div className="testmonial-slide" key={index} >
+                          <Quote className='qoute'/>
+                            <div className="test-intro">
+                                <h3>{data.officename}</h3>
+                            </div>
+                            <p className='testmonial-text'>
+                                {data.content}
+                            </p>
+                            <div className="names">
+                                <img src={data.img} alt={data.name} />
+                                <div className="flex column">
+                                    <h4>{data.name}</h4>
+                                    <h3>{data.position}</h3>
+                                </div>
+                            </div> 
+                        </div>
+                    ))}
+            </div>
+
+            <div className="controller">
+                <div className="slide-button" onClick={()=>changeCard(-1)}>
+                    <ArrowLeft  className='slide-arrow'/>
+                </div>
+                <div className="slide-button"  onClick={()=>changeCard(1)}>
+                    <ArrowRight className='slide-arrow'/>
+                </div>
+            </div>
+            
+            <p className="small-title">Click the controls to explore more reviews.</p>
+            <div className="slider-image" >
+                {testdata.map((data,index)=>(
+                    <img key={index} src={data.img} alt={data.name} />
+                    ))
+                }
             </div>
         </div>
 
-        <div className="main-card" >
-               
-                    <div className="card-test"  >
-                            <div className="slider" >
-                                <div className="progress-container">
-                                    <div className="progress-line" ref={progressRef}></div>
-                                </div>
-
-                                <div className="controller flex row space-between">
-                                    <div className="slide-holder">
-                                        <div className="slide-button" onClick={prev}>
-                                            <ArrowLeft  className='slide-arrow'/>
-                                        </div>
-                                        <div className="slide-button"  onClick={next}>
-                                            <ArrowRight className='slide-arrow'/>
-                                        </div>
-                                    </div>
-                                    <div className="numbers">{current+1}/{testdata.length}</div>
-                                </div>
-                            </div>
-
-                            <Quote className='quote'></Quote>
-
-                            <div className="slide-wrapper" ref={wrapperRef}>
-                                <div className="slide-track" ref={slidesRef}>
-                                    {testdata.map((data,index)=>(
-                                        <div className="slides" key={index} >
-                                            <div className="names">
-                                                <div className="flex column">
-                                                    <h4>{data.name}</h4>
-                                                    <h3>{data.position}</h3>
-                                                </div>
-                                            </div>
-                                            <p className='testmonial-text'>
-                                                {data.content}
-                                            </p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                     </div>
-            </div>
-        </div>   
+    </div>   
   )
 }
 
