@@ -58,11 +58,11 @@
     inset:0;
     padding:30px;
     border-radius:var(--border-radius);
-    background-color:var(--white-color);
+    background-color:var(--white-fade-color);
+    border: 1px solid var(--text-grey-color);
     box-shadow: 
     0 10px 30px rgba(109, 109, 109, 0.027),
     0 2px 8px rgba(92, 92, 92, 0.04);
-    border: 1px solid var(--border-whitefade-color);
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -71,18 +71,19 @@
 }
 
 .testmonial-slide .qoute{
-    color: var(--text-grey-color);
+    color: var(--text-blackfade-color);
     position: absolute;
-    top: 2rem;
-    left: 4rem;
-    opacity: 0.3;
+    top: 0.5rem;
+    left: 48%;
+    opacity: 0.9;
+    stroke-width: 0.8;
 }
 
 .main-card .testmonial-slide .test-intro{
     width: fit-content;
     height: fit-content;
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .main-card .testmonial-slide .test-intro h3{
@@ -91,7 +92,8 @@
     line-height: 0.65rem;
     letter-spacing: 0px;
     text-transform: uppercase;
-    color: var(--text-grey-color);
+    color: var(--text-blackfade-color);
+    text-decoration: underline;
 }
 
 .main-card  .testmonial-slide .testmonial-text{
@@ -101,7 +103,7 @@
     text-align: center;
     width: 100%;
     color: var(--text-blackfade-color);
-    font-family: "Newsreader", serif;
+    font-family: "Newsreader",serif;
 }
 
 .main-card  .testmonial-slide .names{
@@ -120,7 +122,7 @@
     border-radius: 50%;
     margin-right: 1rem;
     object-fit: cover;
-    filter: grayscale(100%);
+    filter: grayscale(0%);
 }
 
 .main-card  .testmonial-slide .names h4{
@@ -143,7 +145,7 @@
     padding: 0;
     text-align: start;
     text-transform: uppercase;
-    color: var(--text-grey-color);
+    color: var(--text-blackfade-color);
 }
 
 
@@ -161,8 +163,8 @@
     width: fit-content;
     cursor: pointer;
     padding: 5px;
-    box-shadow:0 20px 50px rgba(0, 0, 0, 0.159);
-    border: 1px solid var(--border-whitefade-color);
+    box-shadow:0 20px 50px rgba(0, 0, 0, 0.115);
+    border: 1px solid var(--border-fade-color);
     background-color: var(--white-color);
     border-radius: var(--border-radius);
 }
@@ -182,7 +184,7 @@
 }
 
 .slide-arrow{
-    color: var(--text-grey-color);
+    color: var(--black-fade-color);
     size: 2rem;
     stroke-width:1;
 }
@@ -210,7 +212,7 @@
     height: 3rem;
     object-fit: cover;
     border-radius:50%;
-    filter: grayscale(100%);
+    filter: grayscale(30%);
 }
 
 

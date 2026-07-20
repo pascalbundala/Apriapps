@@ -1,113 +1,102 @@
-import React,{useRef,useState,useEffect} from 'react'
+import React,{useRef} from 'react'
 import './testmonial.css'
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import useMediaQuery from '../../../components/useMediaQuery';
 import { ArrowLeft,ArrowRight,Quote} from 'lucide-react';
 import FadeText from '../../../components/FadeText';
 import Span from '../../../components/span/span';
 import testdata from '../../../data/testmonial';
-import { useLenis } from 'lenis/react';
 
 gsap.registerPlugin(useGSAP,ScrollTrigger);
-
 const Testmonial = () => {
-    const isMobile=useMediaQuery("(max-width:768px)");
-    const lenis=useLenis();
-    const [current, setCurrent] = useState(0);
-    const total = testdata.length;
-    const wrapperRef = useRef();
-    const containerRef = useRef();
-    const index = useRef(0);
-    const animating = useRef(false);
+const containerRef = useRef();
+const cardsRef = useRef([]);
+const index = useRef(0);
+const animating = useRef(false);
 
-
-  useGSAP(() => {
-    if(lenis){lenis.on("scroll",ScrollTrigger.update)}
-    const cards = gsap.utils.toArray(".slides");
-
-    // Initial stack
-    gsap.set(cards, {
-      opacity: 0,
-      y: 60,
-      scale: 0.95,
-      zIndex: 0
+useGSAP(() => {
+    const cards = cardsRef.current;
+    gsap.set(cards,{
+        opacity:0,
+        y:0,
+        scale:0.95,
+        zIndex:0
     });
 
-    gsap.set(cards[0], {
-      opacity: 1,
-      y:0,
-      scale:1,
-      zIndex:10
+    gsap.set(cards[0],{
+        opacity:1,
+        y:0,
+        scale:1,
+        zIndex:10
     });
 
-  }, {scope:containerRef});
-
+}, {scope:containerRef});
 
   const changeCard = (direction)=>{
+
     if(animating.current) return;
-    animating.current = true;
-    const cards = gsap.utils.toArray(".testmonial-slide");
+
+    animating.current=true;
+
+    const cards = cardsRef.current;
+
     const current = index.current;
 
-
-    // GSAP wrap gives infinite looping
     const nextIndex = gsap.utils.wrap(
-      0,
-      cards.length,
-      current + direction
+        0,
+        cards.length,
+        current + direction
     );
+
+
     const currentCard = cards[current];
     const nextCard = cards[nextIndex];
 
-    // put next card above stack
+
+    // Put next card above current card
     gsap.set(nextCard,{
-      opacity:1,
-      zIndex:10,
-      y: direction === 1 ? 50 : -50,
-      scale:0.95
+        opacity:1,
+        zIndex:20,
+        y:direction === 1 ? 80 : -80,
+        scale:0.95
     });
 
 
     const tl = gsap.timeline({
 
-      onComplete(){
-        gsap.set(currentCard,{
-          opacity:0,
-          zIndex:0
-        });
+        onComplete:()=>{
+            gsap.set(currentCard,{
+                opacity:0,
+                zIndex:0,
+                y:0
+            });
 
-        index.current = nextIndex;
 
-        animating.current=false;
-      }
+            index.current = nextIndex;
+            animating.current=false;
+        }
 
     });
 
 
     tl.to(currentCard,{
-
-      y: direction === 1 ? -80 : 80,
-      opacity:0,
-      scale:0.9,
-      duration:.45,
-      ease:"power2.in"
-
+        opacity:0,
+        y:direction === 1 ? -40 : 40,
+        scale:0.95,
+        duration:0.4,
+        ease:"power2.in"
     });
 
 
     tl.to(nextCard,{
-
-      y:0,
-      scale:1,
-      duration:.45,
-      ease:"power3.out"
-
+        y:0,
+        scale:1,
+        duration:0.4,
+        ease:"power3.out"
     },"<");
 
-  };
-
+};
   return (
     <div className='testmonial' ref={containerRef}>
         <div className="title-test padding-space">
@@ -122,11 +111,11 @@ const Testmonial = () => {
                 </p>
             </FadeText>
         </div>
-
         <div className="main-card ">
             <div className="testmonials">
                     {testdata.map((data,index)=>(
-                        <div className="testmonial-slide" key={index} >
+                      <div className="testmonial-slide" 
+                        key={index} ref={(el)=>cardsRef.current[index]=el}>
                           <Quote className='qoute'/>
                             <div className="test-intro">
                                 <h3>{data.officename}</h3>
@@ -146,15 +135,22 @@ const Testmonial = () => {
             </div>
 
             <div className="controller">
-                <div className="slide-button" onClick={()=>changeCard(-1)}>
+                <div className="slide-button" onClick={()=>{
+                      changeCard(-1);
+                  }}>
                     <ArrowLeft  className='slide-arrow'/>
                 </div>
-                <div className="slide-button"  onClick={()=>changeCard(1)}>
+                <div className="slide-button" onClick={()=>{
+                      changeCard(1);
+                  }}>
                     <ArrowRight className='slide-arrow'/>
                 </div>
             </div>
-            
-            <p className="small-title">Click the controls to explore more reviews.</p>
+
+            <p className="small-title">
+                Click the controls to explore more reviews.
+            </p>
+
             <div className="slider-image" >
                 {testdata.map((data,index)=>(
                     <img key={index} src={data.img} alt={data.name} />
@@ -162,7 +158,6 @@ const Testmonial = () => {
                 }
             </div>
         </div>
-
     </div>   
   )
 }
