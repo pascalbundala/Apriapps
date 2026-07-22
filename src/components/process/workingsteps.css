@@ -2,69 +2,81 @@
 .how-we-work{
     width: 100%;
     height: fit-content;
-    background-color: var(--white-fade-color);
     display: flex;
     flex-flow: column nowrap;
     color: var(--text-blackfade-color);
 }
 
 .how-we-work .spacer-list{
-    height:10vh;
     width: 100%;
-    display: block;
+    height: 1px;
+    margin-top: -10px;
 }
 
-
-.how-we-work ul{
+.how-we-work .listing-process{
     width: 100%;
-    padding: 0;
+    height: 70vh;
+    padding: 3rem 0rem;
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: start;
+    border-top: 0.05px solid var(--border-whitefade-color);
+    margin-bottom: 5rem;
+    background-color: var(--background-color);
 }
 
-.how-we-work ul .listing-process{
+.how-we-work .listing-process h1{
+    color: var(--text-blackfade-color);
+    font-weight: 800;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+
+.how-we-work .listing-process .step-cont{
     width: 40%;
-    height: 50vh;
-    padding: 3rem 3rem;
+    height: 100%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
-    align-items: start;
-    border: 0.1px solid var(--border-fade-color);
-    margin-bottom: 5rem;
-    border-radius: var(--border-radius);
-    background-color: var(--white-color);
-    position: relative;
 }
 
-.how-we-work ul .listing-process h1{
-    position: absolute;
-    top: 1rem;
-    right: 2rem;
-    color: var(--text-blackfade-color);
-    font-weight: 700;
-    font-size: 1.2rem;
+.how-we-work .listing-process .step-img{
+    width: 30%;
+    height: 100%;
+    display: flex;
 }
 
-.how-we-work ul .listing-process h3{
-    font-size: 2.5rem;
-    font-weight: 500;
+.how-we-work .listing-process .step-img img{
+    display: block;
+    height: 100%;
     width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
 }
 
-.how-we-work ul .listing-process .list-pr{
+.how-we-work .listing-process .step-cont h3{
+    font-size: 2.5rem;
+    line-height: 2.2rem;
+    margin: 0;
+    font-weight: 500;
+    width: 80%;
+}
+
+.how-we-work .listing-process .step-cont .list-pr{
     display: flex;
     height: fit-content;
     width: fit-content;
 }
 
-.how-we-work ul .listing-process .list-pr p{
+.how-we-work .listing-process .step-cont .list-pr p{
     font-size: 0.60rem;
     width: fit-content;
     text-transform: uppercase;
     font-weight: 600;
-    margin-top: 1rem;
+    margin-top: 1.3rem;
     color: var(--text-blackfade-color);
 }
 
@@ -73,8 +85,10 @@
   margin: 0 8px;
 }
 
-.how-we-work .small-title{
-    margin: 1rem 0 0 0;
-    width: 80%;
+.how-we-work .listing-process .step-cont .small-title{
+    margin: 2.5rem 0 0 0;
+    width: 60%;
     font-weight: 400;
 }
+
+

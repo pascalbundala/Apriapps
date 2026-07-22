@@ -59,7 +59,7 @@
     padding:30px;
     border-radius:var(--border-radius);
     background-color:var(--white-fade-color);
-    border: 1px solid var(--text-grey-color);
+    border: 1px solid var(--border-fade-color);
     box-shadow: 
     0 10px 30px rgba(109, 109, 109, 0.027),
     0 2px 8px rgba(92, 92, 92, 0.04);

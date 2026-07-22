@@ -15,8 +15,6 @@ const WorkingSteps = () => {
     if (lenis){lenis.on("scroll", ScrollTrigger.update)}
     const cards = gsap.utils.toArray(".listing-process");
     cards.forEach((card, i) => {
-      if (i === cards.length - 1) return;
-
         gsap.to(card,{
             ease:"none",
             duration:0.1,
@@ -35,24 +33,25 @@ const WorkingSteps = () => {
 
   return (
     <div className="how-we-work padding-space" ref={container}>
-      <ul>
         {steps.map((step, index) => (
           <div key={index} className="listing-process">
-            <h3>{step.stepname}</h3>
-            <h1>{index + 1}</h1>
-
-            <div className="list-pr">
-              {step.steplist.map((stp, i) => (
-                <p key={i}>{stp}</p>
-              ))}
+            <h1> step-{index + 1}</h1>
+            <div className="step-cont">
+                <h3>{step.stepname}</h3>
+                <div className="list-pr">
+                  {step.steplist.map((stp, i) => (
+                    <p key={i}>{stp}</p>
+                  ))}
+                </div>
+                <p className="small-title">{step.text}</p>
             </div>
-
-            <p className="small-title">{step.text}</p>
+            <div className="step-img">
+              {<img src={step.img} alt={step.stepname} />}
+            </div>
           </div>
         ))}
-      </ul>
 
-      <div className="spacer-list"></div>
+        <div className="spacer-list"></div>
     </div>
   );
 };

@@ -34,7 +34,8 @@ const Faq = () => {
         ease: "power3.out",
         scrollTrigger:{
             trigger:faqContainerRef.current,
-            start:"top 90%",
+            start:"top 70%",
+            end:"top 20%",
             scrub:true,
             markers:false
         }

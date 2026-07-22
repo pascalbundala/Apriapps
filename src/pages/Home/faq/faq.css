@@ -1,12 +1,13 @@
 .faq{
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: start;
     color: var(--text-black-color);
-    background-color: var(--white-fade-color);
+    background-color: var(--white-color);
     z-index: 13;
+    padding-bottom: 5rem;
 }
 
 .faq .service-title{
@@ -27,7 +28,6 @@
 .faq .service-title .small-title{
     width: 50%;
 }
-
 
 .faq .service-title .img-x{
     margin-top: 4rem;
@@ -61,8 +61,8 @@
     align-self:center;
     margin-bottom: 0.1rem;
     background-color: var(--white-color);
-    padding: 0.7rem  1rem;
-    border-radius: var(--border-radius);
+    padding: 0.7rem  0rem;
+    border-bottom: 0.5px solid var(--text-grey-color);
 }
 
 .faq .faqblock .faq-question {
@@ -75,14 +75,14 @@
 
 .faq .faqblock .faq-question .small-title{
     width: fit-content;
-    font-weight: 700;
-    font-size: 0.83rem;
-    color: var(--text-blackfade-color);
+    font-weight: 600;
     opacity: 1;
+    text-transform: capitalize;
+    color: var(--text-blackfade-color);
 }
 
 .faq .faqblock .faq-question span {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     cursor: pointer;
     color: var(--text-blackfade-color);
