@@ -9,8 +9,8 @@
 
 .how-we-work .spacer-list{
     width: 100%;
-    height: 1px;
-    margin-top: -10px;
+    height: 10vh;
+    margin-top: 0px;
 }
 
 .how-we-work .listing-process{
